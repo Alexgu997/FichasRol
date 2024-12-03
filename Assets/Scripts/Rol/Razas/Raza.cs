@@ -22,6 +22,7 @@ public class Raza
 
     public Raza()
     {
+        Codigo = 0;
         Nombre = E_Razas.ELFO;
         TamañoMaximo = 190;//medida en cm
         TamañoMinimo = 140;
@@ -33,8 +34,9 @@ public class Raza
         EdadMaxima = 30;
         Alienamiento = E_Alienamiento.NEUTRAL;
     }
-    public Raza(E_Razas nombre, int tamañoMaximo, int tamañoMinimo, int velocidad, List<E_Habilidades> habilidades, List<Atributo> atributos, List<Subraza> subrazas, Dictionary<E_Caracteristicas, int> mejoraCaracteristicas, int edadMaxima, E_Alienamiento alienamiento)
+    public Raza(int codigoNuevo,E_Razas nombre, int tamañoMaximo, int tamañoMinimo, int velocidad, List<E_Habilidades> habilidades, List<Atributo> atributos, List<Subraza> subrazas, Dictionary<E_Caracteristicas, int> mejoraCaracteristicas, int edadMaxima, E_Alienamiento alienamiento)
     {
+        Codigo = codigoNuevo;
         Nombre = nombre;
         TamañoMaximo = tamañoMaximo;
         TamañoMinimo = tamañoMinimo;
@@ -57,10 +59,12 @@ public class Raza
     public Dictionary<E_Caracteristicas, int> MejoraCaracteristicas { get => mejoraCaracteristicas; set => mejoraCaracteristicas = value; }
     public int EdadMaxima { get => edadMaxima; set => edadMaxima = value; }
     public E_Alienamiento Alienamiento { get => alienamiento; set => alienamiento = value; }
+    public int Codigo { get => codigo; set => codigo = value; }
 
     public bool Equals(Raza raza)
     {
-        return nombre == raza.nombre &&
+        return Codigo==raza.Codigo &&
+               nombre == raza.nombre &&
                tamañoMaximo == raza.tamañoMaximo &&
                tamañoMinimo == raza.tamañoMinimo &&
                velocidad == raza.velocidad &&

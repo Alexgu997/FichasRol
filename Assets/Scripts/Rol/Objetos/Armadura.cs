@@ -1,13 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class Armadura : Objeto
 {
     private int valorCABase;
     private int requisitoFuerza;
     private bool desventajaSigilo;
     bool modificadorDestreza;
+    private int maximoModificadorDestreza;
+
     static int VALORCABASEMINIMO = 10;
     static int VALORCABASEMAXIMO = 20;
 
@@ -18,15 +22,18 @@ public class Armadura : Objeto
         SetRequisitoFuerza(0);
         SetDesventajaSigilo(false);
         SetModificadorDestreza(false);
+        SetMaximoModificadorDestreza(0);
+
     }
 
-    public Armadura(int codigoNuevo, int valor,int peso,int cantidadNueva,string nombreNuevo,E_Monedas monedasTipo,E_TipoObjeto tipoObjetoNuevo, int valorCABaseNuevo, int requisitoFuerzaNuevo, bool desventajaSigiloNuevo, bool modificadorDestrezaNuevo)
+    public Armadura(int codigoNuevo, int valor,int peso,int cantidadNueva,string nombreNuevo,E_Monedas monedasTipo,E_TipoObjeto tipoObjetoNuevo, int valorCABaseNuevo, int requisitoFuerzaNuevo, bool desventajaSigiloNuevo, bool modificadorDestrezaNuevo,int maximoModificadorDestrezaNuevo)
     : base(codigoNuevo,peso, valor, cantidadNueva,nombreNuevo,monedasTipo,tipoObjetoNuevo)
     {
         SetValorCABase(valorCABaseNuevo);
         SetRequisitoFuerza(requisitoFuerzaNuevo);
         SetDesventajaSigilo(desventajaSigiloNuevo);
         SetModificadorDestreza(modificadorDestrezaNuevo);
+        SetMaximoModificadorDestreza(maximoModificadorDestrezaNuevo);
     }
 
     public int GetValorCABase()
@@ -80,12 +87,30 @@ public class Armadura : Objeto
         modificadorDestreza = modificadorDestrezaNuevo;
     }
 
+    public void SetMaximoModificadorDestreza(int valorMaximoModificadorDestreza)
+    {
+        maximoModificadorDestreza = valorMaximoModificadorDestreza;
+    }
+
+    public int GetMaximoModificadorDestreza()
+    {
+        return maximoModificadorDestreza;
+    }
+
     public int CalcularCA(int valorDestreza)
     {
         int valor = GetValorCABase();
         if (modificadorDestreza)
         {
-            valor += valorDestreza <= 2 ?valorDestreza:2;
+            if (maximoModificadorDestreza > 0)
+            {
+                valor += valorDestreza <= maximoModificadorDestreza ? valorDestreza : maximoModificadorDestreza;
+            }
+            else
+            {
+                valor += valorDestreza;
+            }
+            
         }
         return valor;
     }

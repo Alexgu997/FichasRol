@@ -1,29 +1,55 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[Serializable]
 public class Arma : Objeto
 {
     int cantidadDaño;
+    int cantidadSegundoDaño;
     E_TiposDados tipoDadoDaño;
+    E_TiposDados tipoDadoSegundoDaño;
     List<E_Propiedades> propiedades;
+    int alcanceMinimo;
+    int alcanceMaximo;
     static int CANTIDIDADDAÑOMINIMA=1;
     static int CANTIDIDADDAÑOMAXIMA = 20;
     static E_TiposDados TIPODADODAÑOMINIMO=E_TiposDados.D4;
+
+    public int CantidadDaño { get => cantidadDaño; set => cantidadDaño = value; }
+    public int CantidadSegundoDaño { get => cantidadSegundoDaño; set => cantidadSegundoDaño = value; }
+    public E_TiposDados TipoDadoDaño { get => tipoDadoDaño; set => tipoDadoDaño = value; }
+    public List<E_Propiedades> Propiedades { get => propiedades; set => propiedades = value; }
+    public static int CANTIDIDADDAÑOMINIMA1 { get => CANTIDIDADDAÑOMINIMA; set => CANTIDIDADDAÑOMINIMA = value; }
+    public static int CANTIDIDADDAÑOMAXIMA1 { get => CANTIDIDADDAÑOMAXIMA; set => CANTIDIDADDAÑOMAXIMA = value; }
+    public static E_TiposDados TIPODADODAÑOMINIMO1 { get => TIPODADODAÑOMINIMO; set => TIPODADODAÑOMINIMO = value; }
+    public E_TiposDados TipoDadoSegundoDaño { get => tipoDadoSegundoDaño; set => tipoDadoSegundoDaño = value; }
+    public int AlcanceMinimo { get => alcanceMinimo; private set => alcanceMinimo = value; }
+    public int AlcanceMaximo { get => alcanceMaximo; private set => alcanceMaximo = value; }
 
     public Arma()
     {
         SetCantidad(CANTIDIDADDAÑOMINIMA);
         SetTipoDadoDaño(TIPODADODAÑOMINIMO);
+        Propiedades = new List<E_Propiedades>();
+        CantidadSegundoDaño = 0;
+        TipoDadoSegundoDaño = E_TiposDados.D4;
+        AlcanceMinimo = 0;
+        AlcanceMaximo = 0;
     }
 
-    public Arma(int codigoNuevo, int valor, int peso, int cantidadNueva, string nombreNuevo, E_Monedas monedasTipo,E_TipoObjeto tipoObjetoNuevo, int cantidadDaño, E_TiposDados tipoDadoDaño, List<E_Propiedades> propiedades):base(codigoNuevo, peso, valor, cantidadNueva, nombreNuevo, monedasTipo, tipoObjetoNuevo)
+    public Arma(int codigoNuevo, int valor, int peso, int cantidadNueva, string nombreNuevo, E_Monedas monedasTipo, E_TipoObjeto tipoObjetoNuevo, int cantidadDaño, E_TiposDados tipoDadoDaño, List<E_Propiedades> propiedades, int cantidadSegundoDañoNuevo, E_TiposDados tipoDadoSegundoDaño, int alcanceMinimo, int alcanceMaximo) : base(codigoNuevo, peso, valor, cantidadNueva, nombreNuevo, monedasTipo, tipoObjetoNuevo)
     {
-       
-        this.cantidadDaño = cantidadDaño;
-        this.tipoDadoDaño = tipoDadoDaño;
-        this.propiedades = propiedades;
+
+        CantidadDaño = cantidadDaño;
+        TipoDadoDaño = tipoDadoDaño;
+        Propiedades = propiedades;
+        CantidadSegundoDaño = cantidadSegundoDañoNuevo;
+        TipoDadoSegundoDaño = tipoDadoSegundoDaño;
+        AlcanceMinimo = alcanceMinimo;
+        AlcanceMaximo = alcanceMaximo;
     }
 
     public int GetCantidadDaño()
@@ -73,6 +99,26 @@ public class Arma : Objeto
             propiedades.Add(propiedadNueva);
         }
     }
+    public bool BuscarPropiedad(E_Propiedades propiedadBuscada)
+    {
+        bool encontradaPropiedad = false;
+        if (propiedades.Contains(propiedadBuscada))
+        {
+            encontradaPropiedad = true;
+        }
+        return encontradaPropiedad;
+    }
+
+    public void CambiarDaños()
+    {
+        int valorCambio;
+        if (BuscarPropiedad(E_Propiedades.VERSATIL))
+        {
+            valorCambio = CantidadDaño;
+            CantidadDaño = CantidadSegundoDaño;
+            cantidadSegundoDaño= valorCambio;
+        }   
+    }
 
     public void BorrarPropiedad(E_Propiedades propiedadParaBorrar)
     {
@@ -82,12 +128,25 @@ public class Arma : Objeto
         }
     }
 
+    public void SetAlcance(int alcanceMinimoNuevo, int alcanceMaximoNuevo) 
+    {
+        if (BuscarPropiedad(E_Propiedades.ALCANCE))
+        {
+            AlcanceMinimo = alcanceMinimoNuevo;
+            AlcanceMaximo = alcanceMaximoNuevo;
+        }
+    
+    
+    }
+
     public bool Equals(Arma armaComparar)
     {
         return base.Equals(armaComparar) &&
                cantidadDaño == armaComparar.GetCantidadDaño() &&
                tipoDadoDaño == armaComparar.GetTipoDadoDaño() &&
-               propiedades== armaComparar.GetPropiedades();
+               propiedades== armaComparar.GetPropiedades()&&
+               cantidadSegundoDaño==armaComparar.cantidadSegundoDaño&&
+               tipoDadoSegundoDaño==armaComparar.tipoDadoSegundoDaño;
 
 
     }
