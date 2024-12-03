@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class Objeto : MonoBehaviour
 {
     int codigo;
@@ -55,7 +57,7 @@ public class Objeto : MonoBehaviour
     {
         if (codigoNuevo >= 0)
         {
-            Codigo= codigo;
+            codigo= codigoNuevo;
         }
     }
     public void SetPeso(float pesoNuevo)

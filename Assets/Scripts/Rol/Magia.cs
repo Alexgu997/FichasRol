@@ -13,6 +13,7 @@ public class Magia : MonoBehaviour
     int numHechizosMaxConocidos;
     int numTrucosConocidos;
 
+
     public void CalcularAptitudMagica(int bonificadorCompetencia,int caracteristicaAptitudMagica)
     {
         bonificadorAtaqueConjuros =  bonificadorCompetencia + caracteristicaAptitudMagica;
