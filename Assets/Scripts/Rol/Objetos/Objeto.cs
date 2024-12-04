@@ -1,24 +1,32 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class Objeto : MonoBehaviour
+public class Objeto 
 {
+   
     int codigo;
+    
     private string nombre;
+    [JsonProperty]
     private float peso;
+    [JsonProperty]
     private int cantValor;
+   
     private E_Monedas tipoValor;
+    [JsonProperty]
     private int cantidad;
+    
+    E_TipoObjeto tipo;
     static float PESOMAXIMO=1000;
     static float PESOMINIMO=1;
     static int VALORMAXIMO=1000000;
     static int VALORMINIMO=1;
     static int CANTIDADMAXIMA=100;
     static int CANTIDADMINIMA = 1;
-    E_TipoObjeto tipo;
 
     public int Codigo { get => codigo; set =>SetCodigo(value); }
     public string Nombre { get => nombre; set => nombre = value; }
@@ -106,22 +114,23 @@ public class Objeto : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public bool Equals(Objeto obj)
     {
        
 
         return (codigo==obj.codigo&&peso == obj.GetPeso() && cantValor == obj.GetValor() && cantidad == obj.GetCantidad()&&obj.TipoValor==TipoValor);
+    }
+
+    public override string ToString()
+    {
+        string value = "";
+
+        value += "Codigo: " + Codigo + "\n";
+        value += "Nombre: " + Nombre + "\n";
+        value += "Peso: " + GetPeso() + "\n";
+        value += "Precio: " + GetCantidad() + " "+tipoValor.ToString() + "\n";
+
+        return value;
     }
 }

@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,18 +8,26 @@ using UnityEngine;
 [Serializable]
 public class Arma : Objeto
 {
+    
     int cantidadDaño;
+    
     int cantidadSegundoDaño;
+    
     E_TiposDados tipoDadoDaño;
+   
     E_TiposDados tipoDadoSegundoDaño;
+   
     List<E_Propiedades> propiedades;
+    
     int alcanceMinimo;
+    
     int alcanceMaximo;
     static int CANTIDIDADDAÑOMINIMA=1;
     static int CANTIDIDADDAÑOMAXIMA = 20;
+    
     static E_TiposDados TIPODADODAÑOMINIMO=E_TiposDados.D4;
 
-    public int CantidadDaño { get => cantidadDaño; set => cantidadDaño = value; }
+    public int CantidadDaño { get => cantidadDaño; set => SetCantidadDaño(value); }
     public int CantidadSegundoDaño { get => cantidadSegundoDaño; set => cantidadSegundoDaño = value; }
     public E_TiposDados TipoDadoDaño { get => tipoDadoDaño; set => tipoDadoDaño = value; }
     public List<E_Propiedades> Propiedades { get => propiedades; set => propiedades = value; }
@@ -31,11 +40,11 @@ public class Arma : Objeto
 
     public Arma()
     {
-        SetCantidad(CANTIDIDADDAÑOMINIMA);
-        SetTipoDadoDaño(TIPODADODAÑOMINIMO);
+        CantidadDaño=CANTIDIDADDAÑOMINIMA;
+        TipoDadoDaño= TIPODADODAÑOMINIMO;
         Propiedades = new List<E_Propiedades>();
         CantidadSegundoDaño = 0;
-        TipoDadoSegundoDaño = E_TiposDados.D4;
+        TipoDadoSegundoDaño = TIPODADODAÑOMINIMO;
         AlcanceMinimo = 0;
         AlcanceMaximo = 0;
     }
@@ -149,5 +158,23 @@ public class Arma : Objeto
                tipoDadoSegundoDaño==armaComparar.tipoDadoSegundoDaño;
 
 
+    }
+
+    public override string ToString()
+    {
+        string value = base.ToString();
+        
+        value += "Daño: " + cantidadDaño + tipoDadoDaño.ToString() + "\n";
+        Propiedades.ForEach(p => value += p.ToString());
+        if (Propiedades.Contains(E_Propiedades.ALCANCE))
+        {
+            value += "Alcance: " + alcanceMinimo + "/" + alcanceMaximo + "\n";
+        }
+        if (propiedades.Contains(E_Propiedades.VERSATIL))
+        {
+            value += "Versatil: " + cantidadSegundoDaño + tipoDadoSegundoDaño.ToString()+"\n";
+        }
+        return value;
+        
     }
 }

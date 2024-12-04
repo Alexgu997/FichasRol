@@ -2309,7 +2309,7 @@ public class PruebasRol : MonoBehaviour
     private void LoadListObjetos(Dictionary<string, List<Objeto>> jsonObjetosPorGuardar)
     {
         string pathload = jsonObjetosPorGuardar.Keys.First();
-        if (File.Exists(pathload))
+        if (File.Exists(pathload)&&pathload=="meme")
         {
             // Read the entire file and save its contents.
             string fileContents = File.ReadAllText(pathload);
@@ -2334,11 +2334,9 @@ public class PruebasRol : MonoBehaviour
                 ContractResolver = new CamelCasePropertyNamesContractResolver()
             };
             settings.Converters.Add(new StringEnumConverter());
-            Debug.Log(jsonObjetosPorGuardar.Values.First().Count());
-            jsonObjetosPorGuardar.Values.First().ForEach(objeto => { Debug.Log(objeto.Nombre); });
-
+            
             string jsonString = JsonConvert.SerializeObject(jsonObjetosPorGuardar.Values.First(), settings);
-
+            Debug.Log("Json creado en " + pathload);
             File.WriteAllText(pathload, jsonString);
         }
     }

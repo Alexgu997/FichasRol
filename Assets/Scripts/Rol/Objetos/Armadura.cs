@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,10 +7,15 @@ using UnityEngine;
 [Serializable]
 public class Armadura : Objeto
 {
+    [JsonProperty]
     private int valorCABase;
+    [JsonProperty]
     private int requisitoFuerza;
+    [JsonProperty]
     private bool desventajaSigilo;
+    [JsonProperty]
     bool modificadorDestreza;
+    [JsonProperty]
     private int maximoModificadorDestreza;
 
     static int VALORCABASEMINIMO = 10;
@@ -122,5 +128,16 @@ public class Armadura : Objeto
                valorCABase == obj.GetValorCABase() &&
                requisitoFuerza == obj.GetRequisitoFuerza() &&
                desventajaSigilo == obj.GetDesventajaSigilo();
+    }
+
+    public override string ToString()
+    {
+        string value= base.ToString();
+
+        value += "CA Base: " + GetValorCABase() +" " + (modificadorDestreza?"+ "+GetMaximoModificadorDestreza()+" modificador de destreza":"")+ "\n";
+        value += "Requisito Fuerza: " + (requisitoFuerza > 0 ? requisitoFuerza : "No tiene requisito") + "\n";
+        value += "Desventaja Sigilo: " + (desventajaSigilo ? "Tiene desventaja" : "No tiene desventaja")+"\n";
+
+        return value;
     }
 }
