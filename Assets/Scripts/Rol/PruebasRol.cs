@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 
 [Serializable]
@@ -30,7 +31,7 @@ public class PruebasRol : MonoBehaviour
         //readFile();
         //OverWrite();
         //WriteListFile();
-        LoadListPrueba();
+        LoadListObjetos(CargarObjetos());
     }
 
     // Update is called once per frame
@@ -135,7 +136,7 @@ public class PruebasRol : MonoBehaviour
         // Serialize the object into JSON and save string.
         string jsonString = JsonConvert.SerializeObject(r,settings);
 
-
+       
 
         // Write JSON to file.
         File.WriteAllText(saveFile, jsonString);
@@ -155,13 +156,16 @@ public class PruebasRol : MonoBehaviour
         File.WriteAllText(saveFile,jsonString);
     }
 
-    private List<Raza> CargarRazas()
+    private Dictionary<string, List<Raza>> CargarRazas()
     {
+        Dictionary<string,List<Raza>> razasFinales= new Dictionary<string, List<Raza>>();
+        string pathload = "Assets/Resources/Jsons/RazasEsp.json";
         List<Raza>razas = new List<Raza>();
         Subraza subraza;
         Raza r;
         #region EnanoCreacion
         r = new Raza();
+        r.Codigo = 1;
         r.Nombre = E_Razas.ENANO;
         r.EdadMaxima = 300;
         r.Alienamiento = E_Alienamiento.LEGAL;
@@ -191,6 +195,7 @@ public class PruebasRol : MonoBehaviour
         #endregion  EnanoCreacion
         #region ElfoCreacion
         r = new Raza();
+        r.Codigo = 2;
         r.Nombre = E_Razas.ELFO;
         r.EdadMaxima = 700;
         r.Alienamiento = E_Alienamiento.BUENO;
@@ -234,6 +239,7 @@ public class PruebasRol : MonoBehaviour
         #endregion  ElfoCreacion
         #region MedianoCreacion
         r = new Raza();
+        r.Codigo = 3;
         r.Nombre = E_Razas.MEDIANO;
         r.EdadMaxima = 200;
         r.Alienamiento = E_Alienamiento.LEGAL_BUENO;
@@ -264,6 +270,7 @@ public class PruebasRol : MonoBehaviour
         #endregion  MedianoCreacion
         #region HumanoCreacion
         r = new Raza();
+        r.Codigo = 4;
         r.Nombre = E_Razas.HUMANO;
         r.EdadMaxima = 90;
         r.TamañoMinimo = 152;
@@ -282,6 +289,7 @@ public class PruebasRol : MonoBehaviour
         #endregion  HumanoCreacion
         #region DraconianoCreacion
         r = new Raza();
+        r.Codigo = 5;
         r.Nombre = E_Razas.DRACONICO;
         r.EdadMaxima = 80;
         r.TamañoMinimo = 183;
@@ -301,6 +309,7 @@ public class PruebasRol : MonoBehaviour
         #endregion  DraconianoCreacion
         #region GnomoCreacion
         r = new Raza();
+        r.Codigo = 6;
         r.Nombre = E_Razas.GNOMO;
         r.EdadMaxima = 500;
         r.TamañoMinimo = 92;
@@ -331,6 +340,7 @@ public class PruebasRol : MonoBehaviour
         #endregion  GnomoCreacion
         #region SemiElfoCreacion
         r = new Raza();
+        r.Codigo = 7;
         r.Nombre = E_Razas.SEMIELFO;
         r.EdadMaxima = 180;
         r.TamañoMinimo = 152;
@@ -348,6 +358,7 @@ public class PruebasRol : MonoBehaviour
         #endregion  SemiElfoCreacion
         #region SemiOrcoCreacion
         r = new Raza();
+        r.Codigo = 8;
         r.Nombre = E_Razas.SEMIORCO;
         r.EdadMaxima = 75;
         r.TamañoMinimo = 152;
@@ -369,6 +380,7 @@ public class PruebasRol : MonoBehaviour
         #endregion  SemiOrcoCreacion
         #region TieflingCreacion
         r = new Raza();
+        r.Codigo = 9;
         r.Nombre = E_Razas.TIEFLING;
         r.EdadMaxima = 100;
         r.TamañoMinimo = 152;
@@ -385,14 +397,19 @@ public class PruebasRol : MonoBehaviour
         r.Atributos.Add(new Atributo("Idiomas", "Puedes hablar, leery escribir en común e infernal."));
         razas.Add(r);
         #endregion  TieflingCreacion
-        return razas;
+        razasFinales.Add(pathload,razas);
+        return razasFinales;
     }
 
 
-    private List<Objeto> CargarObjetos()
+    private Dictionary<string,List<Objeto>> CargarObjetos()
     {
+        Dictionary<string,List<Objeto>> objetosFinales = new Dictionary<string,List<Objeto>>();
+        string pathload = "Assets/Resources/Jsons/ObjetosEsp.json";
         List<Objeto> objectos=new List<Objeto>();
         Objeto objeto;
+        Arma arma;
+        Armadura armadura;
         #region ObjetosCreados
         #region CrearObjeto1
         objeto = new Objeto();
@@ -1414,11 +1431,862 @@ public class PruebasRol : MonoBehaviour
 
 
         #endregion ObjetosCreados
-        return objectos;
+        #region ArmasCreadas
+        #region Arma1
+        arma = new Arma();
+        arma.Codigo = 102;
+        arma.Nombre = "Baston";
+        arma.Tipo = E_TipoObjeto.ARMA_SIMPLE;
+        arma.SetValor(2);
+        arma.SetPeso(4);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PP;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D6;
+        arma.AñadirPropiedad(E_Propiedades.CONTUNDENTE);
+        arma.AñadirPropiedad(E_Propiedades.VERSATIL);
+        arma.CantidadSegundoDaño = 1;
+        arma.TipoDadoSegundoDaño = E_TiposDados.D8;
+        objectos.Add(arma);
+        #endregion 
+        #region Arma2
+        arma = new Arma();
+        arma.Codigo = 103;
+        arma.Nombre = "Daga";
+        arma.Tipo = E_TipoObjeto.ARMA_SIMPLE;
+        arma.SetValor(2);
+        arma.SetPeso(4);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D4;
+        arma.AñadirPropiedad(E_Propiedades.CORTANTE);
+        arma.AñadirPropiedad(E_Propiedades.ARROJADIZA);
+        arma.AñadirPropiedad(E_Propiedades.LIGERA);
+        arma.AñadirPropiedad(E_Propiedades.SUTIL);
+        arma.SetAlcance(20, 60);
+        objectos.Add(arma);
+        #endregion Arma2
+        #region Arma3
+        arma = new Arma();
+        arma.Codigo = 104;
+        arma.Nombre = "Garrote";
+        arma.Tipo = E_TipoObjeto.ARMA_SIMPLE;
+        arma.SetValor(1);
+        arma.SetPeso(2);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PP;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D4;
+        arma.AñadirPropiedad(E_Propiedades.CONTUNDENTE);
+        arma.AñadirPropiedad(E_Propiedades.LIGERA);
+        objectos.Add(arma);
+        #endregion Arma3
+        #region Arma4
+        arma = new Arma();
+        arma.Codigo = 105;
+        arma.Nombre = "Garrote Grande";
+        arma.Tipo = E_TipoObjeto.ARMA_SIMPLE;
+        arma.SetValor(2);
+        arma.SetPeso(10);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PP;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D8;
+        arma.AñadirPropiedad(E_Propiedades.CONTUNDENTE);
+        arma.AñadirPropiedad(E_Propiedades.A_DOS_MANOS);
+        objectos.Add(arma);
+        #endregion Arma4
+        #region Arma5
+        arma = new Arma();
+        arma.Codigo = 106;
+        arma.Nombre = "Hacha de mano";
+        arma.Tipo = E_TipoObjeto.ARMA_SIMPLE;
+        arma.SetValor(5);
+        arma.SetPeso(2);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D6;
+        arma.AñadirPropiedad(E_Propiedades.CORTANTE);
+        arma.AñadirPropiedad(E_Propiedades.ARROJADIZA);
+        arma.AñadirPropiedad(E_Propiedades.ALCANCE);
+        arma.AñadirPropiedad(E_Propiedades.LIGERA);
+        arma.SetAlcance(20, 60);
+        objectos.Add(arma);
+        #endregion Arma5
+        #region Arma6
+        arma = new Arma();
+        arma.Codigo = 107;
+        arma.Nombre = "Hoz";
+        arma.Tipo = E_TipoObjeto.ARMA_SIMPLE;
+        arma.SetValor(1);
+        arma.SetPeso(2);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D4;
+        arma.AñadirPropiedad(E_Propiedades.CORTANTE);
+        arma.AñadirPropiedad(E_Propiedades.LIGERA);
+        objectos.Add(arma);
+        #endregion Arma6
+        #region Arma7
+        arma = new Arma();
+        arma.Codigo = 108;
+        arma.Nombre = "Jabalina";
+        arma.Tipo = E_TipoObjeto.ARMA_SIMPLE;
+        arma.SetValor(5);
+        arma.SetPeso(2);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PP;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D6;
+        arma.AñadirPropiedad(E_Propiedades.PERFORANTE);
+        arma.AñadirPropiedad(E_Propiedades.ARROJADIZA);
+        arma.AñadirPropiedad(E_Propiedades.ALCANCE);
+        arma.SetAlcance(30, 120);
+        objectos.Add(arma);
+        #endregion Arma7
+        #region Arma8
+        arma = new Arma();
+        arma.Codigo = 109;
+        arma.Nombre = "Lanza";
+        arma.Tipo = E_TipoObjeto.ARMA_SIMPLE;
+        arma.SetValor(1);
+        arma.SetPeso(3);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D6;
+        arma.AñadirPropiedad(E_Propiedades.PERFORANTE);
+        arma.AñadirPropiedad(E_Propiedades.ARROJADIZA);
+        arma.AñadirPropiedad(E_Propiedades.ALCANCE);
+        arma.SetAlcance(20, 60);
+        arma.AñadirPropiedad(E_Propiedades.VERSATIL);
+        arma.CantidadSegundoDaño = 1;
+        arma.TipoDadoSegundoDaño = E_TiposDados.D8;
+        objectos.Add(arma);
+        #endregion Arma8
+        #region Arma9
+        arma = new Arma();
+        arma.Codigo = 110;
+        arma.Nombre = "Martillo ligero";
+        arma.Tipo = E_TipoObjeto.ARMA_SIMPLE;
+        arma.SetValor(2);
+        arma.SetPeso(2);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D4;
+        arma.AñadirPropiedad(E_Propiedades.CONTUNDENTE);
+        arma.AñadirPropiedad(E_Propiedades.ARROJADIZA);
+        arma.AñadirPropiedad(E_Propiedades.ALCANCE);
+        arma.SetAlcance(20, 60);
+        arma.AñadirPropiedad(E_Propiedades.LIGERA);
+        objectos.Add(arma);
+        #endregion Arma9
+        #region Arma10
+        arma = new Arma();
+        arma.Codigo = 111;
+        arma.Nombre = "Maza";
+        arma.Tipo = E_TipoObjeto.ARMA_SIMPLE;
+        arma.SetValor(5);
+        arma.SetPeso(4);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D6;
+        arma.AñadirPropiedad(E_Propiedades.CONTUNDENTE);
+        objectos.Add(arma);
+        #endregion Arma10
+        #region Arma11
+        arma = new Arma();
+        arma.Codigo = 112;
+        arma.Nombre = "Arco corto";
+        arma.Tipo = E_TipoObjeto.ARMA_A_DISTANCIA_SIMPLE;
+        arma.SetValor(25);
+        arma.SetPeso(2);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D6;
+        arma.AñadirPropiedad(E_Propiedades.PERFORANTE);
+        arma.AñadirPropiedad(E_Propiedades.MUNICION);
+        arma.AñadirPropiedad(E_Propiedades.A_DOS_MANOS);
+        arma.AñadirPropiedad(E_Propiedades.ALCANCE);
+        arma.SetAlcance(80,320);
+        objectos.Add(arma);
+        #endregion Arma11
+        #region Arma12
+        arma = new Arma();
+        arma.Codigo = 113;
+        arma.Nombre = "Ballesta ligera";
+        arma.Tipo = E_TipoObjeto.ARMA_A_DISTANCIA_SIMPLE;
+        arma.SetValor(25);
+        arma.SetPeso(5);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D8;
+        arma.AñadirPropiedad(E_Propiedades.PERFORANTE);
+        arma.AñadirPropiedad(E_Propiedades.MUNICION);
+        arma.AñadirPropiedad(E_Propiedades.A_DOS_MANOS);
+        arma.AñadirPropiedad(E_Propiedades.ALCANCE);
+        arma.AñadirPropiedad(E_Propiedades.RECARGA);
+        arma.SetAlcance(80, 320);
+        objectos.Add(arma);
+        #endregion Arma12
+        #region Arma13
+        arma = new Arma();
+        arma.Codigo = 114;
+        arma.Nombre = "Dardo";
+        arma.Tipo = E_TipoObjeto.ARMA_A_DISTANCIA_SIMPLE;
+        arma.SetValor(5);
+        arma.SetPeso(0.25f);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PC;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D4;
+        arma.AñadirPropiedad(E_Propiedades.PERFORANTE);
+        arma.AñadirPropiedad(E_Propiedades.SUTIL);
+        arma.AñadirPropiedad(E_Propiedades.ARROJADIZA);
+        arma.AñadirPropiedad(E_Propiedades.ALCANCE);
+        arma.SetAlcance(20, 60);
+        objectos.Add(arma);
+        #endregion Arma13
+        #region Arma14
+        arma = new Arma();
+        arma.Codigo = 115;
+        arma.Nombre = "Honda";
+        arma.Tipo = E_TipoObjeto.ARMA_A_DISTANCIA_SIMPLE;
+        arma.SetValor(1);
+        arma.SetPeso(0);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PP;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D4;
+        arma.AñadirPropiedad(E_Propiedades.CONTUNDENTE);
+        arma.AñadirPropiedad(E_Propiedades.SUTIL);
+        arma.AñadirPropiedad(E_Propiedades.MUNICION);
+        arma.AñadirPropiedad(E_Propiedades.ALCANCE);
+        arma.SetAlcance(20, 60);
+        objectos.Add(arma);
+        #endregion Arma14
+        #region Arma15
+        arma = new Arma();
+        arma.Codigo = 116;
+        arma.Nombre = "Alabarda";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(20);
+        arma.SetPeso(6);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D10;
+        arma.AñadirPropiedad(E_Propiedades.CORTANTE);
+        arma.AñadirPropiedad(E_Propiedades.A_DOS_MANOS);
+        arma.AñadirPropiedad(E_Propiedades.GRAN_ALCANCE);
+        arma.AñadirPropiedad(E_Propiedades.PESADA);
+        objectos.Add(arma);
+        #endregion Arma15
+        #region Arma16
+        arma = new Arma();
+        arma.Codigo = 117;
+        arma.Nombre = "Cimitarra";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(25);
+        arma.SetPeso(3);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D6;
+        arma.AñadirPropiedad(E_Propiedades.CORTANTE);
+        arma.AñadirPropiedad(E_Propiedades.LIGERA);
+        arma.AñadirPropiedad(E_Propiedades.SUTIL);
+        objectos.Add(arma);
+        #endregion Arma16
+        #region Arma17
+        arma = new Arma();
+        arma.Codigo = 118;
+        arma.Nombre = "Espada corta";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(10);
+        arma.SetPeso(2);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D6;
+        arma.AñadirPropiedad(E_Propiedades.PERFORANTE);
+        arma.AñadirPropiedad(E_Propiedades.LIGERA);
+        arma.AñadirPropiedad(E_Propiedades.SUTIL);
+        objectos.Add(arma);
+        #endregion Arma17
+        #region Arma18
+        arma = new Arma();
+        arma.Codigo = 119;
+        arma.Nombre = "Espada Larga";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(15);
+        arma.SetPeso(3);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D8;
+        arma.AñadirPropiedad(E_Propiedades.CORTANTE);
+        arma.AñadirPropiedad(E_Propiedades.VERSATIL);
+        arma.CantidadSegundoDaño = 1;
+        arma.TipoDadoSegundoDaño= E_TiposDados.D10;
+        objectos.Add(arma);
+        #endregion Arma18
+        #region Arma19
+        arma = new Arma();
+        arma.Codigo = 120;
+        arma.Nombre = "Espadon";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(50);
+        arma.SetPeso(6);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 2;
+        arma.TipoDadoDaño = E_TiposDados.D8;
+        arma.AñadirPropiedad(E_Propiedades.CORTANTE);
+        arma.AñadirPropiedad(E_Propiedades.A_DOS_MANOS);
+        arma.AñadirPropiedad(E_Propiedades.PESADA);
+        objectos.Add(arma);
+        #endregion Arma19
+        #region Arma20
+        arma = new Arma();
+        arma.Codigo = 121;
+        arma.Nombre = "Estoque";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(25);
+        arma.SetPeso(2);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D8;
+        arma.AñadirPropiedad(E_Propiedades.PERFORANTE);
+        arma.AñadirPropiedad(E_Propiedades.SUTIL);
+        objectos.Add(arma);
+        #endregion Arma20
+        #region Arma21
+        arma = new Arma();
+        arma.Codigo = 122;
+        arma.Nombre = "Flagelo";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(10);
+        arma.SetPeso(2);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D8;
+        arma.AñadirPropiedad(E_Propiedades.CONTUNDENTE);
+        objectos.Add(arma);
+        #endregion Arma21
+        #region Arma22
+        arma = new Arma();
+        arma.Codigo = 123;
+        arma.Nombre = "Guja";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(20);
+        arma.SetPeso(6);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D10;
+        arma.AñadirPropiedad(E_Propiedades.CORTANTE);
+        arma.AñadirPropiedad(E_Propiedades.A_DOS_MANOS);
+        arma.AñadirPropiedad(E_Propiedades.GRAN_ALCANCE);
+        arma.AñadirPropiedad(E_Propiedades.PESADA);
+        objectos.Add(arma);
+        #endregion Arma22
+        #region Arma23
+        arma = new Arma();
+        arma.Codigo = 124;
+        arma.Nombre = "Hacha a dos manos";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(30);
+        arma.SetPeso(7);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D12;
+        arma.AñadirPropiedad(E_Propiedades.CORTANTE);
+        arma.AñadirPropiedad(E_Propiedades.A_DOS_MANOS);
+        arma.AñadirPropiedad(E_Propiedades.GRAN_ALCANCE);
+        arma.AñadirPropiedad(E_Propiedades.PESADA);
+        objectos.Add(arma);
+        #endregion Arma23
+        #region Arma24
+        arma = new Arma();
+        arma.Codigo = 125;
+        arma.Nombre = "Hacha de guerra";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(10);
+        arma.SetPeso(4);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D8;
+        arma.AñadirPropiedad(E_Propiedades.CORTANTE);
+        arma.AñadirPropiedad(E_Propiedades.VERSATIL);
+        arma.CantidadSegundoDaño = 1;
+        arma.TipoDadoSegundoDaño= E_TiposDados.D10;
+        objectos.Add(arma);
+        #endregion Arma24
+        #region Arma25
+        arma = new Arma();
+        arma.Codigo = 126;
+        arma.Nombre = "Lanza de caballeria";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(10);
+        arma.SetPeso(6);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D12;
+        arma.AñadirPropiedad(E_Propiedades.PERFORANTE);
+        arma.AñadirPropiedad(E_Propiedades.GRAN_ALCANCE);
+        arma.AñadirPropiedad(E_Propiedades.ESPECIAL);
+        objectos.Add(arma);
+        #endregion Arma25
+        #region Arma26
+        arma = new Arma();
+        arma.Codigo = 127;
+        arma.Nombre = "Latigo";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(2);
+        arma.SetPeso(3);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D4;
+        arma.AñadirPropiedad(E_Propiedades.CORTANTE);
+        arma.AñadirPropiedad(E_Propiedades.GRAN_ALCANCE);
+        arma.AñadirPropiedad(E_Propiedades.SUTIL);
+        objectos.Add(arma);
+        #endregion Arma26
+        #region Arma27
+        arma = new Arma();
+        arma.Codigo = 128;
+        arma.Nombre = "Lucero del alba";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(15);
+        arma.SetPeso(4);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D8;
+        arma.AñadirPropiedad(E_Propiedades.PERFORANTE);
+        objectos.Add(arma);
+        #endregion Arma27
+        #region Arma28
+        arma = new Arma();
+        arma.Codigo = 129;
+        arma.Nombre = "Martillo de guerra";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(15);
+        arma.SetPeso(2);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D8;
+        arma.AñadirPropiedad(E_Propiedades.CONTUNDENTE);
+        arma.AñadirPropiedad(E_Propiedades.VERSATIL);
+        arma.CantidadSegundoDaño = 1;
+        arma.TipoDadoSegundoDaño = E_TiposDados.D10;
+        objectos.Add(arma);
+        #endregion Arma28
+        #region Arma29
+        arma = new Arma();
+        arma.Codigo = 130;
+        arma.Nombre = "Maza a dos manos";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(15);
+        arma.SetPeso(10);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 2;
+        arma.TipoDadoDaño = E_TiposDados.D6;
+        arma.AñadirPropiedad(E_Propiedades.CONTUNDENTE);
+        arma.AñadirPropiedad(E_Propiedades.A_DOS_MANOS);
+        arma.AñadirPropiedad(E_Propiedades.PESADA);
+        objectos.Add(arma);
+        #endregion Arma29
+        #region Arma30
+        arma = new Arma();
+        arma.Codigo = 131;
+        arma.Nombre = "Pica";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(5);
+        arma.SetPeso(18);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D10;
+        arma.AñadirPropiedad(E_Propiedades.PERFORANTE);
+        arma.AñadirPropiedad(E_Propiedades.A_DOS_MANOS);
+        arma.AñadirPropiedad(E_Propiedades.GRAN_ALCANCE);
+        arma.AñadirPropiedad(E_Propiedades.PESADA);
+        objectos.Add(arma);
+        #endregion Arma30
+        #region Arma31
+        arma = new Arma();
+        arma.Codigo = 132;
+        arma.Nombre = "Pico de guerra";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(5);
+        arma.SetPeso(2);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D8;
+        arma.AñadirPropiedad(E_Propiedades.PERFORANTE);
+        objectos.Add(arma);
+        #endregion Arma31
+        #region Arma32
+        arma = new Arma();
+        arma.Codigo = 133;
+        arma.Nombre = "Tridente";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(5);
+        arma.SetPeso(4);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D6;
+        arma.AñadirPropiedad(E_Propiedades.PERFORANTE);
+        arma.AñadirPropiedad(E_Propiedades.ARROJADIZA);
+        arma.AñadirPropiedad(E_Propiedades.ALCANCE);
+        arma.SetAlcance(20, 60);
+        arma.AñadirPropiedad(E_Propiedades.VERSATIL);
+        arma.CantidadSegundoDaño = 1;
+        arma.TipoDadoSegundoDaño = E_TiposDados.D8;
+        objectos.Add(arma);
+        #endregion Arma32
+        #region Arma33
+        arma = new Arma();
+        arma.Codigo = 134;
+        arma.Nombre = "Arco largo";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(50);
+        arma.SetPeso(2);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D8;
+        arma.AñadirPropiedad(E_Propiedades.PERFORANTE);
+        arma.AñadirPropiedad(E_Propiedades.A_DOS_MANOS);
+        arma.AñadirPropiedad(E_Propiedades.MUNICION);
+        arma.AñadirPropiedad(E_Propiedades.PESADA);
+        arma.AñadirPropiedad(E_Propiedades.ALCANCE);
+        arma.SetAlcance(150,600);
+        objectos.Add(arma);
+        #endregion Arma33
+        #region Arma34
+        arma = new Arma();
+        arma.Codigo = 135;
+        arma.Nombre = "Ballesta de mano";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(75);
+        arma.SetPeso(3);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D6;
+        arma.AñadirPropiedad(E_Propiedades.PERFORANTE);
+        arma.AñadirPropiedad(E_Propiedades.RECARGA);
+        arma.AñadirPropiedad(E_Propiedades.MUNICION);
+        arma.AñadirPropiedad(E_Propiedades.LIGERA);
+        arma.AñadirPropiedad(E_Propiedades.ALCANCE);
+        arma.SetAlcance(30, 120);
+        objectos.Add(arma);
+        #endregion Arma34
+        #region Arma35
+        arma = new Arma();
+        arma.Codigo = 136;
+        arma.Nombre = "Ballesta pesada";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(75);
+        arma.SetPeso(3);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D10;
+        arma.AñadirPropiedad(E_Propiedades.PERFORANTE);
+        arma.AñadirPropiedad(E_Propiedades.A_DOS_MANOS);
+        arma.AñadirPropiedad(E_Propiedades.RECARGA);
+        arma.AñadirPropiedad(E_Propiedades.MUNICION);
+        arma.AñadirPropiedad(E_Propiedades.PESADA);
+        arma.AñadirPropiedad(E_Propiedades.ALCANCE);
+        arma.SetAlcance(100, 400);
+        objectos.Add(arma);
+        #endregion Arma35
+        #region Arma36
+        arma = new Arma();
+        arma.Codigo = 137;
+        arma.Nombre = "Cerbatana";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(10);
+        arma.SetPeso(1);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 1;
+        arma.TipoDadoDaño = E_TiposDados.D4;
+        arma.AñadirPropiedad(E_Propiedades.PERFORANTE);
+        arma.AñadirPropiedad(E_Propiedades.RECARGA);
+        arma.AñadirPropiedad(E_Propiedades.MUNICION);
+        arma.AñadirPropiedad(E_Propiedades.ALCANCE);
+        arma.SetAlcance(25, 100);
+        objectos.Add(arma);
+        #endregion Arma36
+        #region Arma37
+        arma = new Arma();
+        arma.Codigo = 138;
+        arma.Nombre = "Red";
+        arma.Tipo = E_TipoObjeto.ARMA_MARCIAL;
+        arma.SetValor(1);
+        arma.SetPeso(3);
+        arma.SetCantidad(1);
+        arma.TipoValor = E_Monedas.PO;
+        arma.CantidadDaño = 0;
+        arma.TipoDadoDaño = E_TiposDados.D4;
+        arma.AñadirPropiedad(E_Propiedades.PERFORANTE);
+        arma.AñadirPropiedad(E_Propiedades.ARROJADIZA);
+        arma.AñadirPropiedad(E_Propiedades.ESPECIAL);
+        arma.AñadirPropiedad(E_Propiedades.ALCANCE);
+        arma.SetAlcance(5, 15);
+        objectos.Add(arma);
+        #endregion Arma37
+        #endregion ArmasCreadas
+        #region ArmadurasCreadas
+        #region Armadura1
+        armadura = new Armadura();
+        armadura.Codigo = 139;
+        armadura.Nombre = "Acolchada";
+        armadura.Tipo = E_TipoObjeto.ARMADURA_LIGERA;
+        armadura.SetValor(5);
+        armadura.TipoValor = E_Monedas.PO;
+        armadura.SetPeso(8);
+        armadura.SetCantidad(1);
+        armadura.SetValorCABase(11);
+        armadura.SetModificadorDestreza(true);
+        armadura.SetRequisitoFuerza(0);
+        armadura.SetDesventajaSigilo(true);
+        objectos.Add(armadura);
+
+        #endregion Armadura1
+        #region Armadura2
+        armadura = new Armadura();
+        armadura.Codigo = 140;
+        armadura.Nombre = "Cuero";
+        armadura.Tipo = E_TipoObjeto.ARMADURA_LIGERA;
+        armadura.SetValor(10);
+        armadura.TipoValor = E_Monedas.PO;
+        armadura.SetPeso(10);
+        armadura.SetCantidad(1);
+        armadura.SetValorCABase(11);
+        armadura.SetModificadorDestreza(true);
+        armadura.SetRequisitoFuerza(0);
+        armadura.SetDesventajaSigilo(false);
+        objectos.Add(armadura);
+
+        #endregion Armadura2
+        #region Armadura3
+        armadura = new Armadura();
+        armadura.Codigo = 141;
+        armadura.Nombre = "Cuero tachonado";
+        armadura.Tipo = E_TipoObjeto.ARMADURA_LIGERA;
+        armadura.SetValor(45);
+        armadura.TipoValor = E_Monedas.PO;
+        armadura.SetPeso(13);
+        armadura.SetCantidad(1);
+        armadura.SetValorCABase(12);
+        armadura.SetModificadorDestreza(true);
+        armadura.SetRequisitoFuerza(0);
+        armadura.SetDesventajaSigilo(false);
+        objectos.Add(armadura);
+
+        #endregion Armadura3
+        #region Armadura4
+        armadura = new Armadura();
+        armadura.Codigo = 142;
+        armadura.Nombre = "Camisa de malla";
+        armadura.Tipo = E_TipoObjeto.ARMADURA_MEDIA;
+        armadura.SetValor(50);
+        armadura.TipoValor = E_Monedas.PO;
+        armadura.SetPeso(20);
+        armadura.SetCantidad(1);
+        armadura.SetValorCABase(13);
+        armadura.SetModificadorDestreza(true);
+        armadura.SetMaximoModificadorDestreza(2);
+        armadura.SetRequisitoFuerza(0);
+        armadura.SetDesventajaSigilo(false);
+        objectos.Add(armadura);
+
+        #endregion Armadura4
+        #region Armadura5
+        armadura = new Armadura();
+        armadura.Codigo = 143;
+        armadura.Nombre = "Cota de escamas";
+        armadura.Tipo = E_TipoObjeto.ARMADURA_MEDIA;
+        armadura.SetValor(50);
+        armadura.TipoValor = E_Monedas.PO;
+        armadura.SetCantidad(1);
+        armadura.SetValorCABase(14);
+        armadura.SetModificadorDestreza(true);
+        armadura.SetMaximoModificadorDestreza(2);
+        armadura.SetRequisitoFuerza(0);
+        armadura.SetDesventajaSigilo(true);
+        armadura.SetPeso(45);
+        objectos.Add(armadura);
+
+        #endregion Armadura5
+        #region Armadura6
+        armadura = new Armadura();
+        armadura.Codigo = 144;
+        armadura.Nombre = "Coraza";
+        armadura.Tipo = E_TipoObjeto.ARMADURA_MEDIA;
+        armadura.SetValor(400);
+        armadura.TipoValor = E_Monedas.PO;
+        armadura.SetCantidad(1);
+        armadura.SetValorCABase(14);
+        armadura.SetModificadorDestreza(true);
+        armadura.SetMaximoModificadorDestreza(2);
+        armadura.SetRequisitoFuerza(0);
+        armadura.SetDesventajaSigilo(false);
+        armadura.SetPeso(20);
+        objectos.Add(armadura);
+
+        #endregion Armadura6
+        #region Armadura8
+        armadura = new Armadura();
+        armadura.Codigo = 145;
+        armadura.Nombre = "Media armadura";
+        armadura.Tipo = E_TipoObjeto.ARMADURA_MEDIA;
+        armadura.SetValor(750);
+        armadura.TipoValor = E_Monedas.PO;
+        armadura.SetCantidad(1);
+        armadura.SetValorCABase(15);
+        armadura.SetModificadorDestreza(true);
+        armadura.SetMaximoModificadorDestreza(2);
+        armadura.SetRequisitoFuerza(0);
+        armadura.SetDesventajaSigilo(true);
+        armadura.SetPeso(40);
+        objectos.Add(armadura);
+
+        #endregion Armadura8
+        #region Armadura9
+        armadura = new Armadura();
+        armadura.Codigo = 146;
+        armadura.Nombre = "Pieles";
+        armadura.Tipo = E_TipoObjeto.ARMADURA_MEDIA;
+        armadura.SetValor(10);
+        armadura.TipoValor = E_Monedas.PO;
+        armadura.SetCantidad(1);
+        armadura.SetValorCABase(12);
+        armadura.SetModificadorDestreza(true);
+        armadura.SetMaximoModificadorDestreza(2);
+        armadura.SetRequisitoFuerza(0);
+        armadura.SetDesventajaSigilo(false);
+        armadura.SetPeso(12);
+        objectos.Add(armadura);
+
+        #endregion Armadura9
+        #region Armadura10
+        armadura = new Armadura();
+        armadura.Codigo = 147;
+        armadura.Nombre = "Armadura de bandas";
+        armadura.Tipo = E_TipoObjeto.ARMADURA_PESADA;
+        armadura.SetValor(200);
+        armadura.TipoValor = E_Monedas.PO;
+        armadura.SetCantidad(1);
+        armadura.SetValorCABase(17);
+        armadura.SetModificadorDestreza(false);
+        armadura.SetMaximoModificadorDestreza(0);
+        armadura.SetRequisitoFuerza(15);
+        armadura.SetDesventajaSigilo(true);
+        armadura.SetPeso(60);
+        objectos.Add(armadura);
+
+        #endregion Armadura10
+        #region Armadura11
+        armadura = new Armadura();
+        armadura.Codigo = 148;
+        armadura.Nombre = "Armadura de placas";
+        armadura.Tipo = E_TipoObjeto.ARMADURA_PESADA;
+        armadura.SetValor(1500);
+        armadura.TipoValor = E_Monedas.PO;
+        armadura.SetCantidad(1);
+        armadura.SetValorCABase(18);
+        armadura.SetModificadorDestreza(false);
+        armadura.SetMaximoModificadorDestreza(0);
+        armadura.SetRequisitoFuerza(15);
+        armadura.SetDesventajaSigilo(true);
+        armadura.SetPeso(65);
+        objectos.Add(armadura);
+
+        #endregion Armadura11
+        #region Armadura12
+        armadura = new Armadura();
+        armadura.Codigo = 149;
+        armadura.Nombre = "Cota guarnecida";
+        armadura.Tipo = E_TipoObjeto.ARMADURA_PESADA;
+        armadura.SetValor(30);
+        armadura.TipoValor = E_Monedas.PO;
+        armadura.SetCantidad(1);
+        armadura.SetValorCABase(14);
+        armadura.SetModificadorDestreza(false);
+        armadura.SetMaximoModificadorDestreza(0);
+        armadura.SetRequisitoFuerza(0);
+        armadura.SetDesventajaSigilo(true);
+        armadura.SetPeso(40);
+        objectos.Add(armadura);
+
+        #endregion Armadura12
+        #region Armadura13
+        armadura = new Armadura();
+        armadura.Codigo = 150;
+        armadura.Nombre = "Cota de malla";
+        armadura.Tipo = E_TipoObjeto.ARMADURA_PESADA;
+        armadura.SetValor(75);
+        armadura.TipoValor = E_Monedas.PO;
+        armadura.SetCantidad(1);
+        armadura.SetValorCABase(16);
+        armadura.SetModificadorDestreza(false);
+        armadura.SetMaximoModificadorDestreza(0);
+        armadura.SetRequisitoFuerza(13);
+        armadura.SetDesventajaSigilo(true);
+        armadura.SetPeso(55);
+        objectos.Add(armadura);
+
+        #endregion Armadura13
+        #region Armadura14
+        armadura = new Armadura();
+        armadura.Codigo = 151;
+        armadura.Nombre = "Escudo";
+        armadura.Tipo = E_TipoObjeto.ESCUDO;
+        armadura.SetValor(10);
+        armadura.TipoValor = E_Monedas.PO;
+        armadura.SetCantidad(1);
+        armadura.SetValorCABase(2);
+        armadura.SetModificadorDestreza(false);
+        armadura.SetMaximoModificadorDestreza(0);
+        armadura.SetRequisitoFuerza(0);
+        armadura.SetDesventajaSigilo(false);
+        armadura.SetPeso(6);
+        objectos.Add(armadura);
+
+        #endregion Armadura14
+        #endregion ArmadurasCreadas
+        objetosFinales.Add(pathload, objectos);
+        return objetosFinales;
     }
-    private void LoadListPrueba()
+
+   
+    private void LoadListPrueba(Dictionary<string, List<object>> jsonPorGuardar)
     {
-        string pathload = "Assets/Resources/Jsons/RazasEsp.json";
+        string pathload = jsonPorGuardar.Keys.First();
              if (File.Exists(pathload))
         {
             // Read the entire file and save its contents.
@@ -1427,14 +2295,50 @@ public class PruebasRol : MonoBehaviour
             // Deserialize the JSON data 
             //  into a pattern matching the GameData class.
 
-            List<Raza> listRazas = JsonConvert.DeserializeObject<List<Raza>>(fileContents);
+            List<object> listObjects = JsonConvert.DeserializeObject<List<object>>(fileContents);
            
-            foreach(Raza r in listRazas)
+            foreach(object obj in listObjects)
             {
                 //Debug.Log(r.Nombre+":"+r.MejoraCaracteristicas.First().Key.ToString());
-                Debug.Log(r.ToString());
+                Debug.Log(obj.ToString());
             }
            
         }
     }
+
+    private void LoadListObjetos(Dictionary<string, List<Objeto>> jsonObjetosPorGuardar)
+    {
+        string pathload = jsonObjetosPorGuardar.Keys.First();
+        if (File.Exists(pathload)&&pathload=="meme")
+        {
+            // Read the entire file and save its contents.
+            string fileContents = File.ReadAllText(pathload);
+
+            // Deserialize the JSON data 
+            //  into a pattern matching the GameData class.
+
+            List<Objeto> listObjects = JsonConvert.DeserializeObject<List<Objeto>>(fileContents);
+
+            foreach (Objeto obj in listObjects)
+            {
+                //Debug.Log(r.Nombre+":"+r.MejoraCaracteristicas.First().Key.ToString());
+                Debug.Log(obj.ToString());
+            }
+
+        }
+        else
+        {
+            JsonSerializerSettings settings = new JsonSerializerSettings
+            {
+                Formatting = Formatting.Indented,
+                ContractResolver = new CamelCasePropertyNamesContractResolver()
+            };
+            settings.Converters.Add(new StringEnumConverter());
+            
+            string jsonString = JsonConvert.SerializeObject(jsonObjetosPorGuardar.Values.First(), settings);
+            Debug.Log("Json creado en " + pathload);
+            File.WriteAllText(pathload, jsonString);
+        }
+    }
+
 }

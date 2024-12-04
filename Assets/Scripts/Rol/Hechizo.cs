@@ -11,14 +11,17 @@ public class Hechizo
     E_EscuelasMagia escuelaMagica;
     string descripcion;
     int alcance;
-    E_Componentes[] requisitos;
+    bool requisitoVocal;
+    bool requisitoSomatico;
+    bool requisitoMaterial;
+   
     List<string> componentes;
     int tiempolanzamiento;
     E_TiempoDeLanzamientoConjuro tipoLanzamientoHechizo;
     int duracion;
     bool concentracion;
 
-    public Hechizo(E_Componentes[] requisitos)
+    public Hechizo()
     {
         this.codigo = 0;
         this.nombre = "";
@@ -31,28 +34,32 @@ public class Hechizo
         this.tipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
         this.duracion = 0;
         this.concentracion = false;
-        this.requisitos = new E_Componentes[3] ;
+        RequisitoVocal = false;
+        RequisitoSomatico = false;
+        RequisitoMaterial = false;
     }
 
-    public Hechizo(int codigo, string nombre, int nivel, E_EscuelasMagia escuelaMagica, string descripcion, int alcance, List<string> componentes, int tiempolanzamiento, E_TiempoDeLanzamientoConjuro tipoLanzamientoHechizo, int duracion, bool concentracion, E_Componentes[] requisitos)
+    public Hechizo(int codigo, string nombre, int nivel, E_EscuelasMagia escuelaMagica, string descripcion, int alcance, List<string> componentes, int tiempolanzamiento, E_TiempoDeLanzamientoConjuro tipoLanzamientoHechizo, int duracion, bool concentracion, E_Componentes[] requisitos, bool requisitoVocal, bool requisitoSomatico, bool requisitoMaterial)
     {
-        this.codigo = codigo;
-        this.nombre = nombre;
-        this.nivel = nivel;
-        this.escuelaMagica = escuelaMagica;
-        this.descripcion = descripcion;
-        this.alcance = alcance;
-        this.componentes = componentes;
-        this.tiempolanzamiento = tiempolanzamiento;
-        this.tipoLanzamientoHechizo = tipoLanzamientoHechizo;
-        this.duracion = duracion;
-        this.concentracion = concentracion;
-        this.requisitos = requisitos;
+        Codigo = codigo;
+        Nombre = nombre;
+        Nivel = nivel;
+        EscuelaMagica = escuelaMagica;
+        Descripcion = descripcion;
+        Alcance = alcance;
+        Componentes = componentes;
+        Tiempolanzamiento = tiempolanzamiento;
+        TipoLanzamientoHechizo = tipoLanzamientoHechizo;
+        Duracion = duracion;
+        Concentracion = concentracion;
+        RequisitoVocal = requisitoVocal;
+        RequisitoSomatico = requisitoSomatico;
+        RequisitoMaterial = requisitoMaterial;
     }
 
-    public int Codigo { get => codigo; set => codigo = value; }
+    public int Codigo { get => codigo; set => codigo = value>=0?value:0; }
     public string Nombre { get => nombre; set => nombre = value; }
-    public int Nivel { get => nivel; set => nivel = value; }
+    public int Nivel { get => nivel; set => SetNivel(value); }
     public E_EscuelasMagia EscuelaMagica { get => escuelaMagica; set => escuelaMagica = value; }
     public string Descripcion { get => descripcion; set => descripcion = value; }
     public int Alcance { get => alcance; set => alcance = value; }
@@ -61,7 +68,25 @@ public class Hechizo
     public E_TiempoDeLanzamientoConjuro TipoLanzamientoHechizo { get => tipoLanzamientoHechizo; set => tipoLanzamientoHechizo = value; }
     public int Duracion { get => duracion; set => duracion = value; }
     public bool Concentracion { get => concentracion; set => concentracion = value; }
-    public E_Componentes[] Requisitos { get =>requisitos; set => requisitos = value; }
+    public bool RequisitoVocal { get => requisitoVocal; set => requisitoVocal = value; }
+    public bool RequisitoSomatico { get => requisitoSomatico; set => requisitoSomatico = value; }
+    public bool RequisitoMaterial { get => requisitoMaterial; set => requisitoMaterial = value; }
+
+    private void SetNivel(int nivelNuevo)
+    {
+        if (nivelNuevo >= 0&&nivelNuevo<=9)
+        {
+            nivel = nivelNuevo;
+        }else if (nivelNuevo > 9)
+        {
+            nivel = 9;
+        }
+        else
+        {
+            nivel = 0;
+        }
+    }
+
 
     public override bool Equals(object obj)
     {
@@ -72,7 +97,10 @@ public class Hechizo
                escuelaMagica == hechizo.escuelaMagica &&
                descripcion == hechizo.descripcion &&
                alcance == hechizo.alcance &&
-               componentes ==hechizo.componentes &&
+               requisitoVocal == hechizo.requisitoVocal &&
+               requisitoSomatico == hechizo.requisitoSomatico &&
+               requisitoMaterial == hechizo.requisitoMaterial &&
+               EqualityComparer<List<string>>.Default.Equals(componentes, hechizo.componentes) &&
                tiempolanzamiento == hechizo.tiempolanzamiento &&
                tipoLanzamientoHechizo == hechizo.tipoLanzamientoHechizo &&
                duracion == hechizo.duracion &&
@@ -82,18 +110,20 @@ public class Hechizo
     public override int GetHashCode()
     {
         HashCode hash = new HashCode();
-        hash.Add(Codigo);
-        hash.Add(Nombre);
-        hash.Add(Nivel);
-        hash.Add(EscuelaMagica);
-        hash.Add(Descripcion);
-        hash.Add(Alcance);
-        hash.Add(Componentes);
-        hash.Add(Tiempolanzamiento);
-        hash.Add(TipoLanzamientoHechizo);
-        hash.Add(Duracion);
-        hash.Add(Concentracion);
-        hash.Add(Requisitos);
+        hash.Add(codigo);
+        hash.Add(nombre);
+        hash.Add(nivel);
+        hash.Add(escuelaMagica);
+        hash.Add(descripcion);
+        hash.Add(alcance);
+        hash.Add(requisitoVocal);
+        hash.Add(requisitoSomatico);
+        hash.Add(requisitoMaterial);
+        hash.Add(componentes);
+        hash.Add(tiempolanzamiento);
+        hash.Add(tipoLanzamientoHechizo);
+        hash.Add(duracion);
+        hash.Add(concentracion);
         return hash.ToHashCode();
     }
 
