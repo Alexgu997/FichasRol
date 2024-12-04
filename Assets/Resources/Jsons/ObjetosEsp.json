@@ -1,0 +1,1840 @@
+[
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 1,
+    "nombre": "Abaco",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 20.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 2,
+    "nombre": "Abrojos",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 20.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 3,
+    "nombre": "Aceite",
+    "tipoValor": "PP",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 20.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 4,
+    "nombre": "Aceite",
+    "tipoValor": "PP",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 5,
+    "nombre": "Acido",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 6,
+    "nombre": "Agua Bendita",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 7,
+    "nombre": "Aljaba",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 8,
+    "nombre": "Anillo de sellar",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 9,
+    "nombre": "Antitoxina",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 10,
+    "nombre": "Antorcha",
+    "tipoValor": "PC",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 11,
+    "nombre": "Ariete Portatil",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 12,
+    "nombre": "Balanza de mercader",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 13,
+    "nombre": "Barril",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 100.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 14,
+    "nombre": "Bolas de metal",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 15,
+    "nombre": "Bolsa",
+    "tipoValor": "PP",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 16,
+    "nombre": "Botella de cristal",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 17,
+    "nombre": "Cadena",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 18,
+    "nombre": "Campana",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 19,
+    "nombre": "Cristal",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 20,
+    "nombre": "Baston",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 21,
+    "nombre": "Orbe",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 22,
+    "nombre": "Vara",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 23,
+    "nombre": "Varita",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 24,
+    "nombre": "Baston de madera",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 25,
+    "nombre": "Rama de muerdago",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 26,
+    "nombre": "Tótem",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 27,
+    "nombre": "Varita de tejo",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 28,
+    "nombre": "Cantimplora",
+    "tipoValor": "PP",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 29,
+    "nombre": "Caña de pescar",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 30,
+    "nombre": "Catalejo",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 31,
+    "nombre": "Cerradura",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 32,
+    "nombre": "Cesta",
+    "tipoValor": "PP",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 33,
+    "nombre": "Cofre",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 34,
+    "nombre": "Cuerda de cañamo",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 35,
+    "nombre": "Cuerda de seda",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 36,
+    "nombre": "Cubo",
+    "tipoValor": "PC",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 37,
+    "nombre": "Escalera",
+    "tipoValor": "PP",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 38,
+    "nombre": "Espejito de acero",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 39,
+    "nombre": "Esposas",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 40,
+    "nombre": "Estuche para mapa o pergamino",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 41,
+    "nombre": "Estuche para virotes de ballesta",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 42,
+    "nombre": "Frasco o jarra",
+    "tipoValor": "PC",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 43,
+    "nombre": "Fuego de alquimista",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 44,
+    "nombre": "Garfio de escalada",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 45,
+    "nombre": "Jabon",
+    "tipoValor": "PC",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 46,
+    "nombre": "Jarro o cantaro",
+    "tipoValor": "PC",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 47,
+    "nombre": "Lacre",
+    "tipoValor": "PP",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 48,
+    "nombre": "Lampara",
+    "tipoValor": "PP",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 49,
+    "nombre": "Libro",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 50,
+    "nombre": "Libro de conjuros",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 51,
+    "nombre": "Lintera de ojo de buey",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 52,
+    "nombre": "Lintera sorda",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 53,
+    "nombre": "Lupa",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 54,
+    "nombre": "Manta",
+    "tipoValor": "PP",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 55,
+    "nombre": "Martillo",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 56,
+    "nombre": "Mazo",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 57,
+    "nombre": "Mochila",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 20.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 58,
+    "nombre": "Balas de honda",
+    "tipoValor": "PC",
+    "tipo": "Municion"
+  },
+  {
+    "peso": 50.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 59,
+    "nombre": "Dardos de cerbatana",
+    "tipoValor": "PO",
+    "tipo": "Municion"
+  },
+  {
+    "peso": 20.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 60,
+    "nombre": "Flechas",
+    "tipoValor": "PO",
+    "tipo": "Municion"
+  },
+  {
+    "peso": 20.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 61,
+    "nombre": "Virotes de ballesta",
+    "tipoValor": "PO",
+    "tipo": "Municion"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 62,
+    "nombre": "Olla de hierro",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 63,
+    "nombre": "Pala",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 64,
+    "nombre": "Palanca",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 65,
+    "nombre": "Papel",
+    "tipoValor": "PP",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 66,
+    "nombre": "Perfume",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 67,
+    "nombre": "Pergamino",
+    "tipoValor": "PP",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 68,
+    "nombre": "Petate",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 69,
+    "nombre": "Pico de minero",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 70,
+    "nombre": "Piedra de afilar",
+    "tipoValor": "PC",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 10.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 71,
+    "nombre": "Pinchos de hierro",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 72,
+    "nombre": "Piton",
+    "tipoValor": "PC",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 73,
+    "nombre": "Pluma",
+    "tipoValor": "PC",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 74,
+    "nombre": "Pocion de curacion",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 75,
+    "nombre": "Polipasto",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 76,
+    "nombre": "Racion",
+    "tipoValor": "PP",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 77,
+    "nombre": "Reloj",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 78,
+    "nombre": "Ropas comunes",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 79,
+    "nombre": "Ropas de calidad",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 80,
+    "nombre": "Ropas de viaje",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 81,
+    "nombre": "Ropas, disfraz",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 82,
+    "nombre": "Saco",
+    "tipoValor": "PC",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 83,
+    "nombre": "Saquito de componentes",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 84,
+    "nombre": "Saquito de componentes",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 85,
+    "nombre": "Silbato de supervivencia",
+    "tipoValor": "PC",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 86,
+    "nombre": "Amuleto",
+    "tipoValor": "PO",
+    "tipo": "Simbolos_Sagrados"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 87,
+    "nombre": "Emblema",
+    "tipoValor": "PO",
+    "tipo": "Simbolos_Sagrados"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 88,
+    "nombre": "Relicario",
+    "tipoValor": "PO",
+    "tipo": "Simbolos_Sagrados"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 89,
+    "nombre": "Tienda para dos personas",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 90,
+    "nombre": "Tinta. botella de 1 onza",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 91,
+    "nombre": "Tiza (1 trozo)",
+    "tipoValor": "PC",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 92,
+    "nombre": "Trampa para cazar",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 93,
+    "nombre": "Tunica",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 94,
+    "nombre": "Utensilios de cocina",
+    "tipoValor": "PP",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 95,
+    "nombre": "Utiles de escalada",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 96,
+    "nombre": "Utiles de sanador",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 97,
+    "nombre": "Vara (10)",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 98,
+    "nombre": "Vela",
+    "tipoValor": "PC",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 99,
+    "nombre": "Veneno basico (vial)",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 100,
+    "nombre": "Vial",
+    "tipoValor": "PO",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 101,
+    "nombre": "Yesquero",
+    "tipoValor": "PP",
+    "tipo": "Objeto_Mundano"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 1,
+    "tipoDadoDaño": "D6",
+    "propiedades": [
+      "CONTUNDENTE",
+      "VERSATIL"
+    ],
+    "tipoDadoSegundoDaño": "D8",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 102,
+    "nombre": "Baston",
+    "tipoValor": "PP",
+    "tipo": "ARMA_SIMPLE"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D4",
+    "propiedades": [
+      "CORTANTE",
+      "ARROJADIZA",
+      "LIGERA",
+      "SUTIL"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 103,
+    "nombre": "Daga",
+    "tipoValor": "PO",
+    "tipo": "ARMA_SIMPLE"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D4",
+    "propiedades": [
+      "CONTUNDENTE",
+      "LIGERA"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 104,
+    "nombre": "Garrote",
+    "tipoValor": "PP",
+    "tipo": "ARMA_SIMPLE"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D8",
+    "propiedades": [
+      "CONTUNDENTE",
+      "A_DOS_MANOS"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 105,
+    "nombre": "Garrote Grande",
+    "tipoValor": "PP",
+    "tipo": "ARMA_SIMPLE"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D6",
+    "propiedades": [
+      "CORTANTE",
+      "ARROJADIZA",
+      "ALCANCE",
+      "LIGERA"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 20,
+    "alcanceMaximo": 60,
+    "codigo": 106,
+    "nombre": "Hacha de mano",
+    "tipoValor": "PO",
+    "tipo": "ARMA_SIMPLE"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D4",
+    "propiedades": [
+      "CORTANTE",
+      "LIGERA"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 107,
+    "nombre": "Hoz",
+    "tipoValor": "PO",
+    "tipo": "ARMA_SIMPLE"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D6",
+    "propiedades": [
+      "PERFORANTE",
+      "ARROJADIZA",
+      "ALCANCE"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 30,
+    "alcanceMaximo": 120,
+    "codigo": 108,
+    "nombre": "Jabalina",
+    "tipoValor": "PP",
+    "tipo": "ARMA_SIMPLE"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 1,
+    "tipoDadoDaño": "D6",
+    "propiedades": [
+      "PERFORANTE",
+      "ARROJADIZA",
+      "ALCANCE",
+      "VERSATIL"
+    ],
+    "tipoDadoSegundoDaño": "D8",
+    "alcanceMinimo": 20,
+    "alcanceMaximo": 60,
+    "codigo": 109,
+    "nombre": "Lanza",
+    "tipoValor": "PO",
+    "tipo": "ARMA_SIMPLE"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D4",
+    "propiedades": [
+      "CONTUNDENTE",
+      "ARROJADIZA",
+      "ALCANCE",
+      "LIGERA"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 20,
+    "alcanceMaximo": 60,
+    "codigo": 110,
+    "nombre": "Martillo ligero",
+    "tipoValor": "PO",
+    "tipo": "ARMA_SIMPLE"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D6",
+    "propiedades": [
+      "CONTUNDENTE"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 111,
+    "nombre": "Maza",
+    "tipoValor": "PO",
+    "tipo": "ARMA_SIMPLE"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D6",
+    "propiedades": [
+      "PERFORANTE",
+      "MUNICION",
+      "A_DOS_MANOS",
+      "ALCANCE"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 80,
+    "alcanceMaximo": 320,
+    "codigo": 112,
+    "nombre": "Arco corto",
+    "tipoValor": "PO",
+    "tipo": "ARMA_A_DISTANCIA_SIMPLE"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D8",
+    "propiedades": [
+      "PERFORANTE",
+      "MUNICION",
+      "A_DOS_MANOS",
+      "ALCANCE",
+      "RECARGA"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 80,
+    "alcanceMaximo": 320,
+    "codigo": 113,
+    "nombre": "Ballesta ligera",
+    "tipoValor": "PO",
+    "tipo": "ARMA_A_DISTANCIA_SIMPLE"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D4",
+    "propiedades": [
+      "PERFORANTE",
+      "SUTIL",
+      "ARROJADIZA",
+      "ALCANCE"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 20,
+    "alcanceMaximo": 60,
+    "codigo": 114,
+    "nombre": "Dardo",
+    "tipoValor": "PC",
+    "tipo": "ARMA_A_DISTANCIA_SIMPLE"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D4",
+    "propiedades": [
+      "CONTUNDENTE",
+      "SUTIL",
+      "MUNICION",
+      "ALCANCE"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 20,
+    "alcanceMaximo": 60,
+    "codigo": 115,
+    "nombre": "Honda",
+    "tipoValor": "PP",
+    "tipo": "ARMA_A_DISTANCIA_SIMPLE"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D10",
+    "propiedades": [
+      "CORTANTE",
+      "A_DOS_MANOS",
+      "GRAN_ALCANCE",
+      "PESADA"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 116,
+    "nombre": "Alabarda",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D6",
+    "propiedades": [
+      "CORTANTE",
+      "LIGERA",
+      "SUTIL"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 117,
+    "nombre": "Cimitarra",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D6",
+    "propiedades": [
+      "PERFORANTE",
+      "LIGERA",
+      "SUTIL"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 118,
+    "nombre": "Espada corta",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 1,
+    "tipoDadoDaño": "D8",
+    "propiedades": [
+      "CORTANTE",
+      "VERSATIL"
+    ],
+    "tipoDadoSegundoDaño": "D10",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 119,
+    "nombre": "Espada Larga",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 2,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D8",
+    "propiedades": [
+      "CORTANTE",
+      "A_DOS_MANOS",
+      "PESADA"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 120,
+    "nombre": "Espadon",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D8",
+    "propiedades": [
+      "PERFORANTE",
+      "SUTIL"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 121,
+    "nombre": "Estoque",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D8",
+    "propiedades": [
+      "CONTUNDENTE"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 122,
+    "nombre": "Flagelo",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D10",
+    "propiedades": [
+      "CORTANTE",
+      "A_DOS_MANOS",
+      "GRAN_ALCANCE",
+      "PESADA"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 123,
+    "nombre": "Guja",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D12",
+    "propiedades": [
+      "CORTANTE",
+      "A_DOS_MANOS",
+      "GRAN_ALCANCE",
+      "PESADA"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 124,
+    "nombre": "Hacha a dos manos",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 1,
+    "tipoDadoDaño": "D8",
+    "propiedades": [
+      "CORTANTE",
+      "VERSATIL"
+    ],
+    "tipoDadoSegundoDaño": "D10",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 125,
+    "nombre": "Hacha de guerra",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D12",
+    "propiedades": [
+      "PERFORANTE",
+      "GRAN_ALCANCE",
+      "ESPECIAL"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 126,
+    "nombre": "Lanza de caballeria",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D4",
+    "propiedades": [
+      "CORTANTE",
+      "GRAN_ALCANCE",
+      "SUTIL"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 127,
+    "nombre": "Latigo",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D8",
+    "propiedades": [
+      "PERFORANTE"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 128,
+    "nombre": "Lucero del alba",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 1,
+    "tipoDadoDaño": "D8",
+    "propiedades": [
+      "CONTUNDENTE",
+      "VERSATIL"
+    ],
+    "tipoDadoSegundoDaño": "D10",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 129,
+    "nombre": "Martillo de guerra",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 2,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D6",
+    "propiedades": [
+      "CONTUNDENTE",
+      "A_DOS_MANOS",
+      "PESADA"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 130,
+    "nombre": "Maza a dos manos",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D10",
+    "propiedades": [
+      "PERFORANTE",
+      "A_DOS_MANOS",
+      "GRAN_ALCANCE",
+      "PESADA"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 131,
+    "nombre": "Pica",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D8",
+    "propiedades": [
+      "PERFORANTE"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 0,
+    "alcanceMaximo": 0,
+    "codigo": 132,
+    "nombre": "Pico de guerra",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 1,
+    "tipoDadoDaño": "D6",
+    "propiedades": [
+      "PERFORANTE",
+      "ARROJADIZA",
+      "ALCANCE",
+      "VERSATIL"
+    ],
+    "tipoDadoSegundoDaño": "D8",
+    "alcanceMinimo": 20,
+    "alcanceMaximo": 60,
+    "codigo": 133,
+    "nombre": "Tridente",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D8",
+    "propiedades": [
+      "PERFORANTE",
+      "A_DOS_MANOS",
+      "MUNICION",
+      "PESADA",
+      "ALCANCE"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 150,
+    "alcanceMaximo": 600,
+    "codigo": 134,
+    "nombre": "Arco largo",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D6",
+    "propiedades": [
+      "PERFORANTE",
+      "RECARGA",
+      "MUNICION",
+      "LIGERA",
+      "ALCANCE"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 30,
+    "alcanceMaximo": 120,
+    "codigo": 135,
+    "nombre": "Ballesta de mano",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D10",
+    "propiedades": [
+      "PERFORANTE",
+      "A_DOS_MANOS",
+      "RECARGA",
+      "MUNICION",
+      "PESADA",
+      "ALCANCE"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 100,
+    "alcanceMaximo": 400,
+    "codigo": 136,
+    "nombre": "Ballesta pesada",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D4",
+    "propiedades": [
+      "PERFORANTE",
+      "RECARGA",
+      "MUNICION",
+      "ALCANCE"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 25,
+    "alcanceMaximo": 100,
+    "codigo": 137,
+    "nombre": "Cerbatana",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "cantidadDaño": 1,
+    "cantidadSegundoDaño": 0,
+    "tipoDadoDaño": "D4",
+    "propiedades": [
+      "PERFORANTE",
+      "ARROJADIZA",
+      "ESPECIAL",
+      "ALCANCE"
+    ],
+    "tipoDadoSegundoDaño": "D4",
+    "alcanceMinimo": 5,
+    "alcanceMaximo": 15,
+    "codigo": 138,
+    "nombre": "Red",
+    "tipoValor": "PO",
+    "tipo": "ARMA_MARCIAL"
+  },
+  {
+    "valorCABase": 11,
+    "requisitoFuerza": 0,
+    "desventajaSigilo": true,
+    "modificadorDestreza": true,
+    "maximoModificadorDestreza": 0,
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 139,
+    "nombre": "Acolchada",
+    "tipoValor": "PO",
+    "tipo": "ARMADURA_LIGERA"
+  },
+  {
+    "valorCABase": 11,
+    "requisitoFuerza": 0,
+    "desventajaSigilo": false,
+    "modificadorDestreza": true,
+    "maximoModificadorDestreza": 0,
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 140,
+    "nombre": "Cuero",
+    "tipoValor": "PO",
+    "tipo": "ARMADURA_LIGERA"
+  },
+  {
+    "valorCABase": 12,
+    "requisitoFuerza": 0,
+    "desventajaSigilo": false,
+    "modificadorDestreza": true,
+    "maximoModificadorDestreza": 0,
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 141,
+    "nombre": "Cuero tachonado",
+    "tipoValor": "PO",
+    "tipo": "ARMADURA_LIGERA"
+  },
+  {
+    "valorCABase": 13,
+    "requisitoFuerza": 0,
+    "desventajaSigilo": false,
+    "modificadorDestreza": true,
+    "maximoModificadorDestreza": 2,
+    "peso": 1.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 142,
+    "nombre": "Camisa de malla",
+    "tipoValor": "PO",
+    "tipo": "ARMADURA_MEDIA"
+  },
+  {
+    "valorCABase": 14,
+    "requisitoFuerza": 0,
+    "desventajaSigilo": true,
+    "modificadorDestreza": true,
+    "maximoModificadorDestreza": 2,
+    "peso": 45.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 143,
+    "nombre": "Cota de escamas",
+    "tipoValor": "PO",
+    "tipo": "ARMADURA_MEDIA"
+  },
+  {
+    "valorCABase": 14,
+    "requisitoFuerza": 0,
+    "desventajaSigilo": false,
+    "modificadorDestreza": true,
+    "maximoModificadorDestreza": 2,
+    "peso": 20.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 144,
+    "nombre": "Coraza",
+    "tipoValor": "PO",
+    "tipo": "ARMADURA_MEDIA"
+  },
+  {
+    "valorCABase": 15,
+    "requisitoFuerza": 0,
+    "desventajaSigilo": true,
+    "modificadorDestreza": true,
+    "maximoModificadorDestreza": 2,
+    "peso": 40.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 145,
+    "nombre": "Media armadura",
+    "tipoValor": "PO",
+    "tipo": "ARMADURA_MEDIA"
+  },
+  {
+    "valorCABase": 12,
+    "requisitoFuerza": 0,
+    "desventajaSigilo": false,
+    "modificadorDestreza": true,
+    "maximoModificadorDestreza": 2,
+    "peso": 12.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 146,
+    "nombre": "Pieles",
+    "tipoValor": "PO",
+    "tipo": "ARMADURA_MEDIA"
+  },
+  {
+    "valorCABase": 17,
+    "requisitoFuerza": 0,
+    "desventajaSigilo": true,
+    "modificadorDestreza": false,
+    "maximoModificadorDestreza": 0,
+    "peso": 60.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 147,
+    "nombre": "Armadura de bandas",
+    "tipoValor": "PO",
+    "tipo": "ARMADURA_PESADA"
+  },
+  {
+    "valorCABase": 18,
+    "requisitoFuerza": 0,
+    "desventajaSigilo": true,
+    "modificadorDestreza": false,
+    "maximoModificadorDestreza": 0,
+    "peso": 65.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 148,
+    "nombre": "Armadura de placas",
+    "tipoValor": "PO",
+    "tipo": "ARMADURA_PESADA"
+  },
+  {
+    "valorCABase": 14,
+    "requisitoFuerza": 0,
+    "desventajaSigilo": true,
+    "modificadorDestreza": false,
+    "maximoModificadorDestreza": 0,
+    "peso": 40.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 149,
+    "nombre": "Cota guarnecida",
+    "tipoValor": "PO",
+    "tipo": "ARMADURA_PESADA"
+  },
+  {
+    "valorCABase": 16,
+    "requisitoFuerza": 0,
+    "desventajaSigilo": true,
+    "modificadorDestreza": false,
+    "maximoModificadorDestreza": 0,
+    "peso": 55.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 150,
+    "nombre": "Cota de malla",
+    "tipoValor": "PO",
+    "tipo": "ARMADURA_PESADA"
+  },
+  {
+    "valorCABase": 10,
+    "requisitoFuerza": 0,
+    "desventajaSigilo": false,
+    "modificadorDestreza": false,
+    "maximoModificadorDestreza": 0,
+    "peso": 6.0,
+    "cantValor": 0,
+    "cantidad": 0,
+    "codigo": 151,
+    "nombre": "Escudo",
+    "tipoValor": "PO",
+    "tipo": "ESCUDO"
+  }
+]
