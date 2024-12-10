@@ -156,6 +156,67 @@ public class PruebasRol : MonoBehaviour
         File.WriteAllText(saveFile,jsonString);
     }
 
+
+
+    private void LoadListPrueba(Dictionary<string, List<object>> jsonPorGuardar)
+    {
+        string pathload = jsonPorGuardar.Keys.First();
+        if (File.Exists(pathload))
+        {
+            // Read the entire file and save its contents.
+            string fileContents = File.ReadAllText(pathload);
+
+            // Deserialize the JSON data 
+            //  into a pattern matching the GameData class.
+
+            List<object> listObjects = JsonConvert.DeserializeObject<List<object>>(fileContents);
+
+            foreach (object obj in listObjects)
+            {
+                //Debug.Log(r.Nombre+":"+r.MejoraCaracteristicas.First().Key.ToString());
+                Debug.Log(obj.ToString());
+            }
+
+        }
+    }
+
+    private void LoadListObjetos(Dictionary<string, List<Objeto>> jsonObjetosPorGuardar)
+    {
+        string pathload = jsonObjetosPorGuardar.Keys.First();
+        if (File.Exists(pathload) && pathload == "meme")
+        {
+            // Read the entire file and save its contents.
+            string fileContents = File.ReadAllText(pathload);
+
+            // Deserialize the JSON data 
+            //  into a pattern matching the GameData class.
+
+            List<Objeto> listObjects = JsonConvert.DeserializeObject<List<Objeto>>(fileContents);
+
+            foreach (Objeto obj in listObjects)
+            {
+                //Debug.Log(r.Nombre+":"+r.MejoraCaracteristicas.First().Key.ToString());
+                Debug.Log(obj.ToString());
+            }
+
+        }
+        else
+        {
+            JsonSerializerSettings settings = new JsonSerializerSettings
+            {
+                Formatting = Formatting.Indented,
+                ContractResolver = new CamelCasePropertyNamesContractResolver()
+            };
+            settings.Converters.Add(new StringEnumConverter());
+
+            string jsonString = JsonConvert.SerializeObject(jsonObjetosPorGuardar.Values.First(), settings);
+            Debug.Log("Json creado en " + pathload);
+            File.WriteAllText(pathload, jsonString);
+        }
+    }
+
+    #region CargaDatos
+
     private Dictionary<string, List<Raza>> CargarRazas()
     {
         Dictionary<string,List<Raza>> razasFinales= new Dictionary<string, List<Raza>>();
@@ -2283,62 +2344,1493 @@ public class PruebasRol : MonoBehaviour
         return objetosFinales;
     }
 
-   
-    private void LoadListPrueba(Dictionary<string, List<object>> jsonPorGuardar)
+
+    private Dictionary<string,List<Hechizo>> CargarHechizos()
     {
-        string pathload = jsonPorGuardar.Keys.First();
-             if (File.Exists(pathload))
-        {
-            // Read the entire file and save its contents.
-            string fileContents = File.ReadAllText(pathload);
+        string pathload = "Assets/Resources/Jsons/HechizosEsp.json";
+        List<Hechizo>hechizos = new List<Hechizo>();
+        Dictionary<string, List<Hechizo>> hechizosFinales=new Dictionary<string, List<Hechizo>>();
+        Hechizo hechizo;
+        #region CrearHechizos
+        #region Trucos
+        #region CrearHechizo1
+        hechizo = new Hechizo();
+        hechizo.Codigo = 1;
+        hechizo.Nombre = "Agarre Electrizante";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 1;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico= true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Descripcion = "Un relámpago salta de tu mano para dar una descarga eléctrica a la criatura que intentas tocar. Haz un ataque de conjuro cuerpo a cuerpo contra el objetivo. Tienes ventaja en la tirada de ataquesi la criatura lleva armadura de metal.Si impactas,el objetivosufre ld8 dedañode relámpago y no podrá llevar a cabo reacciones hasta el comienzo de su próximo turno.A niveles superiores. El daño del conjuroaumenta en ld8\r\n cuandoalcanzas nivel 5 (2d8), nivel 11 (3d8)y nivel 17 (4d8).";
+        hechizo.ClasesAptas.Add(E_Clases.HECHICERO);
+        hechizo.ClasesAptas.Add(E_Clases.MAGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo1
+        #region CrearHechizo2
+        hechizo = new Hechizo();
+        hechizo.Codigo = 2;
+        hechizo.Nombre = "Amistad";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ENCANTAMIENTO;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = false;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Una pequeña camtodad de maquillaje aplicada sobre la cara al lanzador del conjuro");
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = "Hasta el final de la duración del conjuro tienes ventaja en todas las pruebas de Carisma relacionadascon una criatura de tu elección que nosea hostil hacia ti. Cuando el conjuro termina, el objetivose da cuenta de que has usado magia para manipular su actitud y se vuelve hostil hacia ti. Una criatura con tendencias violentas podría atacarte, mientrasque otra podría intentar vengarse de otra manera (bajo el criterio del DM), dependiendo de la índole de tu interacción con ella.";
+        hechizo.ClasesAptas.Add(E_Clases.BARDO);
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizo.ClasesAptas.Add(E_Clases.HECHICERO);
+        hechizo.ClasesAptas.Add(E_Clases.MAGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo2
+        #region CrearHechizo3
+        hechizo = new Hechizo();
+        hechizo.Codigo = 3;
+        hechizo.Nombre = "Burla Dañina";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ENCANTAMIENTO;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 60;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = false;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Profieres una sarta de improperios entremezclados con sutiles encantamientos hacia una criatura que puedas ver dentro del alcance. Si el objetivo puede oírte (aunque no necesita entenderte), debe tener éxito en una tirada de salvación de Sabiduría o recibirá ld4 de daño psíquico y sufrirá desventaja en la siguiente tirada de ataque que realice antes del final de su próximo turno. A niveles superiores.El daño del conjuro aumenta en ld4 cuando alcanzas nivel 5 (2d4), nivel 11 (3d4) y nivel 17 (4d4).";
+        hechizo.ClasesAptas.Add(E_Clases.BARDO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo3
+        #region CrearHechizo4
+        hechizo = new Hechizo();
+        hechizo.Codigo = 4;
+        hechizo.Nombre = "Crear Llama";
+        hechizo.EscuelaMagica = E_EscuelasMagia.CONJURACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 10;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Aparece en tu mano una llama parpadeante.Esta perma\r\nnece hastael final de la duración del conjuroy no te daña ni\r\n a ti ni a tu equipo. La llama emite luz brillante en un radio de\r\n 10 piesy luz tenue 10 pies másallá. El conjuro termina si lo\r\n lanzas de nuevo osi utilizas una acción para finalizarlo.\r\n También puedesatacar con la llama, pero esto termina\r\n el conjuro.Cuando lanzas este conjuro, o como acción en\r\n un turno posterior, puedes arrojar la llama a una criatura\r\n hasta a 30 piesde ti.Haz un ataque de conjuroa distancia.\r\n Si impactas, el objetivo recibe ld8de daño de fuego.\r\n El daño del conjuro aumenta en ld8cuando alcanzas\r\n nivel 5 (2d8), nivel 11 (3d8) y nivel 17 (4d8)";
+        hechizo.ClasesAptas.Add(E_Clases.DRUIDA);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo4
+        #region CrearHechizo5
+        hechizo = new Hechizo();
+        hechizo.Codigo = 5;
+        hechizo.Nombre = "Descarga de fuego";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 120;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Arrojas una mota de fuego a una criatura u objetodentro\r\n del alcance. Haz un ataque de conjuroa distancia contra\r\n el objetivo. Si impactas, el objetivo recibe Id10 de daño de\r\n fuego. Los objetos inflamables que se encuentren en el área\r\n que no lleve o vista nadie arderán.\r\n El daño del conjuro aumenta en 1d10 cuando alcanzas\r\n nivel 5 (2d10), nivel 11 (3dl0) y nivel 17 (4dl0).";
+        hechizo.ClasesAptas.Add(E_Clases.HECHICERO);
+        hechizo.ClasesAptas.Add(E_Clases.MAGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo5
+        #region CrearHechizo6
+        hechizo = new Hechizo();
+        hechizo.Codigo = 6;
+        hechizo.Nombre = "Descarga sobrenatural";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 120;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = " Lanzas un rayode energía chisporroteante hacia una cria\r\ntura de tu elección dentro del alcance. Haz un ataque de\r\n conjuro a distancia contra el objetivo. Si impactas, el obje\r\ntivo recibe Id10 de daño de fuerza.\r\n Aniveles superiores. Este conjuro crea dos rayos a nivel\r\n 5, tres rayos a nivel 11 y cuatro rayos a fifvel 17. Puedes\r\n dirigir los rayos al mismo o a distintos objetivos. Haz una\r\n tirada de ataque separada para cada rayo.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo6
+        #region CrearHechizo7
+        hechizo = new Hechizo();
+        hechizo.Codigo = 7;
+        hechizo.Nombre = "Guardia de cuchillas";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ABJURACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.ASALTO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Extiendes tu manoy trazas un sello de guarda en el aire.\r\n Hasta el final de tu próximo turno, tienes resistencia contra\r\n el daño contundente, perforante y cortante que provenga de\r\n ataques con armas.";
+        hechizo.ClasesAptas.Add(E_Clases.BARDO);
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizo.ClasesAptas.Add(E_Clases.HECHICERO);
+        hechizo.ClasesAptas.Add(E_Clases.MAGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo7
+        #region CrearHechizo8
+        hechizo = new Hechizo();
+        hechizo.Codigo = 8;
+        hechizo.Nombre = "Guia";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ADIVINACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = "Tocas a una criatura voluntaria. Una sola vez, antes de que\r\n termine el conjuro, el objetivo puede tirar ld4 y añadir el\r\n resultado a una prueba de característica de su elección.\r\n Puede tirar el dado antes o despuésde conocer el resultado\r\n de la prueba. Hacer esto termina el conjuro.\r\n";
+        hechizo.ClasesAptas.Add(E_Clases.CLERIGO);
+        hechizo.ClasesAptas.Add(E_Clases.DRUIDA);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo8
+        #region CrearHechizo9
+        hechizo = new Hechizo();
+        hechizo.Codigo = 9;
+        hechizo.Nombre = "Ilusion Menor";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ILUSIONISMO;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 30;
+        hechizo.RequisitoVocal = false;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("un poco de vellón");
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Creas un sonidoo una imagen de un objeto,situado dentro\r\n del alcance yque permanece hasta el final de la duración\r\n del conjuro .La ilusión también termina si lanzas el conjuro\r\n de nuevo osi utilizas una acción para finalizarlo.\r\n Si creas unsonido,su volumen puedeestar entre el de\r\n un susurro yel de un grito. Puedeser tu voz, la de otra\r\n criatura, el rugido de un león, un redoblar de tambores\r\n o cualquier otro sonido de tu elección. Podrá sonar en\r\n momentosconcretosocontinuamente hasta que termine el\r\n conjuro, lo que prefieras.\r\n Si creas la imagen de un objeto (como una silla, pisa\r\ndas embarradas o un pequeño cofre) no puede ser mayor\r\n que un cubode5 piesde lado. La imagen nopuede generar\r\n sonido, luz,olor o cualquier otro efecto sensorial. La inte\r\nracción física con la imagen revela que es una ilusión, ya\r\n que las cosas la atraviesan.\r\n Si una criatura utiliza su acción para examinar la imagen\r\n o el sonido, puede determinar que es una ilusión si tiene\r\n éxito en una prueba de Inteligencia (Investigación) cuya CD\r\n es tu salvación de conjuros.Si averigua que es una ilusión,\r\n su aspectoe vuelve tenue para esa criatura.\r\n";
+        hechizo.ClasesAptas.Add(E_Clases.BARDO);
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizo.ClasesAptas.Add(E_Clases.HECHICERO);
+        hechizo.ClasesAptas.Add(E_Clases.MAGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo9
+        #region CrearHechizo10
+        hechizo = new Hechizo();
+        hechizo.Codigo = 10;
+        hechizo.Nombre = "Impacto certero";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ADIVINACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 30;
+        hechizo.RequisitoVocal = false;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.ASALTO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = " Extiendes tu mano yseñalas con eldedo a unobjetivo\r\n dentro del alcance. Tu magia te da un momentáneo enten\r\ndimiento de las defensas del objetivo. En tu próximo turno,\r\n ganasventaja en tu primera tirada deataquecontra el obje\r\ntivo, suponiendo que este conjuro no haya terminado.";
+        hechizo.ClasesAptas.Add(E_Clases.BARDO);
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizo.ClasesAptas.Add(E_Clases.HECHICERO);
+        hechizo.ClasesAptas.Add(E_Clases.MAGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo10
+        #region CrearHechizo11
+        hechizo = new Hechizo();
+        hechizo.Codigo = 11;
+        hechizo.Nombre = "Latigo de espinas";
+        hechizo.EscuelaMagica = E_EscuelasMagia.TRANSMUTACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 30;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("El tallo de una planta con espinas");
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = " Creas un látigo largo, similar a una enredadera cubierta de\r\n espinas, que fustiga bajo tus órdenes a una criatura dentro\r\n del alcance. Haz un ataque de conjuro cuerpo a cuerpocon\r\ntra el objetivo. Si el ataque impacta, la criatura sufre ld6\r\n de daño perforante. Además, si el objetivo es de tamaño\r\n Grande o menor, tirasde él 10 pies hacia ti.\r\n Aniveles superiores. El daño del conjuro aumenta en\r\n ldó cuando alcanzas nivel 5(2d6), nivel 11 (3d6)y nivel 17\r\n (4d6).";
+        hechizo.ClasesAptas.Add(E_Clases.ARTIFICE);
+        hechizo.ClasesAptas.Add(E_Clases.DRUIDA);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo11
+        #region CrearHechizo12
+        hechizo = new Hechizo();
+        hechizo.Codigo = 12;
+        hechizo.Nombre = "Llama sagrada";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 60;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = "Un fulgor de llamas desciende sobre una criatura que pue\r\ndas ver dentro del alcance. El objetivo deberá tener éxito\r\n en una tirada de salvación de Destreza o sufrirá ld8de\r\n daño radiante. Además, el objetivo no podrá beneficiarse de\r\n cobertura para esta tirada de salvación.\r\n Aniveles superiores. El daño del conjuro aumenta en ld8\r\n cuando alcanzas nivel 5 (2d8), nivel 11 (3d8) y nivel 17 (4d8).";
+        hechizo.ClasesAptas.Add(E_Clases.CLERIGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo12
+        #region CrearHechizo13
+        hechizo = new Hechizo();
+        hechizo.Codigo = 13;
+        hechizo.Nombre = "Luces danzantes";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance =120;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Una pizca de fósforo");
+        hechizo.Componentes.Add("Un pedazo de olmo montano o un gusano luminiscente");
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = "Creas hasta cuatro luces con la intensidad de antorchas\r\n dentro del alcance. Puedes darles la apariencia de antor\r\nchas, linternas u orbes luminosos, y levitan hasta el final\r\n de la duración del conjuro.También puedescombinar las\r\n cuatro luces para formar una luz de aspecto vagamente\r\n humanoide y de tamaño Mediano. En ambos casos, cada\r\n luz proyecta luz tenue en un radio de 10 pies.\r\n Comoacción adicional puedes mover las luces\r\n hasta 60 pies a una nueva localización dentro del alcance.\r\n Cada luz debeestar a 20 pieso menosTieotra luz creada\r\n por este conjuro y se desvanecerá si sale del alcance\r\n del mismo.";
+        hechizo.ClasesAptas.Add(E_Clases.BARDO);
+        hechizo.ClasesAptas.Add(E_Clases.HECHICERO);
+        hechizo.ClasesAptas.Add(E_Clases.MAGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo13
+        #region CrearHechizo14
+        hechizo = new Hechizo();
+        hechizo.Codigo = 14;
+        hechizo.Nombre = "Luz";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance =0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = false;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Una luciernaga o musgo florescente");
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.HORA;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = " Tocas un objeto cuyotama ñosea menor o igual a 10 pies\r\n en todas las dimensiones. Hastaque elconjuro termine,\r\n el objeto emitirá luz brillante en un radiode 20 pies y luz\r\n tenue 20 pies más allá. La luzpuede tener el color que\r\n desees. Tapar completamente el objeto con un material\r\n opaco bloquea la luz. Elconjuro termina si lolanzas de\r\n nuevoo si utilizas una acción para finalizarlo.\r\n Si eligescomo objetivo un objeto portado por una cria\r\ntura hostil,esta última debe tener éxito en una tirada de\r\n salvació n de Destreza para evitar el conjuro";
+        hechizo.ClasesAptas.Add(E_Clases.BARDO);
+        hechizo.ClasesAptas.Add(E_Clases.CLERIGO);
+        hechizo.ClasesAptas.Add(E_Clases.HECHICERO);
+        hechizo.ClasesAptas.Add(E_Clases.MAGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo14
+        #region CrearHechizo15
+        hechizo = new Hechizo();
+        hechizo.Codigo = 15;
+        hechizo.Nombre = "Mano de mago";
+        hechizo.EscuelaMagica = E_EscuelasMagia.CONJURACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 30;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Conjuras una manoespectral flotante en un punto de tu\r\n elección dentro del alcance. La manodurará hasta el final\r\n de la duración delconjuro o hastaque utilices una acción\r\n para finalizarlo. Además, la manodesaparecerá si en algún\r\n momento está a más de 30 pies de ti osi lanzaseste con\r\njuro de nuevo.\r\n »\r\n Puedes emplear tu acción para controlar la mano,\r\n haciendo que manipule un objeto,abra una puerta o reci\r\npiente que no esté cerrado con llave,retire oguarde un\r\n objeto en un recipiente abierto ovierta el contenido de un\r\n vial.Cada vez que controles la mano deesta forma puedes\r\n también moverla hasta 30 pies.\r\n La mano no puedeatacar,activar objetos mágicos o lle\r\nvar más de 10 libras de peso";
+        hechizo.ClasesAptas.Add(E_Clases.BARDO);
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizo.ClasesAptas.Add(E_Clases.HECHICERO);
+        hechizo.ClasesAptas.Add(E_Clases.MAGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo15
+        #region CrearHechizo16
+        hechizo = new Hechizo();
+        hechizo.Codigo = 16;
+        hechizo.Nombre = "Mensaje";
+        hechizo.EscuelaMagica = E_EscuelasMagia.TRANSMUTACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 120;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Un alambre de cobre corto");
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.ASALTO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Señalas con el dedo a una criatura dentro del alcance y\r\n susurras un mensaje. El objetivo (y soloél) escucha el men\r\nsaje y puede contestar en un susurroquesolo tú puedes oír.\r\n Puedes lanzar este conjuro a travésde objetossólidossi\r\n estásfamiliarizado con el objetivo ysabes quese encuen\r\ntra tras el obstáculo. Aunque no tiene que seguir una línea\r\n recta y puede viajar libremente torciendo\"esquinas o atrave\r\nsando aberturas, este conjurose ve bloqueado por elsilencio\r\n mágico, 1 pie de piedra, 1 pulgada de cualquier metal común,\r\n una lámina fina de plomo o3 piesde madera otierra.";
+        hechizo.ClasesAptas.Add(E_Clases.BARDO);
+        hechizo.ClasesAptas.Add(E_Clases.HECHICERO);
+        hechizo.ClasesAptas.Add(E_Clases.MAGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo16
+        #region CrearHechizo17
+        hechizo = new Hechizo();
+        hechizo.Codigo = 17;
+        hechizo.Nombre = "Prestidigitacion";
+        hechizo.EscuelaMagica = E_EscuelasMagia.TRANSMUTACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 10;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.HORA;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Este conjuro es un truco mágico menor con el que practi\r\ncan los lanzadores de conjuros inexpertos. Produces uno\r\n de los siguientes efectos mágicos, dentro del alcance:\r\n • Creas un efecto sensorial instantáneo e inofensivo, como\r\n una lluvia de chispas, una sutil ráfaga de viento, leves\r\n notas musicales o un olor extraño.\r\n • Apagas o enciendes de forma instantánea una vela,antor\r\ncha u hoguera pequeña.\r\n • Limpias o ensucias de forma instantánea un objeto de\r\n hasta 1 pie cúbico.\r\n • Enfrías, calientas o das sabor a un material inerte de\r\n hasta 1 pie cúbicodurante 1 hora.\r\n • Hacesaparecer una mancha de color, una pequeña\r\n marcao unsímboloen un objetoosuperficie durante 1 hora.\r\n ...turno...\r\n • Creas un abalorio no mágico o una imagen ilusoria que\r\n cabe en tu mano y que dura hasta el final de tu próximo\r\n _\r\n .\r\n .\r\n . . \r\n_ . ...\r\n Si lanzas este conjuro varias veces, puedes mantener\r\n hasta tres de susefectos no instantáneos activos a la vez.\r\n Para finalizar cualquiera de ellos deberás emplear una\r\n acción.";
+        hechizo.ClasesAptas.Add(E_Clases.BARDO);
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizo.ClasesAptas.Add(E_Clases.HECHICERO);
+        hechizo.ClasesAptas.Add(E_Clases.MAGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo17
+        #region CrearHechizo18
+        hechizo = new Hechizo();
+        hechizo.Codigo = 18;
+        hechizo.Nombre = "Rayo de escarcha";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 60;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = " Lanzas un rayo helado de luz blanquiazul hacia una cria\r\ntura de tu elección que se encuentre dentro del alcance.\r\n Haz un ataque deconjuroa distancia contra el objetivo.Si\r\n impactas, el objetivo sufre ld8 de daño de frío y su velo\r\ncidad queda reducida en 10 pies hasta el comienzo de tu\r\n próximo turno.\r\n Aniveles superiores. El daño del conjuro aumenta\r\n en ld8 cuando alcanzas nivel 5 (2d8), nivel 11 (3d8) y\r\n nivel 17 (4d8).";
+        hechizo.ClasesAptas.Add(E_Clases.HECHICERO);
+        hechizo.ClasesAptas.Add(E_Clases.MAGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo18
+        #region CrearHechizo19
+        hechizo = new Hechizo();
+        hechizo.Codigo = 19;
+        hechizo.Nombre = "Reparar";
+        hechizo.EscuelaMagica = E_EscuelasMagia.TRANSMUTACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Dos imanes naturales");
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Este conjuro repara una sola grieta o ruptura en un objeto\r\n que toques, como un eslabón roto en una cadena, lasdos\r\n mitades de una llave partida, una capa rasgada o una fuga\r\n en una bota de vino. Mientras la grieta o desgarrón nosea\r\n de másde1 pie en alguna dimensión, lo arreglassin dejar\r\n rastrodel daño.\r\n Este conjuro puede reparar el componentefísico de un\r\n objeto mágico o de un autómata, pero no puede restaurar\r\n su magia.";
+        hechizo.ClasesAptas.Add(E_Clases.BARDO);
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizo.ClasesAptas.Add(E_Clases.DRUIDA);
+        hechizo.ClasesAptas.Add(E_Clases.HECHICERO);
+        hechizo.ClasesAptas.Add(E_Clases.MAGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo19
+        #region CrearHechizo20
+        hechizo = new Hechizo();
+        hechizo.Codigo = 20;
+        hechizo.Nombre = "Resistencia";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ABJURACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Una capa en miniatura");
+        hechizo.Duracion =1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = "Tocas a una criatura voluntaria. Una sola vez, antes de que\r\n termine el conjuro, el objetivo puede tirar ld4y añadir el\r\n resultado a una tirada desalvación de su elección.Puede\r\n tirar el dado antes o después de conocer el resultado de la\r\n tirada. Hacer esto da por finalizado el conjuro.";
+        hechizo.ClasesAptas.Add(E_Clases.CLERIGO);
+        hechizo.ClasesAptas.Add(E_Clases.DRUIDA);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo20
+        #region CrearHechizo21
+        hechizo = new Hechizo();
+        hechizo.Codigo = 21;
+        hechizo.Nombre = "Rociada venenosa";
+        hechizo.EscuelaMagica = E_EscuelasMagia.CONJURACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 10;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion =false;
+        hechizo.Descripcion = "Extiendes tu mano hacia una criatura que puedasver dentro\r\n del alcancey la fumigascon una nubede gas venenosoquesale\r\n de la palma de tu mano.Deberá teneréxitoen una tirada de sal\r\nvación deConstitución osufrirá Id12 de dañodeveneno.\r\n El daño del conjuro aumenta en 1d12 cuandoalcanzas\r\n nivel 5(2d12), nivel 11 (3dl2)y nivel 17 (4dl2).";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizo.ClasesAptas.Add(E_Clases.DRUIDA);
+        hechizo.ClasesAptas.Add(E_Clases.HECHICERO);
+        hechizo.ClasesAptas.Add(E_Clases.MAGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo21
+        #region CrearHechizo22
+        hechizo = new Hechizo();
+        hechizo.Codigo = 22;
+        hechizo.Nombre = "Saber Druidico";
+        hechizo.EscuelaMagica = E_EscuelasMagia.TRANSMUTACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 30;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Susurrando a los espíritus de la naturaleza, produces uno\r\n de los siguientes efectos mágicos:\r\n • Creasun efecto sensorial diminuto e inofensivo que pre\r\ndice cómoserá el tiempoatmosféricoen tulocalización\r\n en las próximas 24 horas.El efecto podría manifestarse\r\n como un orbe dorado para un día despejado, una nube\r\n indicando lluvia, copos de nieve para nieve, etc. Este\r\n efecto dura 1 asalto.\r\n • Hacesque unaflor florezca inmediatamente,que una vaina\r\n de semillasse abra o queel brotede una hoja germine.\r\n • Creas un efectosensorial instantáneo e inofensivo, como\r\n hojas cayendo, una ráfaga de viento, el sonido de un\r\n animal pequeño o un leve olor a mofeta. El efecto debe\r\n quedar confinado a un cubo de 5 pies.\r\n • Apagaso enciendes de forma instantánea una vela, antor\r\ncha u hoguera pequeña.\r\n";
+        hechizo.ClasesAptas.Add(E_Clases.DRUIDA);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo22
+        #region CrearHechizo23
+        hechizo = new Hechizo();
+        hechizo.Codigo = 23;
+        hechizo.Nombre = "Salpicadura acida";
+        hechizo.EscuelaMagica = E_EscuelasMagia.CONJURACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 60;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = " Lanzas una burbuja de ácido. Elige una criatura dentro del\r\n alcance o dos criaturas dentro del alcanceseparadas 5 pies\r\n o menos la una de la otra. Cada objetivo deberá tener éxito\r\n en una tirada de salvación de Destreza o sufrirá ldó de\r\n dañodeácido.\r\n El daño del conjuroaumenta en ldócuandoalcanzas\r\n nivel 5 (2dó), nivel 11 (3dó) y nivel 17 (4dó).";
+        hechizo.ClasesAptas.Add(E_Clases.HECHICERO);
+        hechizo.ClasesAptas.Add(E_Clases.MAGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo23
+        #region CrearHechizo24
+        hechizo = new Hechizo();
+        hechizo.Codigo = 24;
+        hechizo.Nombre = "Shillelagh";
+        hechizo.EscuelaMagica = E_EscuelasMagia.TRANSMUTACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION_ADICIONAL;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("muerdago");
+        hechizo.Componentes.Add("una hoja de trébol");
+        hechizo.Componentes.Add("un garrote o bastón");
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "La madera de un bastón o garrote que empuñas queda\r\n imbuida con el poder de la naturaleza. Hasta el final de\r\n la duración del conjuro puedes usar tu aptitud mágica\r\n en vez de tu Fuerza para las tiradas de ataque y daño\r\n al utilizar esta arma, y su dado de daño pasa a ser ld8.\r\n Además, el arma se convierte en mágica si no lo era\r\n ya. El conjuro termina si lo lanzas de nuevo o si sueltas\r\n el arma";
+        hechizo.ClasesAptas.Add(E_Clases.DRUIDA);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo24
+        #region CrearHechizo25
+        hechizo = new Hechizo();
+        hechizo.Codigo = 25;
+        hechizo.Nombre = "Taumaturgia";
+        hechizo.EscuelaMagica = E_EscuelasMagia.TRANSMUTACION;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 30;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = false;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Manifiestas un pequeño milagro oseñal de poder sobre\r\nnatural dentro del alcance. Produces uno de lossiguientes\r\n efectos mágicos:\r\n • Tu voz resuena hasta tres veces más fuerte de lo normal\r\n durante 1 minuto.\r\n • Haces que una llama titile, cambie la intensidad de su\r\n brillo o modifique su color durante 1 minuto.\r\n • Hacesque la tierra tiemble inofensivamente durante\r\n 1 minuto.\r\n • Creas un sonidoinstantáneo, que tiene como origen un\r\n punto de tu elección dentro del alcance. Por ejemplo, el\r\n retumbar de un trueno, el graznido de un cuervo o unos\r\n susurros de mal agüero.\r\n • Hacesque una puerta o ventana que noesté cerrada con\r\n llave se abra o cierre de golpe.\r\n • Cambiasel aspecto de tus ojosdurante 1 minuto.\r\n Si lanzas este conjuro varias veces, puedes mantener\r\n hasta tres de sus efectos no instantáneos activos a la\r\n vez. Para finalizar cualquiera de ellos deberás emplear\r\n una acción.";
+        hechizo.ClasesAptas.Add(E_Clases.CLERIGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo25
+        #region CrearHechizo26
+        hechizo = new Hechizo();
+        hechizo.Codigo = 26;
+        hechizo.Nombre = "Toque helado";
+        hechizo.EscuelaMagica = E_EscuelasMagia.NIGROMANCIA;
+        hechizo.Nivel = 0;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 120;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.ASALTO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Creas una mano fantasmagórica en el espacio de una\r\n criatura dentro del alcance. Haz un ataque de conjuro\r\n a distancia contra la criatura para agredirla con un frío\r\n sepulcral.Si impactas, el objetivo sufre ld8 de daño\r\n necrótico y no podrá recuperar puntos de golpe hasta el\r\n comienzo de tu próximo turno. Hasta ese momento, la\r\n manose aferra al objetivo.\r\n Si, además,el objetivo impactado es un muerto viviente,\r\n tendrá desventaja en sus tiradas de ataque contra ti hasta el\r\n final de tu próximo turno.\r\n Aniveles superiores.El daño del conjuro aumenta en ld8\r\n cuando alcanzas nivel 5(2d8), nivel 11(3d8) y nivel 17 (4d8).";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizo.ClasesAptas.Add(E_Clases.HECHICERO);
+        hechizo.ClasesAptas.Add(E_Clases.MAGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo26
+        #endregion Trucos
+        #region Nivel1
+        #region CrearHechizo27
+        hechizo = new Hechizo();
+        hechizo.Codigo = 27;
+        hechizo.Nombre = "Alarma";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ABJURACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Alcance = 30;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Una pequeña campana");
+        hechizo.Componentes.Add("Un hilo de plata fina");
+        hechizo.Duracion = 8;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.HORA;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = " Preparas una alarma contra intrusos. Elige una puerta,\r\n ventana o cualquier otra área dentro del alcance cuyo\r\n volumen sea menoro igual que un cubode 20 pies de\r\n lado. Una alarma te avisará siempre que una criatura,\r\n Diminuta o de tamañosuperior, toque oentre en la zona\r\n vigilada antes del final del conjuro. Al lanzarlo puedes ele\r\ngir que ciertas criaturas no activarán la alarma,que puede\r\n ser mental osonora.\r\n Unaalarma mental te alerta con un sonidodentrode tu\r\n mente si estás a 1 milla de la zona vigilada.Si estás dor\r\nmido, te despertará.\r\n Una alarma sonora produce un sonido decampanilla\r\n durante 10 segundos audible a 60 pies de distancia.";
+        hechizo.ClasesAptas.Add(E_Clases.EXPLORADOR);
+        hechizo.ClasesAptas.Add(E_Clases.MAGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo27
+        #region CrearHechizo28
+        hechizo = new Hechizo();
+        hechizo.Codigo = 28;
+        hechizo.Nombre = "Armadura de mago";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ABJURACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Una taza de agua");
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.HORA;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = " Una fuerza mágica protectora te rodea ,manifestándose como unaescarcha espectral quete cubre por completo,\r\n incluido a tu equipo .Ganas 5puntos de golpetemporales\r\n hasta el final de la duració ndel conjuro. Si unacriatura te\r\n impacta con unataque cuerpo acuerpo mientras conservas\r\n estos puntos ,esta sufre 5 de da ño de frío.\r\n Anivelessuperiores .Cuandolanzas esteconjuro uti\r\nlizando unespacio deconjuro de nivel 2o más,tanto los\r\n puntos degolpe temporales comoel daño de frío aumentan\r\n en5 por cada nivel porencima de1que tenga elespacio\r\n que hayas empleado";
+        hechizo.ClasesAptas.Add(E_Clases.HECHICERO);
+        hechizo.ClasesAptas.Add(E_Clases.MAGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo28
+        #region CrearHechizo29
+        hechizo = new Hechizo();
+        hechizo.Codigo = 29;
+        hechizo.Nombre = "Bendicion";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ENCANTAMIENTO;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 30;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Unas gotas de agua bendita");
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = "Bendices hasta tres criaturas de tu elección dentro del\r\n alcance. Hasta el final de la duración del conjuro, cuando\r\n uno de los objetivos haga una tirada de ataque o una\r\n tirada de salvación, puede tirar ld4 y añadir el resultado\r\n a esa tirada.\r\n Aniveles superiores. Cuando lanzas este conjuro utili\r\nzando un espacio deconjuro de nivel 2 o más, puedeselegir\r\n como objetivo-a una criatura adicional ^or cada nivel por\r\n encima de 1 que tenga el espacio que hayas empleado.";
+        hechizo.ClasesAptas.Add(E_Clases.PALADIN);
+        hechizo.ClasesAptas.Add(E_Clases.CLERIGO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo29
+        #region CrearHechizo30
+        hechizo = new Hechizo();
+        hechizo.Codigo = 30;
+        hechizo.Nombre = "Brazos de Hadar";
+        hechizo.EscuelaMagica = E_EscuelasMagia.CONJURACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 10;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Invocas el poder de Hadar, el Hambre Tenebrosa. Zarci\r\nllos de energía oscura surgen de ti y golpean a todas las\r\n criaturas a 10 pies o menos de tu posición. Cada criatura\r\n en el área debe hacer una tirada de salvación de Fuerza.\r\n Si falla, sufrirá 2d6 de daño necrótico y no podrá llevar a\r\n cabo reacciones hasta el comienzo de su próximo turno.\r\n Si supera la tirada, recibirá la mitad de daño, pero no\r\n sufrirá ningún otro efecto.\r\n Aniveles superiores.Cuando lanzaseste conjuro uti\r\nlizando un espacio de conjuro de nivel 2 o más, el daño\r\n aumenta en ldó por cada nivel por encima de 1que tenga\r\n el espacio que hayasempleado.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo30
+        #region CrearHechizo31
+        hechizo = new Hechizo();
+        hechizo.Codigo = 31;
+        hechizo.Nombre = "Bruenas bayas";
+        hechizo.EscuelaMagica = E_EscuelasMagia.TRANSMUTACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("un ramito de múerdago");
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Aparecen en tu mano un máximo de diez bayas infundidas\r\n con magia hasta el final de la duración del conjuro. Una\r\n criatura puede utilizar su acción para comerse una baya.\r\n Si hace esto recuperará 1 punto de golpe y tendrá sustento\r\n para todo el día.\r\n Las bayas pierden su poder si noson consumidasdentro\r\n de las 24 horassiguientes al lanzamiento del conjuro.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo31
+        #region CrearHechizo32
+        hechizo = new Hechizo();
+        hechizo.Codigo = 32;
+        hechizo.Nombre = "Caida pluma";
+        hechizo.EscuelaMagica = E_EscuelasMagia.TRANSMUTACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.REACCION;
+        hechizo.Alcance = 60;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = false;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Una pluma pequeña o un poco de plumón");
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Elige un máximo de cinco criaturas dentro del alcance que\r\n estén cayendo. La velocidad de caída de cada objetivo se\r\n reduce a 60 pies por asalto hasta que el conjuro termine. Si\r\n alguna criatura llega al suelo antes de que esto suceda, no\r\n recibe daño por caída, sino que puede caer de pie y el con\r\njuro acaba para ese objetivo.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo32
+        #region CrearHechizo33
+        hechizo = new Hechizo();
+        hechizo.Codigo = 33;
+        hechizo.Nombre = "Castigo abrasador";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION_ADICIONAL;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = false;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = " La próxima vez que impactes a una criatura con unataque\r\n con armacuerpoa cuerpo antes del final de laduració ndel\r\n conjuro, tu armase calienta hasta el rojo vivoy elataque\r\n inflige ldó de da ño defuego adicional al objetivo, haciendo\r\n que comience a arder. Al iniciode cada uno desus turnos ,\r\n el objetivo debe realizar una tirada desalvaciónde Consti\r\ntució n.Si falla , recibe ldó de daño de fuego. Si tiene éxito\r\n en la tirada, elconjuro termina inmediatamente.Si el obje\r\ntivo o una criatura a 5pies deeste utiliza una acción para\r\n apagar las llamas, o si otro efectolas sofoca (como sumer\r\ngir al objetivoen agua) ,el conjuro termina.\r\n Anivelessuperiores. Cuandolanzaseste conjuro uti\r\nlizando un espacio deconjuro de nivel 2 o más ,el da ño\r\n adicional del ataque aumenta en ldó por cada nivel por\r\n encima de 1 delespacio.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo33
+        #region CrearHechizo34
+        hechizo = new Hechizo();
+        hechizo.Codigo = 34;
+        hechizo.Nombre = "Castigo atronador";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION_ADICIONAL;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = false;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = " La próxima vez que impactes a una criatura con un ata\r\nque con arma antes del final de la duración del conjuro, tu\r\n armasuena como un truenoaudiblea 300 piesde distan\r\ncia y el ataque inflige 2dó de daño de trueno adicionales al\r\n objetivo.Si el objetivo es una criatura, deberá superar una\r\n tirada de salvación de Fuerza oserá empujada 10 piesen\r\n dirección opuesta a ti yserá derribada.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo34
+        #region CrearHechizo35
+        hechizo = new Hechizo();
+        hechizo.Codigo = 35;
+        hechizo.Nombre = "Castigo furioso";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION_ADICIONAL;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = false;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = "La próxima vezque impactes a una criatura con un ataque\r\n conarma antes del final de la duración del conjuro, el ata\r\nque le infligirá ldó dedañopsíquico adicional. Además ,el\r\n objetivo debe tener éxito en una tirada de salvación de Sabi\r\nduría o quedará asustado por ti hasta el final de la duración\r\n del conjuro. Podrá utilizar su acción para hacer una prueba\r\n de Sabiduría con CDigual a tu salvaciónde conjuros para\r\n recuperar su bravura y terminar elconjuro.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo35
+        #region CrearHechizo36
+        hechizo = new Hechizo();
+        hechizo.Codigo = 36;
+        hechizo.Nombre = "Crear o destruir agua";
+        hechizo.EscuelaMagica = E_EscuelasMagia.TRANSMUTACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 30;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("una gota de agua si estas creandola o unas granos de arena si la estas destruyendo");
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = "Creas o destruyes agua.\r\n Crear agua.Creas hasta 10 galones de agua limpia en\r\n un recipiente dentro del alcance. Alternativamente, el agua\r\n llueve en un cubo de 30 piesde lado dentro del alcance,\r\n apagando cualquier llama expuesta dentro del área.\r\n Destruir agua. Destruyes hasta 10 galones de agua\r\n limpia de un recipiente dentro del alcance. Alternativa\r\nmente, deshaces la niebla en un cubo de 30 pies de lado\r\n dentro del alcance.\r\n A niveles superiores.Cuando lanzas este conjuro\r\n utilizando un espacio de conjuro de nivel 2 o más, por\r\n cada nivel por encima de 1 del espacio creas o destru\r\nyes 10 galones adicionales de agua o el lado del cubo\r\n aumenta en 5 pies.\r\n";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo36
+        #region CrearHechizo37
+        hechizo = new Hechizo();
+        hechizo.Codigo = 37;
+        hechizo.Nombre = "Curar heridas";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = "Una criatura a la que toques recupera tantos puntosde\r\n golpe como ld8+ tu modificador por aptitud mágica.Este\r\n conjuro no afecta a muertos vivientesoautómatas.\r\n Aniveles superiores. Cuando lanzas este conjuro utili\r\nzando unespaciode conjurode nivel 2 omás, la curación\r\n aumenta en ld8 por cada nivel porencima de 1 que tenga\r\n el espacioque hayasempleado.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo37
+        #region CrearHechizo38
+        hechizo = new Hechizo();
+        hechizo.Codigo = 38;
+        hechizo.Nombre = "Detectar el bien y el mal";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ADIVINACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 10;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = "Hasta el final del conjuro, sabes si hay aberraciones, celestiales, elementales, feéricos, demonios o muertos vivientes\r\n en un radio de 30 pies a tu alrededor, asícomosu ubica\r\nción exacta. De forma similar, percibessi hay un lugar u\r\n objeto a 30 pies de ti que haya sidoconsagradoo desecrado\r\n mágicamente.\r\n Este conjuro escapaz de atravesar la mayoría de las\r\n barreras, pero se ve bloqueado por 1 pie de piedra, 1 pul\r\ngada de cualquier metal común, una fina lámina de plomoo\r\n 3pies de madera otierra.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo38
+        #region CrearHechizo39
+        hechizo = new Hechizo();
+        hechizo.Codigo = 39;
+        hechizo.Nombre = "Detectar magia";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ADIVINACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 10;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = "Hasta que termine la duración del conjuro podrás perci\r\nbir la presencia de magia a 30 pies o menos de ti.Si la\r\n detectas de esta manera, puedes usar tu acción para ver\r\n una débil aura alrededor de cualquier objeto o criatura\r\n visible que esté afectada por la magia, y además podrás\r\n distinguir a qué escuela pertenece, si es que pertenece\r\n a alguna.\r\n Este conjuro es capaz de atravesar la mayoría de las\r\n barreras, pero se ve bloqueado por 1 pie de piedra, 1 pul\r\ngada de cualquier metal común, una lámina fina de plomoo\r\n 3pies de madera o tierra.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo39
+        #region CrearHechizo40
+        hechizo = new Hechizo();
+        hechizo.Codigo = 40;
+        hechizo.Nombre = "Detectar magia";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ADIVINACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("una hoja de tejo");
+        hechizo.Duracion = 10;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = "Hasta que termine la duración del conjuro podrás perci\r\nbir la presencia de magia a 30 pies o menos de ti.Si la\r\n detectas de esta manera, puedes usar tu acción para ver\r\n una débil aura alrededor de cualquier objeto o criatura\r\n visible que esté afectada por la magia, y además podrás\r\n distinguir a qué escuela pertenece, si es que pertenece\r\n a alguna.\r\n Este conjuro es capaz de atravesar la mayoría de las\r\n barreras, pero se ve bloqueado por 1 pie de piedra, 1 pul\r\ngada de cualquier metal común, una lámina fina de plomoo\r\n 3pies de madera o tierra.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo40
+        #region CrearHechizo41
+        hechizo = new Hechizo();
+        hechizo.Codigo = 41;
+        hechizo.Nombre = "Disco flotante de Tenser";
+        hechizo.EscuelaMagica = E_EscuelasMagia.CONJURACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 30;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("una gota de mercurio");
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.HORA;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = " Este conjuro crea un plano circular y horizontal de\r\n fuerza, de 3 pies de diámetro y 1 pulgada de espesor, que\r\n flota a 3 pies del suelo en un espacio desocupado de tu\r\n elección que puedas ver dentro del alcance. El disco per\r\nmanece hasta el final de la duración del conjuro y puede\r\n cargar hasta 500 libras. Si se pone más peso encima,\r\n el conjuro termina y todo lo que hubiera en el disco cae\r\n al suelo.\r\n El disco permanecerá inmóvil mientras estés a 20 pies\r\n o menos de él.Si te alejas másde 20 pies, te seguirá para\r\n mantenerse a esa distancia. Puede moverse sobre terreno\r\n desigual, subir o bajar escaleras, cuestas y similares, pero\r\n no puede cruzar un cambiode elevación de 10 o más pies.\r\n Por ejemplo, el disco no puede moverse a través de un pozo\r\n de 10 pies de profundidad, ni podrá salir de dicho pozo si\r\n es creado en el fondo.\r\n Si te alejas a más de 100 piesdel disco(normalmente\r\n porque no puede rodear un obstáculo para seguirte), el con\r\njuro termina.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo41
+        #region CrearHechizo42
+        hechizo = new Hechizo();
+        hechizo.Codigo = 42;
+        hechizo.Nombre = "Disfrazarse";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ILUSIONISMO;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.HORA;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = "Haces que tú (incluyendo tu vestimenta, armadura, armas\r\n y otras posesiones que lleves contigo) parezcas diferente\r\n hasta que el conjuro finalice o utilices tu acción para ter\r\nminarlo. Puedes\r\n ^arecer 1 pie másaltoo más bajoy de\r\n complexión delgada, gorda o intermedia. No puedes cam\r\nbiar el tipo de tu cuerpo, así que debes adoptar una forma\r\n que tenga la misma configuración de miembros. El resto de\r\n aspectos pueden ser afectados por la ilusión.\r\n Los cambios realizados por este conjuro no aguantan\r\n una inspección física. Por ejemplo, si usas este conjuro\r\n para añadir un sombreroa tu vestimenta, los objetos atra\r\nviesan el sombrero y cualquiera que lo toque no sentiría\r\n nada, o sencillamente notaría tu pelo y'G'gbeza. Si utilizas\r\n este conjuro para parecer más delgado, la mano de cual\r\nquiera que intente tocarte se chocará contigo en lo que\r\n parece ser espacio libre.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo42
+        #region CrearHechizo43
+        hechizo = new Hechizo();
+        hechizo.Codigo = 43;
+        hechizo.Nombre = "Dormir";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ENCANTAMIENTO;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 90;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Una pizca de arena fina");
+        hechizo.Componentes.Add("pétalos de rosa o un grillo");
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.HORA;
+        hechizo.Concentracion =false;
+        hechizo.Descripcion = " Este conjuro sume a tusobjetivos en un sueño mágico.\r\n Tira 5d8; podrásafectar a criaturas cuyo total combinado\r\n de puntos de golpe sea menor o igual al resultado. Las\r\n criaturas a 20 pies de un puntode tu elección dentro del\r\n alcance son afectadas en orden ascendente desus puntos\r\n de golpe actuales. Ignora a las criaturas inconscientes.\r\nEmpezando por la criatura que tenga el menor número\r\n de puntos de golpe actuales, cada criatura afectada por\r\n este conjuro cae inconsciente hasta el final del conjuro,\r\n hasta recibir daño o hasta que alguien utilice su acción\r\n para despertarla. Resta del total los puntos de golpe de\r\n cada criatura a la que duermas antes de continuar con la\r\n siguiente. Una criatura solo se verá afectada si sus puntos\r\n de golpe actualesson menores o iguales al total restante.\r\n Los muertos vivientes y las criaturas inmunes a ser\r\n hechizadas no se ven afectadas por este conjuro.\r\n Aniveles superiores.Cuando lanzaseste conjuro uti\r\nlizando un espacio de conjuro de nivel 2 o más, tira 2d8\r\n adicionales por cada nivel por encima de 1 que tenga el\r\n espacio que hayasempleado.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo43
+        #region CrearHechizo44
+        hechizo = new Hechizo();
+        hechizo.Codigo = 44;
+        hechizo.Nombre = "Duelo forzado";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ENCANTAMIENTO;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION_ADICIONAL;
+        hechizo.Alcance = 30;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = false;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = " Intentas forzar a una criatura a un duelo. Un objetivo de tu\r\n elección que puedasver dentro del alcance debe realizar\r\n una tirada de salvación de Sabiduría.Si la falla, la criatura\r\n ve su atención atraída hacia ti, obligada por tu demanda\r\n divina. Hasta el final de la duración del conjuro, tiene des\r\nventaja en las tiradas de ataque contra criaturas distintas\r\n a ti y debe hacer una tirada de salvación de Sabiduría cada\r\n vez que intente moverse a un espacioa más de 30 pies de ti;\r\n si tiene éxito, no ve su movimiento restringido por este con\r\njuro durante este turno.\r\n El conjuro termina si atacas a otra criatura, si lanzas un\r\n conjuro que tiene como objetivo a una criatura hostil dis\r\ntinta, si una criatura amistosa hacia ti daña al objetivo o\r\n le lanza un conjuro dañino, osi acabas tu turno a más de\r\n 30 pies del objetivo.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo44
+        #region CrearHechizo45
+        hechizo = new Hechizo();
+        hechizo.Codigo = 45;
+        hechizo.Nombre = "Encantar animal";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ENCANTAMIENTO;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 30;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Unas migajas de comida");
+        hechizo.Duracion = 24;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.HORA;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = " Este conjuro te permite convencer a una bestia de que no\r\n quieres hacerle daño. Elige a una bestia que puedas ver\r\n dentro del alcance. Debe ser capaz de verte y oírte.Si su\r\n inteligencia es 4 o más, el conjuro falla. En caso contrario,\r\n el objetivo debe superar una tirada de salvación de Sabidu\r\nría o quedará hechizado por ti hasta el final de la duración\r\n del conjuro.Si tú o cualquiera de tus compañeros dañáis al\r\n objetivo, el conjuro termina.\r\n Aniveles superiores. Cuando lanzas este conjuro uti\r\nlizando un espacio de conjuro de nivel 2 o más, puedes\r\n elegir como objetivo una bestia adicional por cada nivel por\r\n encima de 1que tenga el espacio que hayasempleado.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo45
+        #region CrearHechizo46
+        hechizo = new Hechizo();
+        hechizo.Codigo = 46;
+        hechizo.Nombre = "Encontrar familiar";
+        hechizo.EscuelaMagica = E_EscuelasMagia.CONJURACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.HORA;
+        hechizo.Alcance = 10;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("10 po de carbón");
+        hechizo.Componentes.Add("Incieso");
+        hechizo.Componentes.Add("Hierbas");
+        hechizo.Componentes.Add("Brasero de bronce");
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Obtienes los servicios de un familiar, un espíritu que\r\n adopta una forma animal de tu elección: araña, coma\r\ndreja, búho, caballito de mar, cangrejo, cuervo, gato,\r\n halcón, lagarto, murciélago, pez (mordedor), pulpo, rana\r\n (sapo), rata o serpiente venenosa. Aparece en un espacio\r\n libre dentro del alcance y tiene el perfd de la forma ele\r\ngida, aunque su tipo es celestial, feérico o infernal (a tu\r\n elección) en vez de bestia.\r\n Tu familiar actúa de forma independiente, perosiempre\r\n obedece tusórdenes. En combate hacesu propia tirada de\r\n iniciativa y actúa en su propio turno. Un familiar no puede\r\n atacar, pero puede realizar otras accionescon normalidad.\r\n Si sus puntos de golpe se reducen a 0 desaparece sin\r\n dejar rastro físico alguno. Reaparecerá cuando lanceseste\r\n conjuro de nuevo. Mientras tu familiar esté a 100 pies de ti,\r\n puedes comunicarte con él telepáticamente. Además, pue\r\ndes usar tu acción para ver a travésde losojos del familiar\r\n y oír lo que él oiga hasta el comienzode tu próximo turno,\r\n ganando los beneficios de cualquier sentido especial que\r\n posea. Durante este tiempo, permanecerássordoy ciego\r\n respecto a tus propiossentidos.\r\n Puedes usar tu acción para desconvocar temporalmente\r\n a tu familiar. Se retira a una dimensión de bolsillo, donde\r\n espera a ser convocado de nuevo. También puedesdescon\r\nvocarlo para siempre. Mientrasse encuentre temporalmente\r\n desconvocado, puedes usar una acción para hacer que rea\r\nparezca en un espacio desocupadoa 30 pieso menosde ti.\r\n No puedes tener más de un familiar al mismo tiempo.\r\n Si lanzas este conjuro cuando ya tienes uno haces que el\r\n actual adopte una forma nueva. Elígela de la lista anterior.\r\n Tu familiar se transforma en la criatura escogida.\r\n Por último, cuandolanzas un conjurocon un alcancede\r\n toque, puedes hacer que tu familiar sea el que toquea tu obje\r\ntivo, comosi él hubiera lanzadoel conjuro.Tu familiardebe\r\n permanecera 100 piesomenosdetiyusarsu reacción para\r\n tocar al objetivo cuandolanzasel conjuro.Si este requiere una\r\n tirada de ataque, utiliza tu modificador de ataque para la tirada.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo46
+        #region CrearHechizo47
+        hechizo = new Hechizo();
+        hechizo.Codigo = 47;
+        hechizo.Nombre = "Enmarañar";
+        hechizo.EscuelaMagica = E_EscuelasMagia.CONJURACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 90;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = "Raíces, vides y malas hierbas brotan del suelo, intentando\r\n agarrar a las criaturas en un cuadrado de 20 pies de lado\r\n situado en un puntodentro del alcance. Hasta el final de la\r\n duración del conjuro, estas plantas transforman el suelo del\r\n área en terreno difícil.\r\n Cualquier criatura que se encuentre en dicho'espacio\r\n cuando lanzas el conjuro debe tener éxito en una tirada\r\n de salvación de Fuerza oquedará apresada por las plan\r\ntas enredadoras hasta el final del conjuro. Una criatura\r\n apresada puede utilizar su acción para hacer una prueba\r\n de Fuerza con CD igual a tu salvación de conjuros. Si la\r\n supera, queda libre.\r\n Cuandoel conjuro termina, las plantas conjuradasse\r\n marchitan y sesecan.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo47
+        #region CrearHechizo48
+        hechizo = new Hechizo();
+        hechizo.Codigo = 48;
+        hechizo.Nombre = "Entender Idiomas";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ADIVINACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 90;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Una pizca de hollin y sal");
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.HORA;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Hasta que termine la duración del conjuro, entiendes el sig\r\nnificado literal de las palabras que escuches en cualquier\r\n idioma. También comprendes todos los textos escritos que\r\n veas, independientemente del lenguaje, pero debes poder\r\n tocar la superficie sobre la que están inscritos. Tardas\r\n 1minuto en leer una página.\r\n Este conjuro no descifra mensajessecretos de un texto o\r\n glifo, como un sello arcano, que no forme parte de un len\r\nguaje escrito.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo48
+        #region CrearHechizo49
+        hechizo = new Hechizo();
+        hechizo.Codigo = 49;
+        hechizo.Nombre = "Escudo de fe";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ABJURACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION_ADICIONAL;
+        hechizo.Alcance = 60;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Un pequeño pergamino que contenga un fragmento de texto sagrado");
+        hechizo.Duracion = 10;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = " Un campo titilante envuelve a una criatura de tu elección\r\n dentro del alcance, otorgándole un bonificador de +2 a la\r\n CA hasta el final de la duración del conjuro";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo49
+        #region CrearHechizo50
+        hechizo = new Hechizo();
+        hechizo.Codigo = 50;
+        hechizo.Nombre = "Escudo de fe";
+        hechizo.EscuelaMagica = E_EscuelasMagia.NIGROMANCIA;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("una pequeña cantidad de alcohol o bebidas espirituosas");
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.HORA;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = " Fortaleciéndote mediante una imitación nigromántica de\r\n vida, ganas ld4+4 puntos de golpe temporales hasta el final\r\n de la duración del conjuro.\r\n Aniveles superiores.Cuando lanzas este conjuro utili\r\nzando un espacio de conjuro de nivel 2 o más, los puntos\r\n de golpe temporales aumentan en 5 más por cada nivel\r\n por encima de 1 que tenga el espacio que hayas empleado.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo50
+        #region CrearHechizo51
+        hechizo = new Hechizo();
+        hechizo.Codigo = 51;
+        hechizo.Nombre = "Favor divino";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION_ADICIONAL;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.HORA;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = " Tu plegaria te fortifica con un resplandor divino. Hasta que\r\n el conjuro termine, tus ataques con arma infligen ld4 de\r\n daño radiante adicional.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo51
+        #region CrearHechizo52
+        hechizo = new Hechizo();
+        hechizo.Codigo = 52;
+        hechizo.Nombre = "Fuego feerico";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 60;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = false;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.HORA;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = " El conjuro ilumina con luz azul, verde o violeta, a tu elec\r\nción, el contorno de todos los objetos en un cubo de 20 pies\r\n dentro del alcance. Se ilumina también el contorno de\r\n cualquier criatura dentro del área que falle una tirada de\r\n salvación de Destreza. Hasta el final de la duración del con\r\njuro, los objetos y criaturas afectados emiten luz tenue en\r\n un radio de 10 pies.\r\n Todaslas tiradas de ataque contra una criatura u objeto\r\n afectado tienen ventaja si el atacante puede ver a su obje\r\ntivo. Además, aunque sean invisibles no recibirán ninguno\r\n de los beneficios de ese estado mientras sigan afectados\r\n por fuego feérico.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo52
+        #region CrearHechizo53
+        hechizo = new Hechizo();
+        hechizo.Codigo = 53;
+        hechizo.Nombre = "Grasa";
+        hechizo.EscuelaMagica = E_EscuelasMagia.CONJURACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 60;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Un poco de piel de cerdo o de mantequilla");
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = " Una grasa resbaladiza cubre el suelo en un cuadrado de\r\n 10 pies centrado en un punto dentro del alcance, convir\r\ntiéndolo en terreno difícil hasta el finaide la duración\r\n del conjuro.\r\n Cuando la grasa aparece, todas las criaturas de pie en\r\n la zona afectada deben tener éxito en una tiradade salva\r\nción de Destreza o quedarán derribadas. Una criatura que\r\n entre en la zona o acabe su turno en ella también debe\r\n tener éxito en una tirada de salvación de Destreza o que\r\ndará derribada.\r\n";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo53
+        #region CrearHechizo54
+        hechizo = new Hechizo();
+        hechizo.Codigo = 54;
+        hechizo.Nombre = "Hablar con los animales";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ADIVINACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 10;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Ganas la capacidad de comprender ycomunicarte verbal\r\nmente con bestias hasta el final de la duración del conjuro. El\r\n conocimientoy conciencia de muchas criaturasestá limitado\r\n por su inteligencia, pero como mínimo podrán proporcionarte\r\n información sobre lugaresy monstruoscercanos, incluyendo\r\n lo que puedan percibir o hayan percibido en el último día. Es\r\n posible que seascapaz de convencer a una bestia de que te\r\n haga un pequeño favor,según el criterio del DM.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo54
+        #region CrearHechizo55
+        hechizo = new Hechizo();
+        hechizo.Codigo = 55;
+        hechizo.Nombre = "Hechizar persona";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ENCANTAMIENTO;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 30;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.HORA;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = " Intentas hechizar a un hurnanoide que puedas ver dentro\r\n del alcance. El objetivo debe hacer una tirada de salva\r\nción de Sabiduría,con ventaja si está luchandocontra ti\r\n o tuscompañeros.Si falla la tirada de salvación,queda\r\n hechizado por ti hasta que termine la duración del con\r\njuro , o tú mismo o uno de tus compañeros ledañéis de\r\n alguna manera. La criatura hechizada te considera un\r\n conocido amistoso. Cuando el conjuro termine,sabrá que\r\n la hechizaste.\r\n Aniveles superiores.Cuando lanzas este conjuro utili\r\nzando un espacio de conjuro de nivel 2 o más, puedes elegir\r\n comoobjetivoa una criatura adicional por cada nivel por\r\n encima de 1 que tenga elespacio que hayas empleado. En\r\n el momento deelegirla como objetivo,cada criatura debe\r\n estar a 30 pies o menosde todas las demás.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo55
+        #region CrearHechizo56
+        hechizo = new Hechizo();
+        hechizo.Codigo = 56;
+        hechizo.Nombre = "Heroismo";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ENCANTAMIENTO;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.HORA;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = "Infundes valor en una criatura voluntaria a la que toques.\r\n Hasta el final del conjuro, no puede ser asustada y gana\r\n tantos puntos de golpe temporales como tu modificador\r\n por aptitud mágica al principio de cada uno de sus tur\r\nnos.Cuandoel conjuro termina, pierde todos los puntos de\r\n golpe temporales restantes que provengan de este conjuro.\r\n Aniveles superiores. Cuando lanzas este conjuro utili\r\nzando un espacio de conjuro de nivel 2 o más, puedes elegir\r\n comoobjetivo a una criatura adicional p'pr cada nivel por\r\n encima de 1 que tenga el espacio que hayasempleado.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo56
+        #region CrearHechizo57
+        hechizo = new Hechizo();
+        hechizo.Codigo = 57;
+        hechizo.Nombre = "Identificar";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ADIVINACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Una perla que valga, al menos, 100 po");
+        hechizo.Componentes.Add("una pluma de búho");
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Elige un objeto o criatura ,que deberás tocar durante el lan\r\nzamiento del conjuro. Si es un objeto mágico o un objeto\r\n imbuido de magia ,averiguarás sus propiedades ycómo\r\n usarlas,si hace falta sintonizarse con él para utilizarlo y\r\n cuántas cargas tiene,si fuera el caso.Si hay conjuros afec\r\ntando al objeto,sabrás cuáles son.Si elobjeto fue creado\r\n con un conjuro, también averiguarás cuá les.\r\n Si tocas una criatura en lugar de un objeto,averiguarás\r\n qué conjuros le están afectando.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo57
+        #region CrearHechizo58
+        hechizo = new Hechizo();
+        hechizo.Codigo = 58;
+        hechizo.Nombre = "Imagen silenciosa";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ILUSIONISMO;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Alcance = 60;
+        hechizo.RequisitoVocal = false;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Un poco de vellón");
+        hechizo.Duracion = 10;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Creas una imagen de un objeto, una criatura u otro tipo\r\n de fenómenovisible, cuyas dimensiones no excedan las\r\n de un cubo de 15 pies de lado.La imagen aparece en un\r\n sitio que puedas ver dentro del alcance yse mantiene\r\n hasta el final de la duración del conjuro. La imagen es\r\n solamente visual; no está acompañada de sonido, olor u\r\n otros efectos sensoriales.\r\n Mientras estés dentro del alcance de la ilusión, puedes\r\n utilizar tu acción para moverla a otro sitio dentro de dicho\r\n alcance. Al cambiarla de sitio, puedes alterar su aparien\r\ncia de forma quesus movimientos parezcan naturales. Por\r\n ejemplo, si creas la imagen de una criatura y la mueves,\r\n puedas alterarla de forma que parezca estar andando.\r\n La interacción física con la imagen revela que es una ilu\r\nsión, ya que las cosas la atraviesan.Si una criatura emplea\r\n su acción para examinar la imagen, puede determinar que\r\n es una ilusión si tiene éxito en una prueba de Inteligencia\r\n (Investigación) cuya CD es tu salvación de conjuros. Si la\r\n criatura descubre que la imagen es una ilusión, podrá ver a\r\n través de ella.\r\n";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo58
+        #region CrearHechizo59
+        hechizo = new Hechizo();
+        hechizo.Codigo = 59;
+        hechizo.Nombre = "Inflingir heridas";
+        hechizo.EscuelaMagica = E_EscuelasMagia.NIGROMANCIA;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal =true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = "Haz una taque deconjuro cuerpoacuerpo contra una cria\r\ntura que se encuentre dentro delalcance .Si impacta, el\r\n objetivo recibe 3d10 de daño necrótico.\r\n Anivelessuperiores.Cuandolanzas este conjuro uti\r\nlizando unespacio deconjuro de nivel 2 o más ,el daño\r\n aumenta en Id10 por cada nivel por encima de1que tenga\r\n el espacio que hayas empleado.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo59
+        #region CrearHechizo60
+        hechizo = new Hechizo();
+        hechizo.Codigo = 60;
+        hechizo.Nombre = "Maleficio";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ENCANTAMIENTO;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION_ADICIONAL;
+        hechizo.Alcance = 90;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("El ojo petrificado de un triton");
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.HORA;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = "Impones una maldición a una criatura que puedas ver\r\n dentro del alcance. Hasta el final del conjuro ,sufrirá ld ó\r\n de daño necrótico adicional cada vezque sea impactada\r\n por uno de tus ataques.Además,elige una característica\r\n cuando lanzas el conjuro. El objetivo tiene desventaja en las\r\n pruebas decaracterística ytiradas de salvación hechas con\r\n la característica elegida.\r\n Si los puntos de golpe del objetivo se reducen a 0 antes\r\n del final de la duración del conjuro ,puedes utilizar una\r\n acción adicional en un turno posterior para transferir la\r\n maldición a una nuevacriatura.\r\n El conjuro levantar maldición termina este conjuro\r\n inmediatamente.\r\n Aniveles superiores.Si utilizas unespacio de conjuro\r\n de nivel 3o 4, la duración pasa a ser:concentración,hasta\r\n 8 horas.Si usas un espacio de conjuro de nivel 5 o más, la\r\n duración pasa a ser: concentración, hasta 24 horas.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo60
+        #region CrearHechizo61
+        hechizo = new Hechizo();
+        hechizo.Codigo = 61;
+        hechizo.Nombre = "Manos ardientes";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 15;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion =0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = " Juntas las manos con los pulgares tocándose y los dedos\r\n estirados, creando una fina capa de llamas que se proyecta\r\n desde la punta de los dedos.Todaslas criaturas en un cono\r\n de 15 pies deben hacer una tirada desalvación de Des\r\ntreza.Sufrirán 3d6 de daño de fuegosi fallan la tirada o la\r\n mitad del dañosi la superan.\r\n Losobjetos inflamables que se encuentren en el área que\r\n no lleve o vista alguien arderán.\r\n Anivelessuperiores.Cuandolanzasesteconjuro uti\r\nlizando un espacio de conjuro de nivel 2 o más, el daño\r\n aumenta en ld6 por cada nivel por encima de 1 que tenga\r\n el espacio que hayas empleado.\r\n";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo61
+        #region CrearHechizo62
+        hechizo = new Hechizo();
+        hechizo.Codigo = 62;
+        hechizo.Nombre = "Marca del cazador";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ADIVINACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION_ADICIONAL;
+        hechizo.Alcance = 90;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = false;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.HORA;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = "Eliges una criatura que puedas ver dentro del alcance y\r\n la marcas,de manera mística, como tu presa. Hasta que\r\n el conjuro termine, la criatura sufrirá ldó de daño adicio\r\nnal cuando la impactes con un ataquecon arma y tendrás\r\n ventaja en cualquier prueba de Sabiduría (Percepción) o\r\n Sabiduría (Supervivencia) realizada para encontrarla. Si\r\n los puntos de golpe del objetivo se reducen a 0 antes del\r\n final de la duración del conjuro, puedes utilizar una acción\r\n adicional en un turno posterior para transferir la marca a\r\n una nueva criatura.\r\n Aniveles superiores. Si empleas un espacio de conjuro\r\n de nivel 3o 4, la duración pasa a ser:concentración, hasta\r\n 8 horas. Si usas un espaciode conjuro de nivel 5o más, la\r\n duración pasa a ser:concentración, hasta 24 horas.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo62
+        #region CrearHechizo63
+        hechizo = new Hechizo();
+        hechizo.Codigo = 63;
+        hechizo.Nombre = "Nube de oscurecimiento";
+        hechizo.EscuelaMagica = E_EscuelasMagia.CONJURACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 120;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.HORA;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = " Creas una bruma que cubre un área esférica de 20 pies de\r\n radio alrededor de un punto de tu elección. La nieblase\r\n extiende más allá de las esquinas y el área se considera\r\n muy oscura.Se mantiene hasta el final de la duración del\r\n conjuro o hasta que un viento de velocidad moderada (al\r\n menos10 millas por hora) la disperse.\r\n Aniveles superiores. Cuando lanzas este conjuro utili\r\nzando un espacio de conjuro de nivel 2 o más, el radio de la\r\n niebla aumenta en 20 pies por cada nivel por encima de 1\r\n que tenga el espacio que hayas empleado.\r\n";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo63
+        #region CrearHechizo64
+        hechizo = new Hechizo();
+        hechizo.Codigo = 64;
+        hechizo.Nombre = "Ola atronadora";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 15;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = " Una ola de fuerza atronadora surge de tu cuerpo. Todas las\r\n criaturas en un cubode 15 pies adyacente a ti deben hacer\r\n una tirada de salvación de Constitución. Las criaturas que\r\n fallen la tirada^ufrirán 2d8 de daño de trueno y serán\r\n empujadas 10 pies, y las que la superen sufrirán la mitad\r\n del dañoy noserán empujadas.\r\n Además, los objetos dentro del área de efecto que nadie\r\n lleve o vista son empujados automáticamente 10 pies en\r\n dirección contraria a ti. El conjuro crea una explosión\r\n sónica audible a 300 pies de distancia.\r\n Aniveles superiores.Cuando lanzas este conjuro uti\r\nlizando un espacio de conjuro de nivel 2 o más, el daño\r\n aumenta en ld8 por cada nivel por encima de 1que tenga\r\n el espacio que hayasempleado.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo64
+        #region CrearHechizo65
+        hechizo = new Hechizo();
+        hechizo.Codigo = 65;
+        hechizo.Nombre = "Orbe cromatico";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 90;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial =true;
+        hechizo.Componentes.Add("Un diamante que valga al menos 50 PO");
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = " Lanzas unaesfera de energía de 4 pulgadasde diámetroa\r\n una criatura que puedas ver dentro del alcance.Elige entre\r\n ácido, frío, fuego, relámpago,veneno o trueno para el tipo\r\n de orbe creado y,después, haz un ataque de conjuro a dis\r\ntancia contra el objetivo.Si el ataque impacta, la criatura\r\n recibe 3d8 de daño del tipo elegido.\r\n Aniveles superiores.Cuando lanzaseste conjuro uti\r\nlizando un espacio de conjuro de nivel 2 o más, el daño\r\n aumenta en ld8por cada nivel por encima de 1 que tenga\r\n el espacio que hayas empleado.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo65
+        #region CrearHechizo66
+        hechizo = new Hechizo();
+        hechizo.Codigo = 66;
+        hechizo.Nombre = "Orden imperiosa";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ENCANTAMIENTO;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 60;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = false;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.ASALTO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Das una orden de una sola palabra a una criatura que pue\r\ndas ver dentro del alcance. El objetivo debe tener éxito\r\n en una tirada de salvación de Sabiduría o verse obligada\r\n a obedecer la orden en su próximo turno.Este conjuro\r\n no tiene efecto si el objetivo es un muerto viviente, si no\r\n entiende tu idioma o si la orden implica dañar a la cria\r\ntura de forma directa.\r\n Más abajo puedes encontrar ejemplos de órdenes típicas\r\n ysus efectos, aunque puedes dar otras distintas a las que\r\n se describen aquí. En ese caso, el DM decidecómo reac\r\nciona el objetivo.Si la criatura no puede obedecer la orden,\r\n el conjuro termina.\r\n Acércate. El objetivose acerca a ti por el camino más\r\n corto y directo posible, acabando su turno si se mueve a\r\n 5 pies o menosde ti.\r\n Suelta. El objetivo suelta lo que esté sujetando y acaba\r\n su turno.\r\n Huye. El objetivo emplea su turno en alejarse de ti de la\r\n manera más rápida posible.\r\n Póstrate. El objetivo cae derribado y acaba su turno.\r\n Detente. El objetivo no se mueve ni realiza ninguna\r\n acción. Si le es posible, una criatura que esté volando per\r\nmanecerá en el aire. Si para ello necesita moverse, volará\r\n la mínima distancia necesaria para no caer.\r\n Aniveles superiores. Cuando lanzas este conjuro utili\r\nzando un espacio de conjuro de nivel 2 o más, puedes elegir\r\n como objetivo a una criatura adicional por cada nivel por encima de 1 que tenga elespacio que hayasempleado. En\r\n el momento de elegirla comoobjetivo, cada criatura debe\r\n estar a 30 pies o menosde todas las demás .";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo66
+        #region CrearHechizo67
+        hechizo = new Hechizo();
+        hechizo.Codigo = 67;
+        hechizo.Nombre = "Palabra de curacion";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION_ADICIONAL;
+        hechizo.Alcance = 60;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = false;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Una criatura de tu elección que puedas ver dentro del\r\n alcance recupera tantos puntos de golpe como lcf4 + tu\r\n modificador por aptitud mágica. Este conjuro no afecta a\r\n muertos vivientes oautómatas.\r\n Anivelessuperiores.Cuando lanzas este conjuro utili\r\nzando unespacio deconjuro de nivel 2 o más, lacuración\r\n aumenta en ld4 por cada nivel por encima de 1 que tenga\r\n el espacio que hayasempleado.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo67
+        #region CrearHechizo68
+        hechizo = new Hechizo();
+        hechizo.Codigo = 68;
+        hechizo.Nombre = "Proteccion contra el bien y el mal";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ABJURACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 0;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Agua bendita o plata pulverizada y hierro pulverizados");
+        hechizo.Duracion = 10;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = " Hasta el final de la duración del conjuro, una criatura volun\r\ntaria que toques queda protegida contra ciertos tipos de\r\n criaturas: aberraciones, celestiales, elementales, feéricos,\r\n infernales y muertos vivientes.\r\n Esta protección proporciona varios beneficios. Las cria\r\nturas del tipo elegido tienen desventaja en tiradas de ataque\r\n contra el objetivo. Este tampoco podrá ser hechizado, asus\r\ntadoo poseído por ellas.Si el objetivo ya estaba hechizado,\r\n asustado o poseído por una criatura de este tipo, tendrá\r\n ventaja en cualquier tirada de salvación subsiguiente contra\r\n estos efectos.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo68
+        #region CrearHechizo69
+        hechizo = new Hechizo();
+        hechizo.Codigo = 69;
+        hechizo.Nombre = "Proyectil magico";
+        hechizo.EscuelaMagica = E_EscuelasMagia.ABJURACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 120;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = " Creas tres dardos brillantes de fuerza mágica. Cada dardo\r\n impacta a una criatura de tu elección a la que puedas ver\r\n dentro del alcance. La criatura recibe ld4+l de daño de\r\n fuerza por cada dardo. Todos los dardos impactan a la vez y\r\n puedes repartirlos como desees entre varios objetivos.\r\n Aniveles superiores.Cuando lanzas este conjuro uti\r\nlizando un espacio de conjuro de nivel 2 o más, creas un\r\n dardo adicional por cada nivel por encima de 1 que tenga el\r\n espacio que hayas empleado.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo69
+        #region CrearHechizo70
+        hechizo = new Hechizo();
+        hechizo.Codigo = 70;
+        hechizo.Nombre = "Purificar comida y agua";
+        hechizo.EscuelaMagica = E_EscuelasMagia.TRANSMUTACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 10;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = " Purificas y libras de todo veneno y enfermedad la comida\r\n y bebida no mágica que esté dentrode una esfera de\r\n 5 pies de radio centrada en un puntode tu elección dentro\r\n del alcance.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo70
+        #region CrearHechizo71
+        hechizo = new Hechizo();
+        hechizo.Codigo = 71;
+        hechizo.Nombre = "Rayo de hechiceria";
+        hechizo.EscuelaMagica = E_EscuelasMagia.TRANSMUTACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.ACCION;
+        hechizo.Alcance = 30;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = true;
+        hechizo.Componentes.Add("Una ramita de un arbol que haya sido golpeado por un rayo");
+        hechizo.Duracion = 1;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.MINUTO;
+        hechizo.Concentracion = true;
+        hechizo.Descripcion = " Un rayode energía chisporroteante alcanza a una criatura\r\n dentro del alcance, formando un arco constante similar a\r\n un relámpago entre el objetivo y tú. Haz un ataque de con\r\njuro a distancia contra la criatura.Si impactas, el objetivo\r\n recibe Id12 de dañode relámpagoy, en cada unode tus\r\n turnos hasta el final de la duración de!conjuro, puedes usar\r\n tu acción para infligir automáticamente otros Id12 de daño\r\n de relámpagoa la criatura. El conjuro termina si utilizas\r\n tu acción para cualquier otra cosa, osi en algún momento\r\n el objetivo queda fuera del alcance del conjuro o consigue\r\n tener cobertura completa respecto a ti.\r\n Aniveles superiores.Cuando lanzas este conjuro uti\r\nlizando un espacio de conjuro de nivel 2 o más, el daño\r\n inicial aumenta en Id12 por cada nivel por encima de 1\r\n del espacio.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo71
+        #region CrearHechizo72
+        hechizo = new Hechizo();
+        hechizo.Codigo = 72;
+        hechizo.Nombre = "Represion infernal";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.REACCION;
+        hechizo.Alcance = 60;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Apuntas con el dedoy la criatura que te dañó seve\r\n envuelta momentáneamenteen una llamarada infernal.\r\n Debe hacer una tirada de salvación de Destreza. '4Sufrirá\r\n 2d10 de daño de fuego si falla la tirada o la mitad del daño\r\n si la supera.\r\n Aniveles superiores.Cuando lanzas este conjuro uti\r\nlizando un espacio de conjuro de nivel 2 o más,^l daño\r\n aumenta en Id10 porcada nivel por encima de 1que tenga\r\n el espacio que hayas empleado.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo72
+        #region CrearHechizo73
+        hechizo = new Hechizo();
+        hechizo.Codigo = 73;
+        hechizo.Nombre = "Represion infernal";
+        hechizo.EscuelaMagica = E_EscuelasMagia.EVOCACION;
+        hechizo.Nivel = 1;
+        hechizo.Tiempolanzamiento = 1;
+        hechizo.TipoLanzamientoHechizo = E_TiempoDeLanzamientoConjuro.REACCION;
+        hechizo.Alcance = 60;
+        hechizo.RequisitoVocal = true;
+        hechizo.RequisitoSomatico = true;
+        hechizo.RequisitoMaterial = false;
+        hechizo.Duracion = 0;
+        hechizo.TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        hechizo.Concentracion = false;
+        hechizo.Descripcion = "Apuntas con el dedoy la criatura que te dañó seve\r\n envuelta momentáneamenteen una llamarada infernal.\r\n Debe hacer una tirada de salvación de Destreza. '4Sufrirá\r\n 2d10 de daño de fuego si falla la tirada o la mitad del daño\r\n si la supera.\r\n Aniveles superiores.Cuando lanzas este conjuro uti\r\nlizando un espacio de conjuro de nivel 2 o más,^l daño\r\n aumenta en Id10 porcada nivel por encima de 1que tenga\r\n el espacio que hayas empleado.";
+        hechizo.ClasesAptas.Add(E_Clases.BRUJO);
+        hechizos.Add(hechizo);
+        #endregion CrearHechizo73
+        #endregion Nivel1
+        #endregion CrearHechizos
 
-            // Deserialize the JSON data 
-            //  into a pattern matching the GameData class.
 
-            List<object> listObjects = JsonConvert.DeserializeObject<List<object>>(fileContents);
-           
-            foreach(object obj in listObjects)
-            {
-                //Debug.Log(r.Nombre+":"+r.MejoraCaracteristicas.First().Key.ToString());
-                Debug.Log(obj.ToString());
-            }
-           
-        }
+        hechizosFinales.Add(pathload,hechizos);
+        return hechizosFinales;
     }
 
-    private void LoadListObjetos(Dictionary<string, List<Objeto>> jsonObjetosPorGuardar)
-    {
-        string pathload = jsonObjetosPorGuardar.Keys.First();
-        if (File.Exists(pathload)&&pathload=="meme")
-        {
-            // Read the entire file and save its contents.
-            string fileContents = File.ReadAllText(pathload);
-
-            // Deserialize the JSON data 
-            //  into a pattern matching the GameData class.
-
-            List<Objeto> listObjects = JsonConvert.DeserializeObject<List<Objeto>>(fileContents);
-
-            foreach (Objeto obj in listObjects)
-            {
-                //Debug.Log(r.Nombre+":"+r.MejoraCaracteristicas.First().Key.ToString());
-                Debug.Log(obj.ToString());
-            }
-
-        }
-        else
-        {
-            JsonSerializerSettings settings = new JsonSerializerSettings
-            {
-                Formatting = Formatting.Indented,
-                ContractResolver = new CamelCasePropertyNamesContractResolver()
-            };
-            settings.Converters.Add(new StringEnumConverter());
-            
-            string jsonString = JsonConvert.SerializeObject(jsonObjetosPorGuardar.Values.First(), settings);
-            Debug.Log("Json creado en " + pathload);
-            File.WriteAllText(pathload, jsonString);
-        }
-    }
-
+    #endregion CargaDatos
 }
