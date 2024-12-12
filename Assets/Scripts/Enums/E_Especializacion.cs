@@ -5,17 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [JsonConverter(typeof(StringEnumConverter))]
-public class E_Especializacion : MonoBehaviour
+public enum E_Especializacion
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   LADRON,ASESINO, EMBAUCADOR_ARCANO,SIN_ASIGNACION
 }

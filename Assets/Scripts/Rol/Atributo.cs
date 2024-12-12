@@ -11,17 +11,27 @@ public class Atributo
     string efecto;
     Hechizo hechizoAtributo;
     Objeto objetoAtributo;
-    public Atributo(Hechizo hechizoAtributo, Objeto objetoAtributo)
+    public Atributo()
     {
-        this.Nombre = "";
-        this.Efecto = "";
-        this.hechizoAtributo = null;
-        this.objetoAtributo = null;
+        Nombre = "";
+        Efecto = "";
+        HechizoAtributo = null;
+        ObjetoAtributo = null;
     }
+
     public Atributo(string nombre, string efecto)
     {
-        this.Nombre = nombre;
-        this.Efecto = efecto;
+        Nombre = nombre;
+        Efecto = efecto;
+        HechizoAtributo = null;
+        ObjetoAtributo = null;
+    }
+    public Atributo(string nombre, string efecto, Hechizo hechizoAtributo, Objeto objetoAtributo)
+    {
+        Nombre = nombre;
+        Efecto = efecto;
+        HechizoAtributo = hechizoAtributo;
+        ObjetoAtributo = objetoAtributo;
     }
 
     public string Nombre { get => nombre; set => nombre = value; }

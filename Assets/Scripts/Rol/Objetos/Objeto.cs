@@ -86,15 +86,15 @@ public class Objeto
     {
         if (valorNuevo < VALORMINIMO)
         {
-            peso = VALORMINIMO;
+            cantValor = VALORMINIMO;
         }
         else if (valorNuevo > VALORMAXIMO)
         {
-            peso = VALORMAXIMO;
+            cantValor = VALORMAXIMO;
         }
         else
         {
-            peso = valorNuevo;
+            cantValor = valorNuevo;
         }
     }
 
@@ -102,15 +102,15 @@ public class Objeto
     {
         if (cantidadNueva < CANTIDADMINIMA)
         {
-            peso = CANTIDADMINIMA;
+            cantidad = CANTIDADMINIMA;
         }
         else if (cantidadNueva> CANTIDADMAXIMA)
         {
-            peso = CANTIDADMAXIMA;
+            cantidad = CANTIDADMAXIMA;
         }
         else
         {
-            peso = cantidadNueva;
+            cantidad = cantidadNueva;
         }
     }
 
