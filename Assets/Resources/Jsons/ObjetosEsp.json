@@ -1,1840 +1,3200 @@
-[
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 1,
-    "nombre": "Abaco",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 20.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 2,
-    "nombre": "Abrojos",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 20.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 3,
-    "nombre": "Aceite",
-    "tipoValor": "PP",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 20.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 4,
-    "nombre": "Aceite",
-    "tipoValor": "PP",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 5,
-    "nombre": "Acido",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 6,
-    "nombre": "Agua Bendita",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 7,
-    "nombre": "Aljaba",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 8,
-    "nombre": "Anillo de sellar",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 9,
-    "nombre": "Antitoxina",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 10,
-    "nombre": "Antorcha",
-    "tipoValor": "PC",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 11,
-    "nombre": "Ariete Portatil",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 12,
-    "nombre": "Balanza de mercader",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 13,
-    "nombre": "Barril",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 100.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 14,
-    "nombre": "Bolas de metal",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 15,
-    "nombre": "Bolsa",
-    "tipoValor": "PP",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 16,
-    "nombre": "Botella de cristal",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 17,
-    "nombre": "Cadena",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 18,
-    "nombre": "Campana",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 19,
-    "nombre": "Cristal",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 20,
-    "nombre": "Baston",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 21,
-    "nombre": "Orbe",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 22,
-    "nombre": "Vara",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 23,
-    "nombre": "Varita",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 24,
-    "nombre": "Baston de madera",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 25,
-    "nombre": "Rama de muerdago",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 26,
-    "nombre": "Tótem",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 27,
-    "nombre": "Varita de tejo",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 28,
-    "nombre": "Cantimplora",
-    "tipoValor": "PP",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 29,
-    "nombre": "Caña de pescar",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 30,
-    "nombre": "Catalejo",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 31,
-    "nombre": "Cerradura",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 32,
-    "nombre": "Cesta",
-    "tipoValor": "PP",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 33,
-    "nombre": "Cofre",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 34,
-    "nombre": "Cuerda de cañamo",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 35,
-    "nombre": "Cuerda de seda",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 36,
-    "nombre": "Cubo",
-    "tipoValor": "PC",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 37,
-    "nombre": "Escalera",
-    "tipoValor": "PP",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 38,
-    "nombre": "Espejito de acero",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 39,
-    "nombre": "Esposas",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 40,
-    "nombre": "Estuche para mapa o pergamino",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 41,
-    "nombre": "Estuche para virotes de ballesta",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 42,
-    "nombre": "Frasco o jarra",
-    "tipoValor": "PC",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 43,
-    "nombre": "Fuego de alquimista",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 44,
-    "nombre": "Garfio de escalada",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 45,
-    "nombre": "Jabon",
-    "tipoValor": "PC",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 46,
-    "nombre": "Jarro o cantaro",
-    "tipoValor": "PC",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 47,
-    "nombre": "Lacre",
-    "tipoValor": "PP",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 48,
-    "nombre": "Lampara",
-    "tipoValor": "PP",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 49,
-    "nombre": "Libro",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 50,
-    "nombre": "Libro de conjuros",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 51,
-    "nombre": "Lintera de ojo de buey",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 52,
-    "nombre": "Lintera sorda",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 53,
-    "nombre": "Lupa",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 54,
-    "nombre": "Manta",
-    "tipoValor": "PP",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 55,
-    "nombre": "Martillo",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 56,
-    "nombre": "Mazo",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 57,
-    "nombre": "Mochila",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 20.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 58,
-    "nombre": "Balas de honda",
-    "tipoValor": "PC",
-    "tipo": "Municion"
-  },
-  {
-    "peso": 50.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 59,
-    "nombre": "Dardos de cerbatana",
-    "tipoValor": "PO",
-    "tipo": "Municion"
-  },
-  {
-    "peso": 20.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 60,
-    "nombre": "Flechas",
-    "tipoValor": "PO",
-    "tipo": "Municion"
-  },
-  {
-    "peso": 20.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 61,
-    "nombre": "Virotes de ballesta",
-    "tipoValor": "PO",
-    "tipo": "Municion"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 62,
-    "nombre": "Olla de hierro",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 63,
-    "nombre": "Pala",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 64,
-    "nombre": "Palanca",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 65,
-    "nombre": "Papel",
-    "tipoValor": "PP",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 66,
-    "nombre": "Perfume",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 67,
-    "nombre": "Pergamino",
-    "tipoValor": "PP",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 68,
-    "nombre": "Petate",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 69,
-    "nombre": "Pico de minero",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 70,
-    "nombre": "Piedra de afilar",
-    "tipoValor": "PC",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 10.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 71,
-    "nombre": "Pinchos de hierro",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 72,
-    "nombre": "Piton",
-    "tipoValor": "PC",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 73,
-    "nombre": "Pluma",
-    "tipoValor": "PC",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 74,
-    "nombre": "Pocion de curacion",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 75,
-    "nombre": "Polipasto",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 76,
-    "nombre": "Racion",
-    "tipoValor": "PP",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 77,
-    "nombre": "Reloj",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 78,
-    "nombre": "Ropas comunes",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 79,
-    "nombre": "Ropas de calidad",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 80,
-    "nombre": "Ropas de viaje",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 81,
-    "nombre": "Ropas, disfraz",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 82,
-    "nombre": "Saco",
-    "tipoValor": "PC",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 83,
-    "nombre": "Saquito de componentes",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 84,
-    "nombre": "Saquito de componentes",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 85,
-    "nombre": "Silbato de supervivencia",
-    "tipoValor": "PC",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 86,
-    "nombre": "Amuleto",
-    "tipoValor": "PO",
-    "tipo": "Simbolos_Sagrados"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 87,
-    "nombre": "Emblema",
-    "tipoValor": "PO",
-    "tipo": "Simbolos_Sagrados"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 88,
-    "nombre": "Relicario",
-    "tipoValor": "PO",
-    "tipo": "Simbolos_Sagrados"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 89,
-    "nombre": "Tienda para dos personas",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 90,
-    "nombre": "Tinta. botella de 1 onza",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 91,
-    "nombre": "Tiza (1 trozo)",
-    "tipoValor": "PC",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 92,
-    "nombre": "Trampa para cazar",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 93,
-    "nombre": "Tunica",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 94,
-    "nombre": "Utensilios de cocina",
-    "tipoValor": "PP",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 95,
-    "nombre": "Utiles de escalada",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 96,
-    "nombre": "Utiles de sanador",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 97,
-    "nombre": "Vara (10)",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 98,
-    "nombre": "Vela",
-    "tipoValor": "PC",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 99,
-    "nombre": "Veneno basico (vial)",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 100,
-    "nombre": "Vial",
-    "tipoValor": "PO",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 101,
-    "nombre": "Yesquero",
-    "tipoValor": "PP",
-    "tipo": "Objeto_Mundano"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 1,
-    "tipoDadoDaño": "D6",
-    "propiedades": [
-      "CONTUNDENTE",
-      "VERSATIL"
-    ],
-    "tipoDadoSegundoDaño": "D8",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 102,
-    "nombre": "Baston",
-    "tipoValor": "PP",
-    "tipo": "ARMA_SIMPLE"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D4",
-    "propiedades": [
-      "CORTANTE",
-      "ARROJADIZA",
-      "LIGERA",
-      "SUTIL"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 103,
-    "nombre": "Daga",
-    "tipoValor": "PO",
-    "tipo": "ARMA_SIMPLE"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D4",
-    "propiedades": [
-      "CONTUNDENTE",
-      "LIGERA"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 104,
-    "nombre": "Garrote",
-    "tipoValor": "PP",
-    "tipo": "ARMA_SIMPLE"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D8",
-    "propiedades": [
-      "CONTUNDENTE",
-      "A_DOS_MANOS"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 105,
-    "nombre": "Garrote Grande",
-    "tipoValor": "PP",
-    "tipo": "ARMA_SIMPLE"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D6",
-    "propiedades": [
-      "CORTANTE",
-      "ARROJADIZA",
-      "ALCANCE",
-      "LIGERA"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 20,
-    "alcanceMaximo": 60,
-    "codigo": 106,
-    "nombre": "Hacha de mano",
-    "tipoValor": "PO",
-    "tipo": "ARMA_SIMPLE"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D4",
-    "propiedades": [
-      "CORTANTE",
-      "LIGERA"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 107,
-    "nombre": "Hoz",
-    "tipoValor": "PO",
-    "tipo": "ARMA_SIMPLE"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D6",
-    "propiedades": [
-      "PERFORANTE",
-      "ARROJADIZA",
-      "ALCANCE"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 30,
-    "alcanceMaximo": 120,
-    "codigo": 108,
-    "nombre": "Jabalina",
-    "tipoValor": "PP",
-    "tipo": "ARMA_SIMPLE"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 1,
-    "tipoDadoDaño": "D6",
-    "propiedades": [
-      "PERFORANTE",
-      "ARROJADIZA",
-      "ALCANCE",
-      "VERSATIL"
-    ],
-    "tipoDadoSegundoDaño": "D8",
-    "alcanceMinimo": 20,
-    "alcanceMaximo": 60,
-    "codigo": 109,
-    "nombre": "Lanza",
-    "tipoValor": "PO",
-    "tipo": "ARMA_SIMPLE"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D4",
-    "propiedades": [
-      "CONTUNDENTE",
-      "ARROJADIZA",
-      "ALCANCE",
-      "LIGERA"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 20,
-    "alcanceMaximo": 60,
-    "codigo": 110,
-    "nombre": "Martillo ligero",
-    "tipoValor": "PO",
-    "tipo": "ARMA_SIMPLE"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D6",
-    "propiedades": [
-      "CONTUNDENTE"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 111,
-    "nombre": "Maza",
-    "tipoValor": "PO",
-    "tipo": "ARMA_SIMPLE"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D6",
-    "propiedades": [
-      "PERFORANTE",
-      "MUNICION",
-      "A_DOS_MANOS",
-      "ALCANCE"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 80,
-    "alcanceMaximo": 320,
-    "codigo": 112,
-    "nombre": "Arco corto",
-    "tipoValor": "PO",
-    "tipo": "ARMA_A_DISTANCIA_SIMPLE"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D8",
-    "propiedades": [
-      "PERFORANTE",
-      "MUNICION",
-      "A_DOS_MANOS",
-      "ALCANCE",
-      "RECARGA"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 80,
-    "alcanceMaximo": 320,
-    "codigo": 113,
-    "nombre": "Ballesta ligera",
-    "tipoValor": "PO",
-    "tipo": "ARMA_A_DISTANCIA_SIMPLE"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D4",
-    "propiedades": [
-      "PERFORANTE",
-      "SUTIL",
-      "ARROJADIZA",
-      "ALCANCE"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 20,
-    "alcanceMaximo": 60,
-    "codigo": 114,
-    "nombre": "Dardo",
-    "tipoValor": "PC",
-    "tipo": "ARMA_A_DISTANCIA_SIMPLE"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D4",
-    "propiedades": [
-      "CONTUNDENTE",
-      "SUTIL",
-      "MUNICION",
-      "ALCANCE"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 20,
-    "alcanceMaximo": 60,
-    "codigo": 115,
-    "nombre": "Honda",
-    "tipoValor": "PP",
-    "tipo": "ARMA_A_DISTANCIA_SIMPLE"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D10",
-    "propiedades": [
-      "CORTANTE",
-      "A_DOS_MANOS",
-      "GRAN_ALCANCE",
-      "PESADA"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 116,
-    "nombre": "Alabarda",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D6",
-    "propiedades": [
-      "CORTANTE",
-      "LIGERA",
-      "SUTIL"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 117,
-    "nombre": "Cimitarra",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D6",
-    "propiedades": [
-      "PERFORANTE",
-      "LIGERA",
-      "SUTIL"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 118,
-    "nombre": "Espada corta",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 1,
-    "tipoDadoDaño": "D8",
-    "propiedades": [
-      "CORTANTE",
-      "VERSATIL"
-    ],
-    "tipoDadoSegundoDaño": "D10",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 119,
-    "nombre": "Espada Larga",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 2,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D8",
-    "propiedades": [
-      "CORTANTE",
-      "A_DOS_MANOS",
-      "PESADA"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 120,
-    "nombre": "Espadon",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D8",
-    "propiedades": [
-      "PERFORANTE",
-      "SUTIL"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 121,
-    "nombre": "Estoque",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D8",
-    "propiedades": [
-      "CONTUNDENTE"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 122,
-    "nombre": "Flagelo",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D10",
-    "propiedades": [
-      "CORTANTE",
-      "A_DOS_MANOS",
-      "GRAN_ALCANCE",
-      "PESADA"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 123,
-    "nombre": "Guja",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D12",
-    "propiedades": [
-      "CORTANTE",
-      "A_DOS_MANOS",
-      "GRAN_ALCANCE",
-      "PESADA"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 124,
-    "nombre": "Hacha a dos manos",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 1,
-    "tipoDadoDaño": "D8",
-    "propiedades": [
-      "CORTANTE",
-      "VERSATIL"
-    ],
-    "tipoDadoSegundoDaño": "D10",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 125,
-    "nombre": "Hacha de guerra",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D12",
-    "propiedades": [
-      "PERFORANTE",
-      "GRAN_ALCANCE",
-      "ESPECIAL"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 126,
-    "nombre": "Lanza de caballeria",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D4",
-    "propiedades": [
-      "CORTANTE",
-      "GRAN_ALCANCE",
-      "SUTIL"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 127,
-    "nombre": "Latigo",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D8",
-    "propiedades": [
-      "PERFORANTE"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 128,
-    "nombre": "Lucero del alba",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 1,
-    "tipoDadoDaño": "D8",
-    "propiedades": [
-      "CONTUNDENTE",
-      "VERSATIL"
-    ],
-    "tipoDadoSegundoDaño": "D10",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 129,
-    "nombre": "Martillo de guerra",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 2,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D6",
-    "propiedades": [
-      "CONTUNDENTE",
-      "A_DOS_MANOS",
-      "PESADA"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 130,
-    "nombre": "Maza a dos manos",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D10",
-    "propiedades": [
-      "PERFORANTE",
-      "A_DOS_MANOS",
-      "GRAN_ALCANCE",
-      "PESADA"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 131,
-    "nombre": "Pica",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D8",
-    "propiedades": [
-      "PERFORANTE"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 0,
-    "alcanceMaximo": 0,
-    "codigo": 132,
-    "nombre": "Pico de guerra",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 1,
-    "tipoDadoDaño": "D6",
-    "propiedades": [
-      "PERFORANTE",
-      "ARROJADIZA",
-      "ALCANCE",
-      "VERSATIL"
-    ],
-    "tipoDadoSegundoDaño": "D8",
-    "alcanceMinimo": 20,
-    "alcanceMaximo": 60,
-    "codigo": 133,
-    "nombre": "Tridente",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D8",
-    "propiedades": [
-      "PERFORANTE",
-      "A_DOS_MANOS",
-      "MUNICION",
-      "PESADA",
-      "ALCANCE"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 150,
-    "alcanceMaximo": 600,
-    "codigo": 134,
-    "nombre": "Arco largo",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D6",
-    "propiedades": [
-      "PERFORANTE",
-      "RECARGA",
-      "MUNICION",
-      "LIGERA",
-      "ALCANCE"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 30,
-    "alcanceMaximo": 120,
-    "codigo": 135,
-    "nombre": "Ballesta de mano",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D10",
-    "propiedades": [
-      "PERFORANTE",
-      "A_DOS_MANOS",
-      "RECARGA",
-      "MUNICION",
-      "PESADA",
-      "ALCANCE"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 100,
-    "alcanceMaximo": 400,
-    "codigo": 136,
-    "nombre": "Ballesta pesada",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D4",
-    "propiedades": [
-      "PERFORANTE",
-      "RECARGA",
-      "MUNICION",
-      "ALCANCE"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 25,
-    "alcanceMaximo": 100,
-    "codigo": 137,
-    "nombre": "Cerbatana",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "cantidadDaño": 1,
-    "cantidadSegundoDaño": 0,
-    "tipoDadoDaño": "D4",
-    "propiedades": [
-      "PERFORANTE",
-      "ARROJADIZA",
-      "ESPECIAL",
-      "ALCANCE"
-    ],
-    "tipoDadoSegundoDaño": "D4",
-    "alcanceMinimo": 5,
-    "alcanceMaximo": 15,
-    "codigo": 138,
-    "nombre": "Red",
-    "tipoValor": "PO",
-    "tipo": "ARMA_MARCIAL"
-  },
-  {
-    "valorCABase": 11,
-    "requisitoFuerza": 0,
-    "desventajaSigilo": true,
-    "modificadorDestreza": true,
-    "maximoModificadorDestreza": 0,
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 139,
-    "nombre": "Acolchada",
-    "tipoValor": "PO",
-    "tipo": "ARMADURA_LIGERA"
-  },
-  {
-    "valorCABase": 11,
-    "requisitoFuerza": 0,
-    "desventajaSigilo": false,
-    "modificadorDestreza": true,
-    "maximoModificadorDestreza": 0,
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 140,
-    "nombre": "Cuero",
-    "tipoValor": "PO",
-    "tipo": "ARMADURA_LIGERA"
-  },
-  {
-    "valorCABase": 12,
-    "requisitoFuerza": 0,
-    "desventajaSigilo": false,
-    "modificadorDestreza": true,
-    "maximoModificadorDestreza": 0,
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 141,
-    "nombre": "Cuero tachonado",
-    "tipoValor": "PO",
-    "tipo": "ARMADURA_LIGERA"
-  },
-  {
-    "valorCABase": 13,
-    "requisitoFuerza": 0,
-    "desventajaSigilo": false,
-    "modificadorDestreza": true,
-    "maximoModificadorDestreza": 2,
-    "peso": 1.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 142,
-    "nombre": "Camisa de malla",
-    "tipoValor": "PO",
-    "tipo": "ARMADURA_MEDIA"
-  },
-  {
-    "valorCABase": 14,
-    "requisitoFuerza": 0,
-    "desventajaSigilo": true,
-    "modificadorDestreza": true,
-    "maximoModificadorDestreza": 2,
-    "peso": 45.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 143,
-    "nombre": "Cota de escamas",
-    "tipoValor": "PO",
-    "tipo": "ARMADURA_MEDIA"
-  },
-  {
-    "valorCABase": 14,
-    "requisitoFuerza": 0,
-    "desventajaSigilo": false,
-    "modificadorDestreza": true,
-    "maximoModificadorDestreza": 2,
-    "peso": 20.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 144,
-    "nombre": "Coraza",
-    "tipoValor": "PO",
-    "tipo": "ARMADURA_MEDIA"
-  },
-  {
-    "valorCABase": 15,
-    "requisitoFuerza": 0,
-    "desventajaSigilo": true,
-    "modificadorDestreza": true,
-    "maximoModificadorDestreza": 2,
-    "peso": 40.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 145,
-    "nombre": "Media armadura",
-    "tipoValor": "PO",
-    "tipo": "ARMADURA_MEDIA"
-  },
-  {
-    "valorCABase": 12,
-    "requisitoFuerza": 0,
-    "desventajaSigilo": false,
-    "modificadorDestreza": true,
-    "maximoModificadorDestreza": 2,
-    "peso": 12.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 146,
-    "nombre": "Pieles",
-    "tipoValor": "PO",
-    "tipo": "ARMADURA_MEDIA"
-  },
-  {
-    "valorCABase": 17,
-    "requisitoFuerza": 0,
-    "desventajaSigilo": true,
-    "modificadorDestreza": false,
-    "maximoModificadorDestreza": 0,
-    "peso": 60.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 147,
-    "nombre": "Armadura de bandas",
-    "tipoValor": "PO",
-    "tipo": "ARMADURA_PESADA"
-  },
-  {
-    "valorCABase": 18,
-    "requisitoFuerza": 0,
-    "desventajaSigilo": true,
-    "modificadorDestreza": false,
-    "maximoModificadorDestreza": 0,
-    "peso": 65.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 148,
-    "nombre": "Armadura de placas",
-    "tipoValor": "PO",
-    "tipo": "ARMADURA_PESADA"
-  },
-  {
-    "valorCABase": 14,
-    "requisitoFuerza": 0,
-    "desventajaSigilo": true,
-    "modificadorDestreza": false,
-    "maximoModificadorDestreza": 0,
-    "peso": 40.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 149,
-    "nombre": "Cota guarnecida",
-    "tipoValor": "PO",
-    "tipo": "ARMADURA_PESADA"
-  },
-  {
-    "valorCABase": 16,
-    "requisitoFuerza": 0,
-    "desventajaSigilo": true,
-    "modificadorDestreza": false,
-    "maximoModificadorDestreza": 0,
-    "peso": 55.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 150,
-    "nombre": "Cota de malla",
-    "tipoValor": "PO",
-    "tipo": "ARMADURA_PESADA"
-  },
-  {
-    "valorCABase": 10,
-    "requisitoFuerza": 0,
-    "desventajaSigilo": false,
-    "modificadorDestreza": false,
-    "maximoModificadorDestreza": 0,
-    "peso": 6.0,
-    "cantValor": 0,
-    "cantidad": 0,
-    "codigo": 151,
-    "nombre": "Escudo",
-    "tipoValor": "PO",
-    "tipo": "ESCUDO"
-  }
-]
+{
+  "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+  "$values": [
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 1,
+      "nombre": "Abaco",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 2,
+      "cantidad": 20,
+      "codigo": 2,
+      "nombre": "Abrojos",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 2,
+      "cantidad": 20,
+      "codigo": 3,
+      "nombre": "Aceite",
+      "tipoValor": "PP",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 2,
+      "cantidad": 2,
+      "codigo": 4,
+      "nombre": "Aceite",
+      "tipoValor": "PP",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 25,
+      "cantidad": 1,
+      "codigo": 5,
+      "nombre": "Acido",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 25,
+      "cantidad": 1,
+      "codigo": 6,
+      "nombre": "Agua Bendita",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 7,
+      "nombre": "Aljaba",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 8,
+      "nombre": "Anillo de sellar",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 50,
+      "cantidad": 1,
+      "codigo": 9,
+      "nombre": "Antitoxina",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1,
+      "cantidad": 10,
+      "codigo": 10,
+      "nombre": "Antorcha",
+      "tipoValor": "PC",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 35.0,
+      "cantValor": 4,
+      "cantidad": 1,
+      "codigo": 11,
+      "nombre": "Ariete Portatil",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 12,
+      "nombre": "Balanza de mercader",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 70.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 13,
+      "nombre": "Barril",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 1,
+      "cantidad": 10,
+      "codigo": 14,
+      "nombre": "Bolas de metal",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 15,
+      "nombre": "Bolsa",
+      "tipoValor": "PP",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 16,
+      "nombre": "Botella de cristal",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 10.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 17,
+      "nombre": "Cadena",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 18,
+      "nombre": "Campana",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "codigo": 19,
+      "nombre": "Cristal",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 4.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 20,
+      "nombre": "Baston",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 3.0,
+      "cantValor": 20,
+      "cantidad": 1,
+      "codigo": 21,
+      "nombre": "Orbe",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "codigo": 22,
+      "nombre": "Vara",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "codigo": 23,
+      "nombre": "Varita",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 4.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 24,
+      "nombre": "Baston de madera",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 25,
+      "nombre": "Rama de muerdago",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 26,
+      "nombre": "Tótem",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "codigo": 27,
+      "nombre": "Varita de tejo",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 5.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 28,
+      "nombre": "Cantimplora",
+      "tipoValor": "PP",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 4.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 29,
+      "nombre": "Caña de pescar",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1000,
+      "cantidad": 1,
+      "codigo": 30,
+      "nombre": "Catalejo",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "codigo": 31,
+      "nombre": "Cerradura",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 4,
+      "cantidad": 1,
+      "codigo": 32,
+      "nombre": "Cesta",
+      "tipoValor": "PP",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 25.0,
+      "cantValor": 5,
+      "cantidad": 2,
+      "codigo": 33,
+      "nombre": "Cofre",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 10.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 34,
+      "nombre": "Cuerda de cañamo",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 5.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "codigo": 35,
+      "nombre": "Cuerda de seda",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 36,
+      "nombre": "Cubo",
+      "tipoValor": "PC",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 25.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 37,
+      "nombre": "Escalera",
+      "tipoValor": "PP",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 38,
+      "nombre": "Espejito de acero",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 6.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 39,
+      "nombre": "Esposas",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 40,
+      "nombre": "Estuche para mapa o pergamino",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 41,
+      "nombre": "Estuche para virotes de ballesta",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 42,
+      "nombre": "Frasco o jarra",
+      "tipoValor": "PC",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 50,
+      "cantidad": 1,
+      "codigo": 43,
+      "nombre": "Fuego de alquimista",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 4.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 44,
+      "nombre": "Garfio de escalada",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 45,
+      "nombre": "Jabon",
+      "tipoValor": "PC",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 4.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 46,
+      "nombre": "Jarro o cantaro",
+      "tipoValor": "PC",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 47,
+      "nombre": "Lacre",
+      "tipoValor": "PP",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 48,
+      "nombre": "Lampara",
+      "tipoValor": "PP",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 5.0,
+      "cantValor": 25,
+      "cantidad": 1,
+      "codigo": 49,
+      "nombre": "Libro",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 3.0,
+      "cantValor": 50,
+      "cantidad": 1,
+      "codigo": 50,
+      "nombre": "Libro de conjuros",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "codigo": 51,
+      "nombre": "Linterna de ojo de buey",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 52,
+      "nombre": "Linterna sorda",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 100,
+      "cantidad": 1,
+      "codigo": 53,
+      "nombre": "Lupa",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 3.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 54,
+      "nombre": "Manta",
+      "tipoValor": "PP",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 3.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 55,
+      "nombre": "Martillo",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 10.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 56,
+      "nombre": "Mazo",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 5.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 57,
+      "nombre": "Mochila",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.5,
+      "cantValor": 4,
+      "cantidad": 20,
+      "codigo": 58,
+      "nombre": "Balas de honda",
+      "tipoValor": "PC",
+      "tipo": "Municion"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1,
+      "cantidad": 50,
+      "codigo": 59,
+      "nombre": "Dardos de cerbatana",
+      "tipoValor": "PO",
+      "tipo": "Municion"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1,
+      "cantidad": 20,
+      "codigo": 60,
+      "nombre": "Flechas",
+      "tipoValor": "PO",
+      "tipo": "Municion"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.5,
+      "cantValor": 1,
+      "cantidad": 20,
+      "codigo": 61,
+      "nombre": "Virotes de ballesta",
+      "tipoValor": "PO",
+      "tipo": "Municion"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 10.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 62,
+      "nombre": "Olla de hierro",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 5.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 63,
+      "nombre": "Pala",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 5.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 64,
+      "nombre": "Palanca",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 2,
+      "cantidad": 5,
+      "codigo": 65,
+      "nombre": "Papel",
+      "tipoValor": "PP",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 66,
+      "nombre": "Perfume",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1,
+      "cantidad": 10,
+      "codigo": 67,
+      "nombre": "Pergamino",
+      "tipoValor": "PP",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 7.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 68,
+      "nombre": "Petate",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 10.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 69,
+      "nombre": "Pico de minero",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 70,
+      "nombre": "Piedra de afilar",
+      "tipoValor": "PC",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 5.0,
+      "cantValor": 1,
+      "cantidad": 10,
+      "codigo": 71,
+      "nombre": "Pinchos de hierro",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 5,
+      "cantidad": 10,
+      "codigo": 72,
+      "nombre": "Piton",
+      "tipoValor": "PC",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 73,
+      "nombre": "Pluma",
+      "tipoValor": "PC",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 50,
+      "cantidad": 1,
+      "codigo": 74,
+      "nombre": "Pocion de curacion",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 5.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 75,
+      "nombre": "Polipasto",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 5,
+      "cantidad": 5,
+      "codigo": 76,
+      "nombre": "Racion",
+      "tipoValor": "PP",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 25,
+      "cantidad": 1,
+      "codigo": 77,
+      "nombre": "Reloj",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 3.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 78,
+      "nombre": "Ropas comunes",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 6.0,
+      "cantValor": 15,
+      "cantidad": 1,
+      "codigo": 79,
+      "nombre": "Ropas de calidad",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 4.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 80,
+      "nombre": "Ropas de viaje",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 4.0,
+      "cantValor": 5,
+      "cantidad": 2,
+      "codigo": 81,
+      "nombre": "Ropas, disfraz",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 82,
+      "nombre": "Saco",
+      "tipoValor": "PC",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 25,
+      "cantidad": 1,
+      "codigo": 83,
+      "nombre": "Saquito de componentes",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 25,
+      "cantidad": 1,
+      "codigo": 84,
+      "nombre": "Saquito de componentes",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 85,
+      "nombre": "Silbato de supervivencia",
+      "tipoValor": "PC",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 86,
+      "nombre": "Amuleto",
+      "tipoValor": "PO",
+      "tipo": "Simbolos_Sagrados"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 87,
+      "nombre": "Emblema",
+      "tipoValor": "PO",
+      "tipo": "Simbolos_Sagrados"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 88,
+      "nombre": "Relicario",
+      "tipoValor": "PO",
+      "tipo": "Simbolos_Sagrados"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 20.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 89,
+      "nombre": "Tienda para dos personas",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "codigo": 90,
+      "nombre": "Tinta. botella de 1 onza",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 91,
+      "nombre": "Tiza (1 trozo)",
+      "tipoValor": "PC",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 25.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 92,
+      "nombre": "Trampa para cazar",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 4.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 93,
+      "nombre": "Tunica",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 94,
+      "nombre": "Utensilios de cocina",
+      "tipoValor": "PP",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 12.0,
+      "cantValor": 25,
+      "cantidad": 1,
+      "codigo": 95,
+      "nombre": "Utiles de escalada",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 3.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 96,
+      "nombre": "Utiles de sanador",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 7.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 97,
+      "nombre": "Vara (10)",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1,
+      "cantidad": 2,
+      "codigo": 98,
+      "nombre": "Vela",
+      "tipoValor": "PC",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 100,
+      "cantidad": 1,
+      "codigo": 99,
+      "nombre": "Veneno basico (vial)",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 100,
+      "nombre": "Vial",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 101,
+      "nombre": "Yesquero",
+      "tipoValor": "PP",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 4.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 1,
+      "tipoDadoDaño": "D6",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CONTUNDENTE",
+          "VERSATIL"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D8",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 102,
+      "nombre": "Baston",
+      "tipoValor": "PP",
+      "tipo": "ARMA_SIMPLE"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 4.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D4",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CORTANTE",
+          "ARROJADIZA",
+          "LIGERA",
+          "SUTIL"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 103,
+      "nombre": "Daga",
+      "tipoValor": "PO",
+      "tipo": "ARMA_SIMPLE"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D4",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CONTUNDENTE",
+          "LIGERA"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 104,
+      "nombre": "Garrote",
+      "tipoValor": "PP",
+      "tipo": "ARMA_SIMPLE"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 10.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D8",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CONTUNDENTE",
+          "A_DOS_MANOS"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 105,
+      "nombre": "Garrote Grande",
+      "tipoValor": "PP",
+      "tipo": "ARMA_SIMPLE"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D6",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CORTANTE",
+          "ARROJADIZA",
+          "ALCANCE",
+          "LIGERA"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 20,
+      "alcanceMaximo": 60,
+      "codigo": 106,
+      "nombre": "Hacha de mano",
+      "tipoValor": "PO",
+      "tipo": "ARMA_SIMPLE"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D4",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CORTANTE",
+          "LIGERA"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 107,
+      "nombre": "Hoz",
+      "tipoValor": "PO",
+      "tipo": "ARMA_SIMPLE"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D6",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "PERFORANTE",
+          "ARROJADIZA",
+          "ALCANCE"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 30,
+      "alcanceMaximo": 120,
+      "codigo": 108,
+      "nombre": "Jabalina",
+      "tipoValor": "PP",
+      "tipo": "ARMA_SIMPLE"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 3.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 1,
+      "tipoDadoDaño": "D6",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "PERFORANTE",
+          "ARROJADIZA",
+          "ALCANCE",
+          "VERSATIL"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D8",
+      "alcanceMinimo": 20,
+      "alcanceMaximo": 60,
+      "codigo": 109,
+      "nombre": "Lanza",
+      "tipoValor": "PO",
+      "tipo": "ARMA_SIMPLE"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D4",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CONTUNDENTE",
+          "ARROJADIZA",
+          "ALCANCE",
+          "LIGERA"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 20,
+      "alcanceMaximo": 60,
+      "codigo": 110,
+      "nombre": "Martillo ligero",
+      "tipoValor": "PO",
+      "tipo": "ARMA_SIMPLE"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 4.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D6",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CONTUNDENTE"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 111,
+      "nombre": "Maza",
+      "tipoValor": "PO",
+      "tipo": "ARMA_SIMPLE"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 25,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D6",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "PERFORANTE",
+          "MUNICION",
+          "A_DOS_MANOS",
+          "ALCANCE"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 80,
+      "alcanceMaximo": 320,
+      "codigo": 112,
+      "nombre": "Arco corto",
+      "tipoValor": "PO",
+      "tipo": "ARMA_A_DISTANCIA_SIMPLE"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 5.0,
+      "cantValor": 25,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D8",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "PERFORANTE",
+          "MUNICION",
+          "A_DOS_MANOS",
+          "ALCANCE",
+          "RECARGA"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 80,
+      "alcanceMaximo": 320,
+      "codigo": 113,
+      "nombre": "Ballesta ligera",
+      "tipoValor": "PO",
+      "tipo": "ARMA_A_DISTANCIA_SIMPLE"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D4",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "PERFORANTE",
+          "SUTIL",
+          "ARROJADIZA",
+          "ALCANCE"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 20,
+      "alcanceMaximo": 60,
+      "codigo": 114,
+      "nombre": "Dardo",
+      "tipoValor": "PC",
+      "tipo": "ARMA_A_DISTANCIA_SIMPLE"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D4",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CONTUNDENTE",
+          "SUTIL",
+          "MUNICION",
+          "ALCANCE"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 20,
+      "alcanceMaximo": 60,
+      "codigo": 115,
+      "nombre": "Honda",
+      "tipoValor": "PP",
+      "tipo": "ARMA_A_DISTANCIA_SIMPLE"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 6.0,
+      "cantValor": 20,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D10",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CORTANTE",
+          "A_DOS_MANOS",
+          "GRAN_ALCANCE",
+          "PESADA"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 116,
+      "nombre": "Alabarda",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 3.0,
+      "cantValor": 25,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D6",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CORTANTE",
+          "LIGERA",
+          "SUTIL"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 117,
+      "nombre": "Cimitarra",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D6",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "PERFORANTE",
+          "LIGERA",
+          "SUTIL"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 118,
+      "nombre": "Espada corta",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 3.0,
+      "cantValor": 15,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 1,
+      "tipoDadoDaño": "D8",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CORTANTE",
+          "VERSATIL"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D10",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 119,
+      "nombre": "Espada Larga",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 6.0,
+      "cantValor": 50,
+      "cantidad": 1,
+      "cantidadDaño": 2,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D8",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CORTANTE",
+          "A_DOS_MANOS",
+          "PESADA"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 120,
+      "nombre": "Espadon",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 25,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D8",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "PERFORANTE",
+          "SUTIL"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 121,
+      "nombre": "Estoque",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D8",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CONTUNDENTE"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 122,
+      "nombre": "Flagelo",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 6.0,
+      "cantValor": 20,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D10",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CORTANTE",
+          "A_DOS_MANOS",
+          "GRAN_ALCANCE",
+          "PESADA"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 123,
+      "nombre": "Guja",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 7.0,
+      "cantValor": 30,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D12",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CORTANTE",
+          "A_DOS_MANOS",
+          "GRAN_ALCANCE",
+          "PESADA"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 124,
+      "nombre": "Hacha a dos manos",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 4.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 1,
+      "tipoDadoDaño": "D8",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CORTANTE",
+          "VERSATIL"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D10",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 125,
+      "nombre": "Hacha de guerra",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 6.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D12",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "PERFORANTE",
+          "GRAN_ALCANCE",
+          "ESPECIAL"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 126,
+      "nombre": "Lanza de caballeria",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 3.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D4",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CORTANTE",
+          "GRAN_ALCANCE",
+          "SUTIL"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 127,
+      "nombre": "Latigo",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 4.0,
+      "cantValor": 15,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D8",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "PERFORANTE"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 128,
+      "nombre": "Lucero del alba",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 15,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 1,
+      "tipoDadoDaño": "D8",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CONTUNDENTE",
+          "VERSATIL"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D10",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 129,
+      "nombre": "Martillo de guerra",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 10.0,
+      "cantValor": 15,
+      "cantidad": 1,
+      "cantidadDaño": 2,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D6",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "CONTUNDENTE",
+          "A_DOS_MANOS",
+          "PESADA"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 130,
+      "nombre": "Maza a dos manos",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 18.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D10",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "PERFORANTE",
+          "A_DOS_MANOS",
+          "GRAN_ALCANCE",
+          "PESADA"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 131,
+      "nombre": "Pica",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D8",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "PERFORANTE"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 0,
+      "alcanceMaximo": 0,
+      "codigo": 132,
+      "nombre": "Pico de guerra",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 4.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 1,
+      "tipoDadoDaño": "D6",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "PERFORANTE",
+          "ARROJADIZA",
+          "ALCANCE",
+          "VERSATIL"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D8",
+      "alcanceMinimo": 20,
+      "alcanceMaximo": 60,
+      "codigo": 133,
+      "nombre": "Tridente",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 50,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D8",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "PERFORANTE",
+          "A_DOS_MANOS",
+          "MUNICION",
+          "PESADA",
+          "ALCANCE"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 150,
+      "alcanceMaximo": 600,
+      "codigo": 134,
+      "nombre": "Arco largo",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 3.0,
+      "cantValor": 75,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D6",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "PERFORANTE",
+          "RECARGA",
+          "MUNICION",
+          "LIGERA",
+          "ALCANCE"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 30,
+      "alcanceMaximo": 120,
+      "codigo": 135,
+      "nombre": "Ballesta de mano",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 3.0,
+      "cantValor": 75,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D10",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "PERFORANTE",
+          "A_DOS_MANOS",
+          "RECARGA",
+          "MUNICION",
+          "PESADA",
+          "ALCANCE"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 100,
+      "alcanceMaximo": 400,
+      "codigo": 136,
+      "nombre": "Ballesta pesada",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D4",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "PERFORANTE",
+          "RECARGA",
+          "MUNICION",
+          "ALCANCE"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 25,
+      "alcanceMaximo": 100,
+      "codigo": 137,
+      "nombre": "Cerbatana",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Arma, Assembly-CSharp",
+      "peso": 3.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "cantidadDaño": 1,
+      "cantidadSegundoDaño": 0,
+      "tipoDadoDaño": "D4",
+      "propiedades": {
+        "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "PERFORANTE",
+          "ARROJADIZA",
+          "ESPECIAL",
+          "ALCANCE"
+        ]
+      },
+      "tipoDadoSegundoDaño": "D4",
+      "alcanceMinimo": 5,
+      "alcanceMaximo": 15,
+      "codigo": 138,
+      "nombre": "Red",
+      "tipoValor": "PO",
+      "tipo": "ARMA_MARCIAL"
+    },
+    {
+      "$type": "Armadura, Assembly-CSharp",
+      "valorCABase": 11,
+      "requisitoFuerza": 0,
+      "desventajaSigilo": true,
+      "modificadorDestreza": true,
+      "maximoModificadorDestreza": 0,
+      "peso": 8.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 139,
+      "nombre": "Acolchada",
+      "tipoValor": "PO",
+      "tipo": "ARMADURA_LIGERA"
+    },
+    {
+      "$type": "Armadura, Assembly-CSharp",
+      "valorCABase": 11,
+      "requisitoFuerza": 0,
+      "desventajaSigilo": false,
+      "modificadorDestreza": true,
+      "maximoModificadorDestreza": 0,
+      "peso": 10.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "codigo": 140,
+      "nombre": "Cuero",
+      "tipoValor": "PO",
+      "tipo": "ARMADURA_LIGERA"
+    },
+    {
+      "$type": "Armadura, Assembly-CSharp",
+      "valorCABase": 12,
+      "requisitoFuerza": 0,
+      "desventajaSigilo": false,
+      "modificadorDestreza": true,
+      "maximoModificadorDestreza": 0,
+      "peso": 13.0,
+      "cantValor": 45,
+      "cantidad": 1,
+      "codigo": 141,
+      "nombre": "Cuero tachonado",
+      "tipoValor": "PO",
+      "tipo": "ARMADURA_LIGERA"
+    },
+    {
+      "$type": "Armadura, Assembly-CSharp",
+      "valorCABase": 13,
+      "requisitoFuerza": 0,
+      "desventajaSigilo": false,
+      "modificadorDestreza": true,
+      "maximoModificadorDestreza": 2,
+      "peso": 20.0,
+      "cantValor": 50,
+      "cantidad": 1,
+      "codigo": 142,
+      "nombre": "Camisa de malla",
+      "tipoValor": "PO",
+      "tipo": "ARMADURA_MEDIA"
+    },
+    {
+      "$type": "Armadura, Assembly-CSharp",
+      "valorCABase": 14,
+      "requisitoFuerza": 0,
+      "desventajaSigilo": true,
+      "modificadorDestreza": true,
+      "maximoModificadorDestreza": 2,
+      "peso": 45.0,
+      "cantValor": 50,
+      "cantidad": 1,
+      "codigo": 143,
+      "nombre": "Cota de escamas",
+      "tipoValor": "PO",
+      "tipo": "ARMADURA_MEDIA"
+    },
+    {
+      "$type": "Armadura, Assembly-CSharp",
+      "valorCABase": 14,
+      "requisitoFuerza": 0,
+      "desventajaSigilo": false,
+      "modificadorDestreza": true,
+      "maximoModificadorDestreza": 2,
+      "peso": 20.0,
+      "cantValor": 400,
+      "cantidad": 1,
+      "codigo": 144,
+      "nombre": "Coraza",
+      "tipoValor": "PO",
+      "tipo": "ARMADURA_MEDIA"
+    },
+    {
+      "$type": "Armadura, Assembly-CSharp",
+      "valorCABase": 15,
+      "requisitoFuerza": 0,
+      "desventajaSigilo": true,
+      "modificadorDestreza": true,
+      "maximoModificadorDestreza": 2,
+      "peso": 40.0,
+      "cantValor": 750,
+      "cantidad": 1,
+      "codigo": 145,
+      "nombre": "Media armadura",
+      "tipoValor": "PO",
+      "tipo": "ARMADURA_MEDIA"
+    },
+    {
+      "$type": "Armadura, Assembly-CSharp",
+      "valorCABase": 12,
+      "requisitoFuerza": 0,
+      "desventajaSigilo": false,
+      "modificadorDestreza": true,
+      "maximoModificadorDestreza": 2,
+      "peso": 12.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "codigo": 146,
+      "nombre": "Pieles",
+      "tipoValor": "PO",
+      "tipo": "ARMADURA_MEDIA"
+    },
+    {
+      "$type": "Armadura, Assembly-CSharp",
+      "valorCABase": 17,
+      "requisitoFuerza": 0,
+      "desventajaSigilo": true,
+      "modificadorDestreza": false,
+      "maximoModificadorDestreza": 0,
+      "peso": 60.0,
+      "cantValor": 200,
+      "cantidad": 1,
+      "codigo": 147,
+      "nombre": "Armadura de bandas",
+      "tipoValor": "PO",
+      "tipo": "ARMADURA_PESADA"
+    },
+    {
+      "$type": "Armadura, Assembly-CSharp",
+      "valorCABase": 18,
+      "requisitoFuerza": 0,
+      "desventajaSigilo": true,
+      "modificadorDestreza": false,
+      "maximoModificadorDestreza": 0,
+      "peso": 65.0,
+      "cantValor": 1500,
+      "cantidad": 1,
+      "codigo": 148,
+      "nombre": "Armadura de placas",
+      "tipoValor": "PO",
+      "tipo": "ARMADURA_PESADA"
+    },
+    {
+      "$type": "Armadura, Assembly-CSharp",
+      "valorCABase": 14,
+      "requisitoFuerza": 0,
+      "desventajaSigilo": true,
+      "modificadorDestreza": false,
+      "maximoModificadorDestreza": 0,
+      "peso": 40.0,
+      "cantValor": 30,
+      "cantidad": 1,
+      "codigo": 149,
+      "nombre": "Cota guarnecida",
+      "tipoValor": "PO",
+      "tipo": "ARMADURA_PESADA"
+    },
+    {
+      "$type": "Armadura, Assembly-CSharp",
+      "valorCABase": 16,
+      "requisitoFuerza": 0,
+      "desventajaSigilo": true,
+      "modificadorDestreza": false,
+      "maximoModificadorDestreza": 0,
+      "peso": 55.0,
+      "cantValor": 75,
+      "cantidad": 1,
+      "codigo": 150,
+      "nombre": "Cota de malla",
+      "tipoValor": "PO",
+      "tipo": "ARMADURA_PESADA"
+    },
+    {
+      "$type": "Armadura, Assembly-CSharp",
+      "valorCABase": 10,
+      "requisitoFuerza": 0,
+      "desventajaSigilo": false,
+      "modificadorDestreza": false,
+      "maximoModificadorDestreza": 0,
+      "peso": 6.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "codigo": 151,
+      "nombre": "Escudo",
+      "tipoValor": "PO",
+      "tipo": "ESCUDO"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 8.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "codigo": 152,
+      "nombre": "Herramientas de albañil",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 3.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "codigo": 153,
+      "nombre": "Herramientas de alfarero",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 6.0,
+      "cantValor": 8,
+      "cantidad": 1,
+      "codigo": 154,
+      "nombre": "Herramientas de carpintero",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 6.0,
+      "cantValor": 15,
+      "cantidad": 1,
+      "codigo": 155,
+      "nombre": "Herramientas de cartografo",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 5.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 156,
+      "nombre": "Herramientas de curtidor",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 5.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 157,
+      "nombre": "Herramientas de ebanista",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 8.0,
+      "cantValor": 20,
+      "cantidad": 1,
+      "codigo": 158,
+      "nombre": "Herramientas de herrero",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 25,
+      "cantidad": 1,
+      "codigo": 159,
+      "nombre": "Herramientas de joyero",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 10.0,
+      "cantValor": 50,
+      "cantidad": 1,
+      "codigo": 160,
+      "nombre": "Herramientas de manitas",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 5.0,
+      "cantValor": 30,
+      "cantidad": 1,
+      "codigo": 161,
+      "nombre": "Herramientas de soplador de vidrio",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 5.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 162,
+      "nombre": "Herramientas de tejedor",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 5.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 163,
+      "nombre": "Herramientas de zapatero",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 8.0,
+      "cantValor": 50,
+      "cantidad": 1,
+      "codigo": 164,
+      "nombre": "Herramientas de alquimista",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 5.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "codigo": 165,
+      "nombre": "Herramientas de calígrafo",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 9.0,
+      "cantValor": 20,
+      "cantidad": 1,
+      "codigo": 166,
+      "nombre": "Herramientas de cervecero",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 5.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "codigo": 167,
+      "nombre": "Herramientas de pintor",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 8.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 168,
+      "nombre": "Utiles de cocinero",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 25,
+      "cantidad": 1,
+      "codigo": 169,
+      "nombre": "Herramientas de ladron",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 25,
+      "cantidad": 1,
+      "codigo": 170,
+      "nombre": "Herramientas de navegante",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 171,
+      "nombre": "Chirimia",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 3,
+      "cantidad": 1,
+      "codigo": 172,
+      "nombre": "Cuerno",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 10.0,
+      "cantValor": 25,
+      "cantidad": 1,
+      "codigo": 173,
+      "nombre": "Dulcémele",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 2,
+      "cantidad": 1,
+      "codigo": 174,
+      "nombre": "Flauta",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 12,
+      "cantidad": 1,
+      "codigo": 175,
+      "nombre": "Flauta de pan",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 6.0,
+      "cantValor": 30,
+      "cantidad": 1,
+      "codigo": 176,
+      "nombre": "Gaita",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 35,
+      "cantidad": 1,
+      "codigo": 177,
+      "nombre": "Laúd",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 30,
+      "cantidad": 1,
+      "codigo": 178,
+      "nombre": "Lira",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 3.0,
+      "cantValor": 6,
+      "cantidad": 1,
+      "codigo": 179,
+      "nombre": "Tambor",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 30,
+      "cantidad": 1,
+      "codigo": 180,
+      "nombre": "Viola",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.5,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 181,
+      "nombre": "Ajedrez Dragón",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 182,
+      "nombre": "Apuesta de los tres dragones",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 1,
+      "cantidad": 1,
+      "codigo": 183,
+      "nombre": "Dados",
+      "tipoValor": "PP",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 184,
+      "nombre": "Naipes",
+      "tipoValor": "PP",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 185,
+      "nombre": "Naipes",
+      "tipoValor": "PP",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 2.0,
+      "cantValor": 50,
+      "cantidad": 1,
+      "codigo": 186,
+      "nombre": "Utiles de envenenador",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 3.0,
+      "cantValor": 5,
+      "cantidad": 1,
+      "codigo": 187,
+      "nombre": "Utiles de herborista",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 3.0,
+      "cantValor": 25,
+      "cantidad": 1,
+      "codigo": 188,
+      "nombre": "Utiles para disfrazarse",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Objeto, Assembly-CSharp",
+      "peso": 5.0,
+      "cantValor": 15,
+      "cantidad": 1,
+      "codigo": 189,
+      "nombre": "Utiles para falsificar",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Paquete, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 40,
+      "cantidad": 1,
+      "equipo": {
+        "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 5.0,
+            "cantValor": 2,
+            "cantidad": 1,
+            "codigo": 57,
+            "nombre": "Mochila",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 7.0,
+            "cantValor": 1,
+            "cantidad": 1,
+            "codigo": 68,
+            "nombre": "Petate",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 4.0,
+            "cantValor": 5,
+            "cantidad": 2,
+            "codigo": 81,
+            "nombre": "Ropas, disfraz",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 1,
+            "cantidad": 2,
+            "codigo": 98,
+            "nombre": "Vela",
+            "tipoValor": "PC",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 2.0,
+            "cantValor": 5,
+            "cantidad": 5,
+            "codigo": 76,
+            "nombre": "Racion",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 5.0,
+            "cantValor": 2,
+            "cantidad": 1,
+            "codigo": 28,
+            "nombre": "Cantimplora",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 3.0,
+            "cantValor": 25,
+            "cantidad": 1,
+            "codigo": 188,
+            "nombre": "Utiles para disfrazarse",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          }
+        ]
+      },
+      "codigo": 190,
+      "nombre": "Paquete de artista",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Paquete, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 39,
+      "cantidad": 1,
+      "equipo": {
+        "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 25.0,
+            "cantValor": 5,
+            "cantidad": 2,
+            "codigo": 33,
+            "nombre": "Cofre",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 25.0,
+            "cantValor": 5,
+            "cantidad": 2,
+            "codigo": 33,
+            "nombre": "Cofre",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 6.0,
+            "cantValor": 15,
+            "cantidad": 1,
+            "codigo": 79,
+            "nombre": "Ropas de calidad",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 2,
+            "cantidad": 5,
+            "codigo": 65,
+            "nombre": "Papel",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 5,
+            "cantidad": 1,
+            "codigo": 66,
+            "nombre": "Perfume",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 2,
+            "cantidad": 1,
+            "codigo": 73,
+            "nombre": "Pluma",
+            "tipoValor": "PC",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 10,
+            "cantidad": 1,
+            "codigo": 90,
+            "nombre": "Tinta. botella de 1 onza",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 2,
+            "cantidad": 2,
+            "codigo": 4,
+            "nombre": "Aceite",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 5,
+            "cantidad": 1,
+            "codigo": 47,
+            "nombre": "Lacre",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 2,
+            "cantidad": 1,
+            "codigo": 45,
+            "nombre": "Jabon",
+            "tipoValor": "PC",
+            "tipo": "Objeto_Mundano"
+          }
+        ]
+      },
+      "codigo": 153,
+      "nombre": "Paquete de diplomatico",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Paquete, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 40,
+      "cantidad": 1,
+      "equipo": {
+        "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 5.0,
+            "cantValor": 2,
+            "cantidad": 1,
+            "codigo": 57,
+            "nombre": "Mochila",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 7.0,
+            "cantValor": 1,
+            "cantidad": 1,
+            "codigo": 68,
+            "nombre": "Petate",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 5.0,
+            "cantValor": 25,
+            "cantidad": 1,
+            "codigo": 49,
+            "nombre": "Libro",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 10,
+            "cantidad": 1,
+            "codigo": 90,
+            "nombre": "Tinta. botella de 1 onza",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 2,
+            "cantidad": 1,
+            "codigo": 73,
+            "nombre": "Pluma",
+            "tipoValor": "PC",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 5,
+            "cantidad": 1,
+            "codigo": 15,
+            "nombre": "Bolsa",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 1,
+            "cantidad": 10,
+            "codigo": 67,
+            "nombre": "Pergamino",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          }
+        ]
+      },
+      "codigo": 191,
+      "nombre": "Paquete de erudito",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Paquete, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 40,
+      "cantidad": 1,
+      "equipo": {
+        "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 5.0,
+            "cantValor": 2,
+            "cantidad": 1,
+            "codigo": 57,
+            "nombre": "Mochila",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 7.0,
+            "cantValor": 1,
+            "cantidad": 1,
+            "codigo": 68,
+            "nombre": "Petate",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 8.0,
+            "cantValor": 1,
+            "cantidad": 1,
+            "codigo": 168,
+            "nombre": "Utiles de cocinero",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 5,
+            "cantidad": 1,
+            "codigo": 101,
+            "nombre": "Yesquero",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 1,
+            "cantidad": 10,
+            "codigo": 10,
+            "nombre": "Antorcha",
+            "tipoValor": "PC",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 2.0,
+            "cantValor": 5,
+            "cantidad": 5,
+            "codigo": 76,
+            "nombre": "Racion",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 5.0,
+            "cantValor": 2,
+            "cantidad": 1,
+            "codigo": 28,
+            "nombre": "Cantimplora",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 10.0,
+            "cantValor": 1,
+            "cantidad": 1,
+            "codigo": 34,
+            "nombre": "Cuerda de cañamo",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          }
+        ]
+      },
+      "codigo": 192,
+      "nombre": "Paquete de explorador",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Paquete, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 10,
+      "cantidad": 1,
+      "equipo": {
+        "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 5.0,
+            "cantValor": 2,
+            "cantidad": 1,
+            "codigo": 57,
+            "nombre": "Mochila",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 5.0,
+            "cantValor": 2,
+            "cantidad": 1,
+            "codigo": 64,
+            "nombre": "Palanca",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 3.0,
+            "cantValor": 1,
+            "cantidad": 1,
+            "codigo": 55,
+            "nombre": "Martillo",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 5,
+            "cantidad": 10,
+            "codigo": 72,
+            "nombre": "Piton",
+            "tipoValor": "PC",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 1,
+            "cantidad": 10,
+            "codigo": 10,
+            "nombre": "Antorcha",
+            "tipoValor": "PC",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 2.0,
+            "cantValor": 5,
+            "cantidad": 5,
+            "codigo": 76,
+            "nombre": "Racion",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 5.0,
+            "cantValor": 2,
+            "cantidad": 1,
+            "codigo": 28,
+            "nombre": "Cantimplora",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 10.0,
+            "cantValor": 1,
+            "cantidad": 1,
+            "codigo": 34,
+            "nombre": "Cuerda de cañamo",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          }
+        ]
+      },
+      "codigo": 193,
+      "nombre": "Paquete de explorador de mazmorras",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Paquete, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 16,
+      "cantidad": 1,
+      "equipo": {
+        "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 5.0,
+            "cantValor": 2,
+            "cantidad": 1,
+            "codigo": 57,
+            "nombre": "Mochila",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 2.0,
+            "cantValor": 1,
+            "cantidad": 10,
+            "codigo": 14,
+            "nombre": "Bolas de metal",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 1,
+            "cantidad": 1,
+            "codigo": 18,
+            "nombre": "Campana",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 1,
+            "cantidad": 2,
+            "codigo": 98,
+            "nombre": "Vela",
+            "tipoValor": "PC",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 5.0,
+            "cantValor": 2,
+            "cantidad": 1,
+            "codigo": 64,
+            "nombre": "Palanca",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 3.0,
+            "cantValor": 1,
+            "cantidad": 1,
+            "codigo": 55,
+            "nombre": "Martillo",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 5,
+            "cantidad": 10,
+            "codigo": 72,
+            "nombre": "Piton",
+            "tipoValor": "PC",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 2.0,
+            "cantValor": 5,
+            "cantidad": 1,
+            "codigo": 52,
+            "nombre": "Linterna sorda",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 2,
+            "cantidad": 2,
+            "codigo": 4,
+            "nombre": "Aceite",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 2.0,
+            "cantValor": 5,
+            "cantidad": 5,
+            "codigo": 76,
+            "nombre": "Racion",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 5,
+            "cantidad": 1,
+            "codigo": 101,
+            "nombre": "Yesquero",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 5.0,
+            "cantValor": 2,
+            "cantidad": 1,
+            "codigo": 28,
+            "nombre": "Cantimplora",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 10.0,
+            "cantValor": 1,
+            "cantidad": 1,
+            "codigo": 34,
+            "nombre": "Cuerda de cañamo",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          }
+        ]
+      },
+      "codigo": 194,
+      "nombre": "Paquete de ladrón",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    },
+    {
+      "$type": "Paquete, Assembly-CSharp",
+      "peso": 1.0,
+      "cantValor": 19,
+      "cantidad": 1,
+      "equipo": {
+        "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 5.0,
+            "cantValor": 2,
+            "cantidad": 1,
+            "codigo": 57,
+            "nombre": "Mochila",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 3.0,
+            "cantValor": 5,
+            "cantidad": 1,
+            "codigo": 54,
+            "nombre": "Manta",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 1,
+            "cantidad": 2,
+            "codigo": 98,
+            "nombre": "Vela",
+            "tipoValor": "PC",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 5,
+            "cantidad": 1,
+            "codigo": 101,
+            "nombre": "Yesquero",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 5,
+            "cantidad": 1,
+            "codigo": 15,
+            "nombre": "Bolsa",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 1,
+            "cantidad": 2,
+            "codigo": 98,
+            "nombre": "Vela",
+            "tipoValor": "PC",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 5.0,
+            "cantValor": 2,
+            "cantidad": 1,
+            "codigo": 28,
+            "nombre": "Cantimplora",
+            "tipoValor": "PP",
+            "tipo": "Objeto_Mundano"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 6.0,
+            "cantValor": 15,
+            "cantidad": 1,
+            "codigo": 79,
+            "nombre": "Ropas de calidad",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          }
+        ]
+      },
+      "codigo": 195,
+      "nombre": "Paquete de sacerdote",
+      "tipoValor": "PO",
+      "tipo": "Objeto_Mundano"
+    }
+  ]
+}

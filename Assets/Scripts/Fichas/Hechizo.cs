@@ -10,17 +10,17 @@ public class Hechizo
     int nivel;//0=truco
     E_EscuelasMagia escuelaMagica;
     string descripcion;
-    int alcance;
+    int alcance;//si el valor es 0 significa que es de toque el alcance
     bool requisitoVocal;
     bool requisitoSomatico;
     bool requisitoMaterial;
-   
     List<string> componentes;
     int tiempolanzamiento;
     E_TiempoDeLanzamientoConjuro tipoLanzamientoHechizo;
-    int duracion;
+    int duracion;//la duracion se basa en 
+    E_TiempoDeLanzamientoConjuro tipoDuracion;
     bool concentracion;
-
+    List<E_Clases> clasesAptas;
     public Hechizo()
     {
         this.codigo = 0;
@@ -37,9 +37,11 @@ public class Hechizo
         RequisitoVocal = false;
         RequisitoSomatico = false;
         RequisitoMaterial = false;
+        TipoDuracion = E_TiempoDeLanzamientoConjuro.INSTANTANEO;
+        ClasesAptas = new List<E_Clases>();
     }
 
-    public Hechizo(int codigo, string nombre, int nivel, E_EscuelasMagia escuelaMagica, string descripcion, int alcance, List<string> componentes, int tiempolanzamiento, E_TiempoDeLanzamientoConjuro tipoLanzamientoHechizo, int duracion, bool concentracion, E_Componentes[] requisitos, bool requisitoVocal, bool requisitoSomatico, bool requisitoMaterial)
+    public Hechizo(int codigo, string nombre, int nivel, E_EscuelasMagia escuelaMagica, string descripcion, int alcance, List<string> componentes, int tiempolanzamiento, E_TiempoDeLanzamientoConjuro tipoLanzamientoHechizo, int duracion, bool concentracion, E_Componentes[] requisitos, bool requisitoVocal, bool requisitoSomatico, bool requisitoMaterial, E_TiempoDeLanzamientoConjuro tipoDuracion, List<E_Clases> clasesAptas)
     {
         Codigo = codigo;
         Nombre = nombre;
@@ -55,6 +57,8 @@ public class Hechizo
         RequisitoVocal = requisitoVocal;
         RequisitoSomatico = requisitoSomatico;
         RequisitoMaterial = requisitoMaterial;
+        TipoDuracion = tipoDuracion;
+        ClasesAptas = clasesAptas;
     }
 
     public int Codigo { get => codigo; set => codigo = value>=0?value:0; }
@@ -71,6 +75,8 @@ public class Hechizo
     public bool RequisitoVocal { get => requisitoVocal; set => requisitoVocal = value; }
     public bool RequisitoSomatico { get => requisitoSomatico; set => requisitoSomatico = value; }
     public bool RequisitoMaterial { get => requisitoMaterial; set => requisitoMaterial = value; }
+    public E_TiempoDeLanzamientoConjuro TipoDuracion { get => tipoDuracion; set => tipoDuracion = value; }
+    public List<E_Clases> ClasesAptas { get => clasesAptas; set => clasesAptas = value; }
 
     private void SetNivel(int nivelNuevo)
     {
@@ -104,7 +110,9 @@ public class Hechizo
                tiempolanzamiento == hechizo.tiempolanzamiento &&
                tipoLanzamientoHechizo == hechizo.tipoLanzamientoHechizo &&
                duracion == hechizo.duracion &&
-               concentracion == hechizo.concentracion;
+               TipoDuracion== hechizo.TipoDuracion &&
+               concentracion == hechizo.concentracion&&
+               clasesAptas==hechizo.clasesAptas;
     }
 
     public override int GetHashCode()
@@ -124,6 +132,8 @@ public class Hechizo
         hash.Add(tipoLanzamientoHechizo);
         hash.Add(duracion);
         hash.Add(concentracion);
+        hash.Add(TipoDuracion);
+        hash.Add(clasesAptas);
         return hash.ToHashCode();
     }
 

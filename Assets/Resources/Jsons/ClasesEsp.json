@@ -1,0 +1,831 @@
+{
+  "$type": "System.Collections.Generic.List`1[[Clase, Assembly-CSharp]], mscorlib",
+  "$values": [
+    {
+      "$type": "Picaro, Assembly-CSharp",
+      "cantAtaqueFurtivo": 1,
+      "ataqueFurtivo": "D6",
+      "nombre": "PICARO",
+      "dadosSubidaNivel": "D8",
+      "competencias": {
+        "$type": "System.Collections.Generic.List`1[[E_Competencias, Assembly-CSharp]], mscorlib",
+        "$values": []
+      },
+      "tiradasSalvacion": {
+        "$type": "System.Collections.Generic.List`1[[E_Caracteristicas, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "INTELIGENCIA",
+          "DESTREZA",
+          "DESTREZA",
+          "INTELIGENCIA"
+        ]
+      },
+      "aptitudMagica": "INTELIGENCIA",
+      "puedeUsarMagia": false,
+      "equipoOpcional": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib]], mscorlib",
+        "1A": {
+          "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+          "$values": [
+            {
+              "$type": "Arma, Assembly-CSharp",
+              "peso": 2.0,
+              "cantValor": 25,
+              "cantidad": 1,
+              "cantidadDaño": 1,
+              "cantidadSegundoDaño": 0,
+              "tipoDadoDaño": "D8",
+              "propiedades": {
+                "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+                "$values": [
+                  "PERFORANTE",
+                  "SUTIL"
+                ]
+              },
+              "tipoDadoSegundoDaño": "D4",
+              "alcanceMinimo": 0,
+              "alcanceMaximo": 0,
+              "codigo": 121,
+              "nombre": "Estoque",
+              "tipoValor": "PO",
+              "tipo": "ARMA_MARCIAL"
+            }
+          ]
+        },
+        "1B": {
+          "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+          "$values": [
+            {
+              "$type": "Arma, Assembly-CSharp",
+              "peso": 2.0,
+              "cantValor": 10,
+              "cantidad": 1,
+              "cantidadDaño": 1,
+              "cantidadSegundoDaño": 0,
+              "tipoDadoDaño": "D6",
+              "propiedades": {
+                "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+                "$values": [
+                  "PERFORANTE",
+                  "LIGERA",
+                  "SUTIL"
+                ]
+              },
+              "tipoDadoSegundoDaño": "D4",
+              "alcanceMinimo": 0,
+              "alcanceMaximo": 0,
+              "codigo": 118,
+              "nombre": "Espada corta",
+              "tipoValor": "PO",
+              "tipo": "ARMA_MARCIAL"
+            }
+          ]
+        },
+        "2A": {
+          "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+          "$values": [
+            {
+              "$type": "Arma, Assembly-CSharp",
+              "peso": 2.0,
+              "cantValor": 25,
+              "cantidad": 1,
+              "cantidadDaño": 1,
+              "cantidadSegundoDaño": 0,
+              "tipoDadoDaño": "D6",
+              "propiedades": {
+                "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+                "$values": [
+                  "PERFORANTE",
+                  "MUNICION",
+                  "A_DOS_MANOS",
+                  "ALCANCE"
+                ]
+              },
+              "tipoDadoSegundoDaño": "D4",
+              "alcanceMinimo": 0,
+              "alcanceMaximo": 0,
+              "codigo": 112,
+              "nombre": "Arco corto",
+              "tipoValor": "PO",
+              "tipo": "ARMA_A_DISTANCIA_SIMPLE"
+            },
+            {
+              "$type": "Objeto, Assembly-CSharp",
+              "peso": 1.0,
+              "cantValor": 1,
+              "cantidad": 1,
+              "codigo": 7,
+              "nombre": "Aljaba",
+              "tipoValor": "PO",
+              "tipo": "Objeto_Mundano"
+            }
+          ]
+        },
+        "2B": {
+          "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+          "$values": [
+            {
+              "$type": "Arma, Assembly-CSharp",
+              "peso": 2.0,
+              "cantValor": 10,
+              "cantidad": 1,
+              "cantidadDaño": 1,
+              "cantidadSegundoDaño": 0,
+              "tipoDadoDaño": "D6",
+              "propiedades": {
+                "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+                "$values": [
+                  "PERFORANTE",
+                  "LIGERA",
+                  "SUTIL"
+                ]
+              },
+              "tipoDadoSegundoDaño": "D4",
+              "alcanceMinimo": 0,
+              "alcanceMaximo": 0,
+              "codigo": 118,
+              "nombre": "Espada corta",
+              "tipoValor": "PO",
+              "tipo": "ARMA_MARCIAL"
+            }
+          ]
+        },
+        "3A": {
+          "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+          "$values": [
+            {
+              "$type": "Paquete, Assembly-CSharp",
+              "peso": 1.0,
+              "cantValor": 16,
+              "cantidad": 1,
+              "equipo": {
+                "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+                "$values": [
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 5.0,
+                    "cantValor": 2,
+                    "cantidad": 1,
+                    "codigo": 57,
+                    "nombre": "Mochila",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 2.0,
+                    "cantValor": 1,
+                    "cantidad": 10,
+                    "codigo": 14,
+                    "nombre": "Bolas de metal",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 1.0,
+                    "cantValor": 1,
+                    "cantidad": 1,
+                    "codigo": 18,
+                    "nombre": "Campana",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 1.0,
+                    "cantValor": 1,
+                    "cantidad": 2,
+                    "codigo": 98,
+                    "nombre": "Vela",
+                    "tipoValor": "PC",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 5.0,
+                    "cantValor": 2,
+                    "cantidad": 1,
+                    "codigo": 64,
+                    "nombre": "Palanca",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 3.0,
+                    "cantValor": 1,
+                    "cantidad": 1,
+                    "codigo": 55,
+                    "nombre": "Martillo",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 1.0,
+                    "cantValor": 5,
+                    "cantidad": 10,
+                    "codigo": 72,
+                    "nombre": "Piton",
+                    "tipoValor": "PC",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 2.0,
+                    "cantValor": 5,
+                    "cantidad": 1,
+                    "codigo": 52,
+                    "nombre": "Linterna sorda",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 1.0,
+                    "cantValor": 2,
+                    "cantidad": 2,
+                    "codigo": 4,
+                    "nombre": "Aceite",
+                    "tipoValor": "PP",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 2.0,
+                    "cantValor": 5,
+                    "cantidad": 5,
+                    "codigo": 76,
+                    "nombre": "Racion",
+                    "tipoValor": "PP",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 1.0,
+                    "cantValor": 5,
+                    "cantidad": 1,
+                    "codigo": 101,
+                    "nombre": "Yesquero",
+                    "tipoValor": "PP",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 5.0,
+                    "cantValor": 2,
+                    "cantidad": 1,
+                    "codigo": 28,
+                    "nombre": "Cantimplora",
+                    "tipoValor": "PP",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 10.0,
+                    "cantValor": 1,
+                    "cantidad": 1,
+                    "codigo": 34,
+                    "nombre": "Cuerda de cañamo",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  }
+                ]
+              },
+              "codigo": 194,
+              "nombre": "Paquete de ladrón",
+              "tipoValor": "PO",
+              "tipo": "Objeto_Mundano"
+            }
+          ]
+        },
+        "3B": {
+          "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+          "$values": [
+            {
+              "$type": "Paquete, Assembly-CSharp",
+              "peso": 1.0,
+              "cantValor": 10,
+              "cantidad": 1,
+              "equipo": {
+                "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+                "$values": [
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 5.0,
+                    "cantValor": 2,
+                    "cantidad": 1,
+                    "codigo": 57,
+                    "nombre": "Mochila",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 5.0,
+                    "cantValor": 2,
+                    "cantidad": 1,
+                    "codigo": 64,
+                    "nombre": "Palanca",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 3.0,
+                    "cantValor": 1,
+                    "cantidad": 1,
+                    "codigo": 55,
+                    "nombre": "Martillo",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 1.0,
+                    "cantValor": 5,
+                    "cantidad": 10,
+                    "codigo": 72,
+                    "nombre": "Piton",
+                    "tipoValor": "PC",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 1.0,
+                    "cantValor": 1,
+                    "cantidad": 10,
+                    "codigo": 10,
+                    "nombre": "Antorcha",
+                    "tipoValor": "PC",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 2.0,
+                    "cantValor": 5,
+                    "cantidad": 5,
+                    "codigo": 76,
+                    "nombre": "Racion",
+                    "tipoValor": "PP",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 5.0,
+                    "cantValor": 2,
+                    "cantidad": 1,
+                    "codigo": 28,
+                    "nombre": "Cantimplora",
+                    "tipoValor": "PP",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 10.0,
+                    "cantValor": 1,
+                    "cantidad": 1,
+                    "codigo": 34,
+                    "nombre": "Cuerda de cañamo",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  }
+                ]
+              },
+              "codigo": 193,
+              "nombre": "Paquete de explorador de mazmorras",
+              "tipoValor": "PO",
+              "tipo": "Objeto_Mundano"
+            }
+          ]
+        },
+        "3C": {
+          "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+          "$values": [
+            {
+              "$type": "Paquete, Assembly-CSharp",
+              "peso": 1.0,
+              "cantValor": 10,
+              "cantidad": 1,
+              "equipo": {
+                "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+                "$values": [
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 5.0,
+                    "cantValor": 2,
+                    "cantidad": 1,
+                    "codigo": 57,
+                    "nombre": "Mochila",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 5.0,
+                    "cantValor": 2,
+                    "cantidad": 1,
+                    "codigo": 64,
+                    "nombre": "Palanca",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 3.0,
+                    "cantValor": 1,
+                    "cantidad": 1,
+                    "codigo": 55,
+                    "nombre": "Martillo",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 1.0,
+                    "cantValor": 5,
+                    "cantidad": 10,
+                    "codigo": 72,
+                    "nombre": "Piton",
+                    "tipoValor": "PC",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 1.0,
+                    "cantValor": 1,
+                    "cantidad": 10,
+                    "codigo": 10,
+                    "nombre": "Antorcha",
+                    "tipoValor": "PC",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 2.0,
+                    "cantValor": 5,
+                    "cantidad": 5,
+                    "codigo": 76,
+                    "nombre": "Racion",
+                    "tipoValor": "PP",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 5.0,
+                    "cantValor": 2,
+                    "cantidad": 1,
+                    "codigo": 28,
+                    "nombre": "Cantimplora",
+                    "tipoValor": "PP",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 10.0,
+                    "cantValor": 1,
+                    "cantidad": 1,
+                    "codigo": 34,
+                    "nombre": "Cuerda de cañamo",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  }
+                ]
+              },
+              "codigo": 193,
+              "nombre": "Paquete de explorador de mazmorras",
+              "tipoValor": "PO",
+              "tipo": "Objeto_Mundano"
+            },
+            {
+              "$type": "Paquete, Assembly-CSharp",
+              "peso": 1.0,
+              "cantValor": 40,
+              "cantidad": 1,
+              "equipo": {
+                "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+                "$values": [
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 5.0,
+                    "cantValor": 2,
+                    "cantidad": 1,
+                    "codigo": 57,
+                    "nombre": "Mochila",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 7.0,
+                    "cantValor": 1,
+                    "cantidad": 1,
+                    "codigo": 68,
+                    "nombre": "Petate",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 8.0,
+                    "cantValor": 1,
+                    "cantidad": 1,
+                    "codigo": 168,
+                    "nombre": "Utiles de cocinero",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 1.0,
+                    "cantValor": 5,
+                    "cantidad": 1,
+                    "codigo": 101,
+                    "nombre": "Yesquero",
+                    "tipoValor": "PP",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 1.0,
+                    "cantValor": 1,
+                    "cantidad": 10,
+                    "codigo": 10,
+                    "nombre": "Antorcha",
+                    "tipoValor": "PC",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 2.0,
+                    "cantValor": 5,
+                    "cantidad": 5,
+                    "codigo": 76,
+                    "nombre": "Racion",
+                    "tipoValor": "PP",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 5.0,
+                    "cantValor": 2,
+                    "cantidad": 1,
+                    "codigo": 28,
+                    "nombre": "Cantimplora",
+                    "tipoValor": "PP",
+                    "tipo": "Objeto_Mundano"
+                  },
+                  {
+                    "$type": "Objeto, Assembly-CSharp",
+                    "peso": 10.0,
+                    "cantValor": 1,
+                    "cantidad": 1,
+                    "codigo": 34,
+                    "nombre": "Cuerda de cañamo",
+                    "tipoValor": "PO",
+                    "tipo": "Objeto_Mundano"
+                  }
+                ]
+              },
+              "codigo": 192,
+              "nombre": "Paquete de explorador",
+              "tipoValor": "PO",
+              "tipo": "Objeto_Mundano"
+            }
+          ]
+        }
+      },
+      "nivelClase": 1,
+      "equipoInicial": {
+        "$type": "System.Collections.Generic.List`1[[Objeto, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "Armadura, Assembly-CSharp",
+            "valorCABase": 11,
+            "requisitoFuerza": 0,
+            "desventajaSigilo": false,
+            "modificadorDestreza": true,
+            "maximoModificadorDestreza": 0,
+            "peso": 10.0,
+            "cantValor": 10,
+            "cantidad": 1,
+            "codigo": 140,
+            "nombre": "Cuero",
+            "tipoValor": "PO",
+            "tipo": "ARMADURA_LIGERA"
+          },
+          {
+            "$type": "Arma, Assembly-CSharp",
+            "peso": 4.0,
+            "cantValor": 2,
+            "cantidad": 1,
+            "cantidadDaño": 1,
+            "cantidadSegundoDaño": 0,
+            "tipoDadoDaño": "D4",
+            "propiedades": {
+              "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+              "$values": [
+                "CORTANTE",
+                "ARROJADIZA",
+                "LIGERA",
+                "SUTIL"
+              ]
+            },
+            "tipoDadoSegundoDaño": "D4",
+            "alcanceMinimo": 0,
+            "alcanceMaximo": 0,
+            "codigo": 103,
+            "nombre": "Daga",
+            "tipoValor": "PO",
+            "tipo": "ARMA_SIMPLE"
+          },
+          {
+            "$type": "Arma, Assembly-CSharp",
+            "peso": 4.0,
+            "cantValor": 2,
+            "cantidad": 1,
+            "cantidadDaño": 1,
+            "cantidadSegundoDaño": 0,
+            "tipoDadoDaño": "D4",
+            "propiedades": {
+              "$type": "System.Collections.Generic.List`1[[E_Propiedades, Assembly-CSharp]], mscorlib",
+              "$values": [
+                "CORTANTE",
+                "ARROJADIZA",
+                "LIGERA",
+                "SUTIL"
+              ]
+            },
+            "tipoDadoSegundoDaño": "D4",
+            "alcanceMinimo": 0,
+            "alcanceMaximo": 0,
+            "codigo": 103,
+            "nombre": "Daga",
+            "tipoValor": "PO",
+            "tipo": "ARMA_SIMPLE"
+          },
+          {
+            "$type": "Objeto, Assembly-CSharp",
+            "peso": 1.0,
+            "cantValor": 25,
+            "cantidad": 1,
+            "codigo": 169,
+            "nombre": "Herramientas de ladron",
+            "tipoValor": "PO",
+            "tipo": "Objeto_Mundano"
+          }
+        ]
+      },
+      "bonificacionCompetencia": 2,
+      "especializacion": "SIN_ASIGNACION",
+      "rasgos": null,
+      "requisitoMulticlase": null,
+      "especializaciones": {
+        "$type": "System.Collections.Generic.List`1[[E_Especializacion, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "LADRON",
+          "EMBAUCADOR_ARCANO",
+          "ASESINO"
+        ]
+      },
+      "subidasNivel": {
+        "$type": "System.Collections.Generic.List`1[[SubidaNivel, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "SubidaNivel, Assembly-CSharp",
+            "clase": "PICARO",
+            "bonificadorCompetenciaPorNivel": 2,
+            "rasgos": {
+              "$type": "System.Collections.Generic.List`1[[Atributo, Assembly-CSharp]], mscorlib",
+              "$values": [
+                {
+                  "$type": "Atributo, Assembly-CSharp",
+                  "nombre": "Pericia",
+                  "efecto": "A nivel 1,  escoge dos de tus competencias en habilidades, o bien solo una y tu competencia con las herramientasde ladrón. Tu bonificador por competencia se duplica para cualquier prueba de característica que hagas utilizando cualquiera de las doscompetencias elegidas. A nivel 6 puedes elegir otras dos competencias (en habilidadeso con herramientasde ladrón)y obtenereste beneficio para ellas.",
+                  "hechizoAtributo": null,
+                  "objetoAtributo": null
+                },
+                {
+                  "$type": "Atributo, Assembly-CSharp",
+                  "nombre": "Ataque Furtivo",
+                  "efecto": " A partir de nivel 1 sabes cómo golpear sutilmente y aprovecharte de un enemigo distraído. Una vez por turno, puedes infligir ld6 de daño adicional a una criatura a la que impactes con un ataque en cuya tirada de ataque tuvieras ventaja. Este ataque debe haber sido hecho utilizando un arma sutil o a distancia. No necesitas tener ventaja en la tirada de ataque si otro enemigo del objetivo está a 5 pies o menos de él, dicho enemigo no está incapacitado, y no sufres desventaja en la tirada de ataque. La cantidad de daño adicional aumenta según subes de nivel en esta clase, tal y como se indica en la columna “ataque furtivo” de la tabla del picaro.",
+                  "hechizoAtributo": null,
+                  "objetoAtributo": null
+                },
+                {
+                  "$type": "Atributo, Assembly-CSharp",
+                  "nombre": "Jerga de ladrones",
+                  "efecto": "Durante tu entrenamiento como picaro aprendiste la jerga de ladrones, una mezcla de dialecto, argot y código secreto que te permite esconder mensajes en lo que parece una conversación normal y corriente. Únicamente aquellas criaturas que conozcan la jerga de ladrones podrán entender estos mensajes. Expresar un mensaje utilizando esta jerga precisa de cuatro veces el tiempo que tardarías en comunicar la misma idea directamente. Además, también comprendes un conjunto deseñales y símbolos secretos que se usan para dejar mensajescortos y sencillos, como el hecho de que una zona sea peligrosa o el territorio de un gremio de ladrones,si hay o no botín cerca, o si los lugareños de los alrededores son presas fáciles o pueden proporcionar un piso franco para ladronesa la fuga.",
+                  "hechizoAtributo": null,
+                  "objetoAtributo": null
+                }
+              ]
+            },
+            "nivelSubidaClase": 1,
+            "cantidadTrucos": 0,
+            "conjurosConocidos": 0,
+            "espaciosConjuros": {
+              "$type": "System.Int32[], mscorlib",
+              "$values": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "$type": "SubidaNivel, Assembly-CSharp",
+            "clase": "PICARO",
+            "bonificadorCompetenciaPorNivel": 2,
+            "rasgos": {
+              "$type": "System.Collections.Generic.List`1[[Atributo, Assembly-CSharp]], mscorlib",
+              "$values": [
+                {
+                  "$type": "Atributo, Assembly-CSharp",
+                  "nombre": "Accion Astuta",
+                  "efecto": "A partir de nivel 2 tu agilidad mental y rapidez te permiten moverte y actuar con presteza, por lo que puedes llevar a cabo una acción adicional en cada uno de tus turnosdurante un combate.Solo puedes utilizar esta acción adicional para reali zar las acciones de Correr, Destrabarse o Esconderse.",
+                  "hechizoAtributo": null,
+                  "objetoAtributo": null
+                }
+              ]
+            },
+            "nivelSubidaClase": 2,
+            "cantidadTrucos": 0,
+            "conjurosConocidos": 0,
+            "espaciosConjuros": {
+              "$type": "System.Int32[], mscorlib",
+              "$values": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "$type": "SubidaNivel, Assembly-CSharp",
+            "clase": "PICARO",
+            "bonificadorCompetenciaPorNivel": 2,
+            "rasgos": {
+              "$type": "System.Collections.Generic.List`1[[Atributo, Assembly-CSharp]], mscorlib",
+              "$values": [
+                {
+                  "$type": "Atributo, Assembly-CSharp",
+                  "nombre": "Accion Astuta",
+                  "efecto": "A partir de nivel 2 tu agilidad mental y rapidez te permiten moverte y actuar con presteza, por lo que puedes llevar a cabo una acción adicional en cada uno de tus turnosdurante un combate.Solo puedes utilizar esta acción adicional para reali zar las acciones de Correr, Destrabarse o Esconderse.",
+                  "hechizoAtributo": null,
+                  "objetoAtributo": null
+                }
+              ]
+            },
+            "nivelSubidaClase": 3,
+            "cantidadTrucos": 0,
+            "conjurosConocidos": 0,
+            "espaciosConjuros": {
+              "$type": "System.Int32[], mscorlib",
+              "$values": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      "habilidades": {
+        "$type": "System.Collections.Generic.List`1[[E_Habilidades, Assembly-CSharp]], mscorlib",
+        "$values": [
+          "ACROBACIAS",
+          "ATLETISMO",
+          "ENGAÑO",
+          "INTERPRETACION",
+          "INTIMIDACION",
+          "INVESTIGACION",
+          "JUEGO_DE_MANOS",
+          "PERCEPCION",
+          "PERSPICACIA",
+          "PERSUASION",
+          "SIGILO"
+        ]
+      }
+    }
+  ]
+}

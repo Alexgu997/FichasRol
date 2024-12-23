@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [JsonConverter(typeof(StringEnumConverter))]
-public enum E_TiempoDeLanzamientoConjuro
+public enum E_Especializacion
 {
-   ACCION,ACCION_ADICIONAL,HORA,MINUTO 
+   LADRON,ASESINO, EMBAUCADOR_ARCANO,SIN_ASIGNACION
 }
