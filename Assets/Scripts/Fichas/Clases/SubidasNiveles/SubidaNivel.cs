@@ -20,7 +20,7 @@ public class SubidaNivel
         Rasgos = new List<Atributo>();
         CantidadTrucos = 0;
         ConjurosConocidos = 0;
-        EspaciosConjuros= new int[9];//contar desde 0 pero el 0 sera 1
+        EspaciosConjuros= new int [9]{ 0, 0, 0, 0, 0, 0, 0, 0, 0 };//contar desde 0 pero el 0 sera 1
         
     }
     public SubidaNivel(E_Clases clase, int bonificadorCompetenciaPorNivel, List<Atributo> rasgos,int cantidadTrucosNuevos, int conjurosConocidosNuevos, int[] espaciosConjurosNuevos)
@@ -32,6 +32,17 @@ public class SubidaNivel
         CantidadTrucos = cantidadTrucosNuevos;
         ConjurosConocidos = conjurosConocidosNuevos;
         EspaciosConjuros = EspaciosConjuros;
+    }
+
+    public SubidaNivel (SubidaNivel subidaNivelNueva)
+    {
+        Clase = subidaNivelNueva.Clase;
+        NivelSubidaClase = subidaNivelNueva.NivelSubidaClase;
+        BonificadorCompetenciaPorNivel = subidaNivelNueva.bonificadorCompetenciaPorNivel;
+        Rasgos =new List<Atributo>( subidaNivelNueva.Rasgos);
+        CantidadTrucos = subidaNivelNueva.cantidadTrucos;
+        ConjurosConocidos = subidaNivelNueva.ConjurosConocidos;
+        EspaciosConjuros = subidaNivelNueva.EspaciosConjuros;
     }
 
     public E_Clases Clase { get => clase; set => clase = value; }
@@ -54,5 +65,21 @@ public class SubidaNivel
     public override int GetHashCode()
     {
         return HashCode.Combine(clase, nivelSubidaClase, bonificadorCompetenciaPorNivel, Rasgos);
+    }
+
+    public override string ToString()
+    {
+        string returnvalue = "";
+        returnvalue += "Clase= " + Clase.ToString() + "\n";
+        returnvalue += "Nivel=" + NivelSubidaClase.ToString() + "\n";
+        returnvalue += "Bonificador Competencia=" + BonificadorCompetenciaPorNivel + "\n";
+        returnvalue += "Rasgos=" + "\n";
+        Rasgos.ForEach(x => returnvalue += x.ToString()+"\n");
+        returnvalue +="Cantidad Trucos="+CantidadTrucos.ToString() +"\n";
+        returnvalue += "Conjuros Conocidos=" + ConjurosConocidos.ToString() + "\n";
+        returnvalue += "Espacios de conjuros=" +"\n";
+        for(int i = 0;i<espaciosConjuros.Length;i++) { returnvalue+=espaciosConjuros[i].ToString()+"\n"; }
+        return returnvalue;
+
     }
 }

@@ -1,6 +1,8 @@
+using iText.StyledXmlParser.Jsoup.Helper;
 using MimeKit.Cryptography;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Clase 
@@ -76,7 +78,7 @@ public class Clase
     public List<SubidaNivel> SubidasNivel { get => subidasNivel; set => subidasNivel = value; }
     public List<E_Habilidades> Habilidades { get => habilidades; set => habilidades = value; }
 
-    public void ElegirEspecializacion(E_Especializacion nuevaEspecializacion)
+    public virtual void ElegirEspecializacion(E_Especializacion nuevaEspecializacion)
     {
         Especializacion = nuevaEspecializacion;
     }
@@ -88,9 +90,9 @@ public class Clase
     }
 
 
-    public virtual void SubirNivel()
+    public virtual int SubirNivel()
     {
-
+        return 0;
     }
 
     public virtual void CargarSubidasNivel()
@@ -133,6 +135,31 @@ public class Clase
 
     }
 
+    public void AñadirRasgosEspecialidades(Dictionary<int,List<Atributo>> rasgosEspecialidad)
+    {
+        int nivelActualBuscado;
+        bool salidaBucle = false;   
+        int cantidadNivelesBuscados=rasgosEspecialidad.Keys.Count;
+        while (cantidadNivelesBuscados > 0)
+        {
+            nivelActualBuscado = rasgosEspecialidad.Keys.ToArray()[cantidadNivelesBuscados - 1];
+            for (int i = 0;i<SubidasNivel.Count&& !salidaBucle;i++)
+            {
+                if (SubidasNivel[i].NivelSubidaClase == nivelActualBuscado) 
+                {
+                    foreach (Atributo rasgo in rasgosEspecialidad[nivelActualBuscado]) 
+                    {
+                        SubidasNivel[i].Rasgos.Add(rasgo);
+                    }
+
+                    salidaBucle = true;
+                }
+            }
+            cantidadNivelesBuscados--;
+        }
+        
+    }
+
     public bool Equals(Clase clase)
     {
         return EqualityComparer<E_Clases>.Default.Equals(nombre, clase.nombre) &&
@@ -150,8 +177,32 @@ public class Clase
     {
         string valor = "";
 
-        valor = "Nombre" + Nombre.ToString() + "/n";
+        valor = "Nombre= " + Nombre.ToString() + "\n";
+        valor += "Nivel= " + nivelClase.ToString() + "\n";
+        valor += "Dado Subida Nivel= " + dadosSubidaNivel.ToString() + "\n";
+        valor += "Nivel= " + nivelClase.ToString() + "\n";
+        valor += "Competencias= " + "\n";
+        Competencias.ForEach(competencia => { valor += competencia.ToString() + "\n"; });
+        valor += "Tiradas Salvacion= " + "\n";
+        tiradasSalvacion.ForEach(tirada => { valor+=tirada.ToString() + "\n"; });
+        valor += "Aptitud Magica= " + aptitudMagica.ToString()+"\n";
+        valor += (puedeUsarMagia ? "Puede usar magia" : "No puede usar magia")+"\n";
+        valor += "Equipo Opcional= " + "\n";
+        foreach(string key in equipoOpcional.Keys) 
+        {
+            equipoOpcional[key].ForEach(equipo => { valor += equipo.ToString()+"\n"; });
+        }
+        valor += "Equipo Inicial= \n";
+        equipoInicial.ForEach(equipo => { valor += equipo.ToString() + "\n"; });
+        valor += "Bonificador por competencia= " + bonificacionCompetencia.ToString() + "\n";
+        valor += especializacion == E_Especializacion.SIN_ASIGNACION ? "No tiene especializacion elegida" : especializacion.ToString()+"\n";
+        Especializaciones.ForEach(value => { valor += value.ToString() + "\n"; });
+       
+        if (rasgos != null) { rasgos.ForEach(value => { valor += value.ToString() + "\n"; }); }
+        subidasNivel.ForEach(value => { valor += value.ToString() + "\n"; });
+        habilidades.ForEach(value => { valor+=value.ToString() + "\n"; });
 
-       return valor;
+
+        return valor;
     }
 }

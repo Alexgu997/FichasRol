@@ -133,4 +133,9 @@ public class Objeto
 
         return value;
     }
+
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(codigo, nombre, peso, cantValor, tipoValor, cantidad, tipo);
+    }
 }

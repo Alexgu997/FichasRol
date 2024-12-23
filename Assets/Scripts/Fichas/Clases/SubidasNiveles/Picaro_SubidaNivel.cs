@@ -36,4 +36,11 @@ public class Picaro_SubidaNivel : SubidaNivel
     {
         return HashCode.Combine(base.GetHashCode(), cantAtaqueFurtivo, ataqueFurtivo);
     }
+
+    public override string ToString()
+    {
+        string returnValue= base.ToString();
+        returnValue+= "Ataque furtivo= "+cantAtaqueFurtivo.ToString()+ataqueFurtivo.ToString()+"\n";
+        return returnValue;
+    }
 }

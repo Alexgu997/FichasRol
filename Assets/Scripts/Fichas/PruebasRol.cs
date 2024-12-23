@@ -1,12 +1,14 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
+using Org.BouncyCastle.Utilities;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using Unity.VisualScripting;
 using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 
@@ -31,7 +33,9 @@ public class PruebasRol : MonoBehaviour
         //readFile();
         //OverWrite();
         //WriteListFile();
-        LoadListObjetos(CargarObjetos());
+        //LoadListObjetos(CargarObjetos());
+        LoadList(CargarClases());
+        //PruebaClasePicaro();
     }
 
     // Update is called once per frame
@@ -180,7 +184,7 @@ public class PruebasRol : MonoBehaviour
         }
     }
 
-    private void LoadListObjetos(Dictionary<string, List<Objeto>> jsonObjetosPorGuardar)
+    private void LoadList(Dictionary<string, List<Objeto>> jsonObjetosPorGuardar)
     {
         string pathload = jsonObjetosPorGuardar.Keys.First();
         if (File.Exists(pathload) && pathload == "meme")
@@ -205,11 +209,48 @@ public class PruebasRol : MonoBehaviour
             JsonSerializerSettings settings = new JsonSerializerSettings
             {
                 Formatting = Formatting.Indented,
+                TypeNameHandling = TypeNameHandling.All,
                 ContractResolver = new CamelCasePropertyNamesContractResolver()
             };
             settings.Converters.Add(new StringEnumConverter());
 
             string jsonString = JsonConvert.SerializeObject(jsonObjetosPorGuardar.Values.First(), settings);
+            Debug.Log("Json creado en " + pathload);
+            File.WriteAllText(pathload, jsonString);
+        }
+    }
+
+    private void LoadList(Dictionary<string, List<Clase>> jsonClasesPorGuardar)
+    {
+        string pathload = jsonClasesPorGuardar.Keys.First();
+        if (File.Exists(pathload) && pathload == "meme")
+        {
+            // Read the entire file and save its contents.
+            string fileContents = File.ReadAllText(pathload);
+
+            // Deserialize the JSON data 
+            //  into a pattern matching the GameData class.
+
+            List<Clase> listClases = JsonConvert.DeserializeObject<List<Clase>>(fileContents);
+
+            foreach (Clase obj in listClases)
+            {
+                //Debug.Log(r.Nombre+":"+r.MejoraCaracteristicas.First().Key.ToString());
+                Debug.Log(obj.ToString());
+            }
+
+        }
+        else
+        {
+            JsonSerializerSettings settings = new JsonSerializerSettings
+            {
+                Formatting = Formatting.Indented,
+                TypeNameHandling = TypeNameHandling.All,
+                ContractResolver = new CamelCasePropertyNamesContractResolver()
+            };
+            settings.Converters.Add(new StringEnumConverter());
+
+            string jsonString = JsonConvert.SerializeObject(jsonClasesPorGuardar.Values.First(), settings);
             Debug.Log("Json creado en " + pathload);
             File.WriteAllText(pathload, jsonString);
         }
@@ -471,6 +512,7 @@ public class PruebasRol : MonoBehaviour
         Objeto objeto;
         Arma arma;
         Armadura armadura;
+        Paquete paquete;
         #region ObjetosCreados
         #region CrearObjeto1
         objeto = new Objeto();
@@ -975,7 +1017,7 @@ public class PruebasRol : MonoBehaviour
         #region CrearObjeto51
         objeto = new Objeto();
         objeto.Codigo = 51;
-        objeto.Nombre = "Lintera de ojo de buey";
+        objeto.Nombre = "Linterna de ojo de buey";
         objeto.SetValor(10);
         objeto.SetPeso(2);
         objeto.SetCantidad(1);
@@ -985,7 +1027,7 @@ public class PruebasRol : MonoBehaviour
         #region CrearObjeto52
         objeto = new Objeto();
         objeto.Codigo = 52;
-        objeto.Nombre = "Lintera sorda";
+        objeto.Nombre = "Linterna sorda";
         objeto.SetValor(5);
         objeto.SetPeso(2);
         objeto.SetCantidad(1);
@@ -2340,8 +2382,579 @@ public class PruebasRol : MonoBehaviour
 
         #endregion Armadura14
         #endregion ArmadurasCreadas
+        #region Herramientas
+        #region Herramienta1
+        objeto = new Objeto();
+        objeto.Codigo = 152;
+        objeto.Nombre = "Herramientas de albañil";
+        objeto.SetValor(10);
+        objeto.SetPeso(8);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta1
+        #region Herramienta2
+        objeto = new Objeto();
+        objeto.Codigo = 153;
+        objeto.Nombre = "Herramientas de alfarero";
+        objeto.SetValor(10);
+        objeto.SetPeso(3);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta2
+        #region Herramienta3
+        objeto = new Objeto();
+        objeto.Codigo = 154;
+        objeto.Nombre = "Herramientas de carpintero";
+        objeto.SetValor(8);
+        objeto.SetPeso(6);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta3
+        #region Herramienta4
+        objeto = new Objeto();
+        objeto.Codigo = 155;
+        objeto.Nombre = "Herramientas de cartografo";
+        objeto.SetValor(15);
+        objeto.SetPeso(6);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta4
+        #region Herramienta5
+        objeto = new Objeto();
+        objeto.Codigo = 156;
+        objeto.Nombre = "Herramientas de curtidor";
+        objeto.SetValor(5);
+        objeto.SetPeso(5);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta5
+        #region Herramienta6
+        objeto = new Objeto();
+        objeto.Codigo = 157;
+        objeto.Nombre = "Herramientas de ebanista";
+        objeto.SetValor(1);
+        objeto.SetPeso(5);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta6
+        #region Herramienta7
+        objeto = new Objeto();
+        objeto.Codigo = 158;
+        objeto.Nombre = "Herramientas de herrero";
+        objeto.SetValor(20);
+        objeto.SetPeso(8);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta7
+        #region Herramienta8
+        objeto = new Objeto();
+        objeto.Codigo = 159;
+        objeto.Nombre = "Herramientas de joyero";
+        objeto.SetValor(25);
+        objeto.SetPeso(2);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta8
+        #region Herramienta9
+        objeto = new Objeto();
+        objeto.Codigo = 160;
+        objeto.Nombre = "Herramientas de manitas";
+        objeto.SetValor(50);
+        objeto.SetPeso(10);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta9
+        #region Herramienta10
+        objeto = new Objeto();
+        objeto.Codigo = 161;
+        objeto.Nombre = "Herramientas de soplador de vidrio";
+        objeto.SetValor(30);
+        objeto.SetPeso(5);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta10
+        #region Herramienta11
+        objeto = new Objeto();
+        objeto.Codigo = 162;
+        objeto.Nombre = "Herramientas de tejedor";
+        objeto.SetValor(1);
+        objeto.SetPeso(5);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta11
+        #region Herramienta12
+        objeto = new Objeto();
+        objeto.Codigo = 163;
+        objeto.Nombre = "Herramientas de zapatero";
+        objeto.SetValor(5);
+        objeto.SetPeso(5);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta12
+        #region Herramienta13
+        objeto = new Objeto();
+        objeto.Codigo = 164;
+        objeto.Nombre = "Herramientas de alquimista";
+        objeto.SetValor(50);
+        objeto.SetPeso(8);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta13
+        #region Herramienta14
+        objeto = new Objeto();
+        objeto.Codigo = 165;
+        objeto.Nombre = "Herramientas de calígrafo";
+        objeto.SetValor(10);
+        objeto.SetPeso(5);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta14
+        #region Herramienta15
+        objeto = new Objeto();
+        objeto.Codigo = 166;
+        objeto.Nombre = "Herramientas de cervecero";
+        objeto.SetValor(20);
+        objeto.SetPeso(9);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta15
+        #region Herramienta16
+        objeto = new Objeto();
+        objeto.Codigo = 167;
+        objeto.Nombre = "Herramientas de pintor";
+        objeto.SetValor(10);
+        objeto.SetPeso(5);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta16
+        #region Herramienta17
+        objeto = new Objeto();
+        objeto.Codigo = 168;
+        objeto.Nombre = "Utiles de cocinero";
+        objeto.SetValor(1);
+        objeto.SetPeso(8);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta17
+        #region Herramienta18
+        objeto = new Objeto();
+        objeto.Codigo = 169;
+        objeto.Nombre = "Herramientas de ladron";
+        objeto.SetValor(25);
+        objeto.SetPeso(1);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta18
+        #region Herramienta19
+        objeto = new Objeto();
+        objeto.Codigo = 170;
+        objeto.Nombre = "Herramientas de navegante";
+        objeto.SetValor(25);
+        objeto.SetPeso(2);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta19
+        #region Herramienta20
+        objeto = new Objeto();
+        objeto.Codigo = 171;
+        objeto.Nombre = "Chirimia";
+        objeto.SetValor(2);
+        objeto.SetPeso(1);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta20
+        #region Herramienta21
+        objeto = new Objeto();
+        objeto.Codigo = 172;
+        objeto.Nombre = "Cuerno";
+        objeto.SetValor(3);
+        objeto.SetPeso(2);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta21
+        #region Herramienta22
+        objeto = new Objeto();
+        objeto.Codigo = 173;
+        objeto.Nombre = "Dulcémele";
+        objeto.SetValor(25);
+        objeto.SetPeso(10);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta22
+        #region Herramienta23
+        objeto = new Objeto();
+        objeto.Codigo = 174;
+        objeto.Nombre = "Flauta";
+        objeto.SetValor(2);
+        objeto.SetPeso(1);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta23
+        #region Herramienta24
+        objeto = new Objeto();
+        objeto.Codigo = 175;
+        objeto.Nombre = "Flauta de pan";
+        objeto.SetValor(12);
+        objeto.SetPeso(2);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta24
+        #region Herramienta25
+        objeto = new Objeto();
+        objeto.Codigo = 176;
+        objeto.Nombre = "Gaita";
+        objeto.SetValor(30);
+        objeto.SetPeso(6);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta25
+        #region Herramienta26
+        objeto = new Objeto();
+        objeto.Codigo = 177;
+        objeto.Nombre = "Laúd";
+        objeto.SetValor(35);
+        objeto.SetPeso(2);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta26
+        #region Herramienta27
+        objeto = new Objeto();
+        objeto.Codigo = 178;
+        objeto.Nombre = "Lira";
+        objeto.SetValor(30);
+        objeto.SetPeso(2);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta27
+        #region Herramienta28
+        objeto = new Objeto();
+        objeto.Codigo = 179;
+        objeto.Nombre = "Tambor";
+        objeto.SetValor(6);
+        objeto.SetPeso(3);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta28
+        #region Herramienta29
+        objeto = new Objeto();
+        objeto.Codigo = 180;
+        objeto.Nombre = "Viola";
+        objeto.SetValor(30);
+        objeto.SetPeso(1);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta29
+        #region Herramienta30
+        objeto = new Objeto();
+        objeto.Codigo = 181;
+        objeto.Nombre = "Ajedrez Dragón";
+        objeto.SetValor(1);
+        objeto.SetPeso(1.5f);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta30
+        #region Herramienta31
+        objeto = new Objeto();
+        objeto.Codigo = 182;
+        objeto.Nombre = "Apuesta de los tres dragones";
+        objeto.SetValor(1);
+        objeto.SetPeso(0);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta31
+        #region Herramienta32
+        objeto = new Objeto();
+        objeto.Codigo = 183;
+        objeto.Nombre = "Dados";
+        objeto.SetValor(1);
+        objeto.SetPeso(0);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PP;
+        objectos.Add(objeto);
+        #endregion Herramienta32
+        #region Herramienta33
+        objeto = new Objeto();
+        objeto.Codigo = 184;
+        objeto.Nombre = "Naipes";
+        objeto.SetValor(5);
+        objeto.SetPeso(0);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PP;
+        objectos.Add(objeto);
+        #endregion Herramienta33
+        #region Herramienta34
+        objeto = new Objeto();
+        objeto.Codigo = 185;
+        objeto.Nombre = "Naipes";
+        objeto.SetValor(5);
+        objeto.SetPeso(0);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PP;
+        objectos.Add(objeto);
+        #endregion Herramienta34
+        #region Herramienta35
+        objeto = new Objeto();
+        objeto.Codigo = 186;
+        objeto.Nombre = "Utiles de envenenador";
+        objeto.SetValor(50);
+        objeto.SetPeso(2);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta35
+        #region Herramienta36
+        objeto = new Objeto();
+        objeto.Codigo = 187;
+        objeto.Nombre = "Utiles de herborista";
+        objeto.SetValor(5);
+        objeto.SetPeso(3);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta36
+        #region Herramienta37
+        objeto = new Objeto();
+        objeto.Codigo = 188;
+        objeto.Nombre = "Utiles para disfrazarse";
+        objeto.SetValor(25);
+        objeto.SetPeso(3);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta37
+        #region Herramienta38
+        objeto = new Objeto();
+        objeto.Codigo = 189;
+        objeto.Nombre = "Utiles para falsificar";
+        objeto.SetValor(15);
+        objeto.SetPeso(5);
+        objeto.SetCantidad(1);
+        objeto.TipoValor = E_Monedas.PO;
+        objectos.Add(objeto);
+        #endregion Herramienta38
+        #endregion Herramientas
+        #region Paquetes
+        #region PaqueteArtista
+        paquete = new Paquete();
+        paquete.Codigo = 190;
+        paquete.Nombre = "Paquete de artista";
+        paquete.SetValor(40);
+        paquete.SetPeso(0);
+        paquete.SetCantidad(1);
+        paquete.TipoValor = E_Monedas.PO;
+        paquete.Equipo.Add(BuscarObjeto(objectos,57));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 68));
+        objeto = BuscarObjeto(objectos, 81);
+        objeto.SetCantidad(2);
+        paquete.Equipo.Add(objeto);
+        objeto = BuscarObjeto(objectos, 98);//VELAS
+        objeto.SetCantidad(5);
+        paquete.Equipo.Add(objeto);
+        objeto = BuscarObjeto(objectos, 76);
+        objeto.SetCantidad(5);
+        paquete.Equipo.Add(objeto);
+        paquete.Equipo.Add(BuscarObjeto(objectos, 28));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 188));
+        objectos.Add(paquete);
+        #endregion PaqueteArtista
+        #region PaqueteDiplomatico
+        paquete = new Paquete();
+        paquete.Codigo = 153;
+        paquete.Nombre = "Paquete de diplomatico";
+        paquete.SetValor(39);
+        paquete.SetPeso(0);
+        paquete.SetCantidad(1);
+        paquete.TipoValor = E_Monedas.PO;
+        paquete.Equipo.Add(BuscarObjeto(objectos, 33));
+        objeto = BuscarObjeto(objectos, 33);
+        objeto.SetCantidad(2);
+        paquete.Equipo.Add(objeto);
+        paquete.Equipo.Add(BuscarObjeto(objectos, 79));
+        objeto = BuscarObjeto(objectos, 65);
+        objeto.SetCantidad(5);
+        paquete.Equipo.Add(objeto);
+        paquete.Equipo.Add(BuscarObjeto(objectos, 66));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 73));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 90));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 4));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 47));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 45));
+        objectos.Add(paquete);
+        #endregion PaqueteDiplomatico
+        #region PaqueteErudito
+        paquete = new Paquete();
+        paquete.Codigo = 191;
+        paquete.Nombre = "Paquete de erudito";
+        paquete.SetValor(40);
+        paquete.SetPeso(0);
+        paquete.SetCantidad(1);
+        paquete.TipoValor = E_Monedas.PO;
+        paquete.Equipo.Add(BuscarObjeto(objectos, 57));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 68));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 49));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 90));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 73));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 15));
+        objeto = BuscarObjeto(objectos, 67);
+        objeto.SetCantidad(10);
+        paquete.Equipo.Add(objeto);
+
+        objectos.Add(paquete);
+        #endregion PaqueteErudito
+        #region PaqueteExplorador
+        paquete = new Paquete();
+        paquete.Codigo = 192;
+        paquete.Nombre = "Paquete de explorador";
+        paquete.SetValor(40);
+        paquete.SetPeso(0);
+        paquete.SetCantidad(1);
+        paquete.TipoValor = E_Monedas.PO;
+        paquete.Equipo.Add(BuscarObjeto(objectos, 57));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 68));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 168));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 101));
+        objeto = BuscarObjeto(objectos, 10);
+        objeto.SetCantidad(10);
+        paquete.Equipo.Add(objeto);
+        objeto = BuscarObjeto(objectos, 76);
+        objeto.SetCantidad(10);
+        paquete.Equipo.Add(objeto);
+        paquete.Equipo.Add(BuscarObjeto(objectos, 28));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 34));
+        objectos.Add(paquete);
+
+        #endregion PaqueteErudito
+        #region PaqueteExploradorDeMazmorras
+        paquete = new Paquete();
+        paquete.Codigo = 193;
+        paquete.Nombre = "Paquete de explorador de mazmorras";
+        paquete.SetValor(10);
+        paquete.SetPeso(0);
+        paquete.SetCantidad(1);
+        paquete.TipoValor = E_Monedas.PO;
+        paquete.Equipo.Add(BuscarObjeto(objectos, 57));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 64));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 55));
+        objeto = BuscarObjeto(objectos, 72);
+        objeto.SetCantidad(10);
+        paquete.Equipo.Add(objeto);
+        objeto = BuscarObjeto(objectos, 10);
+        objeto.SetCantidad(10);
+        paquete.Equipo.Add(objeto);
+        objeto = BuscarObjeto(objectos, 76);
+        objeto.SetCantidad(10);
+        paquete.Equipo.Add(objeto);
+        paquete.Equipo.Add(BuscarObjeto(objectos, 28));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 34));
+        objectos.Add(paquete);
+
+        #endregion PaqueteExploradorDeMazmorras
+        #region PaqueteLadron
+        paquete = new Paquete();
+        paquete.Codigo = 194;
+        paquete.Nombre = "Paquete de ladrón";
+        paquete.SetValor(16);
+        paquete.SetPeso(1);
+        paquete.SetCantidad(1);
+        paquete.TipoValor = E_Monedas.PO;
+        paquete.Equipo.Add(BuscarObjeto(objectos, 57));
+        objeto = BuscarObjeto(objectos, 14);
+        objeto.SetCantidad(10);
+        paquete.Equipo.Add(objeto);
+        paquete.Equipo.Add(BuscarObjeto(objectos, 18));
+        objeto = BuscarObjeto(objectos, 98);
+        objeto.SetCantidad(5);
+        paquete.Equipo.Add(objeto);
+        paquete.Equipo.Add(BuscarObjeto(objectos, 64));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 55));
+        objeto = BuscarObjeto(objectos, 72);
+        objeto.SetCantidad(10);
+        paquete.Equipo.Add(objeto);
+        paquete.Equipo.Add(BuscarObjeto(objectos, 52));
+        objeto = BuscarObjeto(objectos, 4);
+        objeto.SetCantidad(2);
+        paquete.Equipo.Add(objeto);
+        objeto = BuscarObjeto(objectos,76);
+        objeto.SetCantidad(5);
+        paquete.Equipo.Add(objeto);
+        paquete.Equipo.Add(BuscarObjeto(objectos, 101));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 28));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 34));
+        objectos.Add(paquete);
+
+        #endregion PaqueteLadron
+        #region PaqueteSacerdote
+        paquete = new Paquete();
+        paquete.Codigo = 195;
+        paquete.Nombre = "Paquete de sacerdote";
+        paquete.SetValor(19);
+        paquete.SetPeso(1);
+        paquete.SetCantidad(1);
+        paquete.TipoValor = E_Monedas.PO;
+        paquete.Equipo.Add(BuscarObjeto(objectos, 57));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 54));
+        objeto = BuscarObjeto(objectos, 98);
+        objeto.SetCantidad(10);
+        paquete.Equipo.Add(objeto);
+        paquete.Equipo.Add(BuscarObjeto(objectos, 101));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 15));
+        objeto = BuscarObjeto(objectos, 98);
+        objeto.SetCantidad(2);
+        paquete.Equipo.Add(objeto);
+        paquete.Equipo.Add(BuscarObjeto(objectos,28));
+        paquete.Equipo.Add(BuscarObjeto(objectos, 79));
+        objectos.Add(paquete);
+
+        #endregion PaqueteLadron
+        #endregion Paquetes
         objetosFinales.Add(pathload, objectos);
         return objetosFinales;
+    }
+    public Objeto BuscarObjeto(List<Objeto>listaObjetos,int codigo)
+    {
+        Objeto objetoBuscado = new Objeto();
+        bool encontrado = false;
+        for(int i = 0; i < listaObjetos.Count&&!encontrado;i++)
+        {
+            if (listaObjetos[i].Codigo == codigo)
+            {
+                objetoBuscado = listaObjetos[i];
+                encontrado=true;
+            }
+        }
+
+        return objetoBuscado;
     }
 
 
@@ -3832,5 +4445,25 @@ public class PruebasRol : MonoBehaviour
         return hechizosFinales;
     }
 
+    public Dictionary<string, List<Clase>> CargarClases()
+    {
+        string pathload = "Assets/Resources/Jsons/ClasesEsp.json";
+        List<Clase> clases = new List<Clase>();
+        Dictionary<string, List<Clase>> clasesFinales = new Dictionary<string, List<Clase>>();
+        clases.Add(new Picaro());
+
+        clasesFinales.Add(pathload, clases);
+        return clasesFinales;
+    }
+
     #endregion CargaDatos
+
+
+    public void PruebaClasePicaro()
+    {
+       Picaro picaro=new Picaro();
+       Debug.Log(picaro.ToString());
+
+        
+    }
 }

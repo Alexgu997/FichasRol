@@ -6,7 +6,7 @@ using UnityEngine;
 
 public static class ControladorJsons 
 {
-    static string PATHLOADOBJETOSESPAÑOL= "Assets/Resources/Jsons/RazasEsp.json";
+    static string PATHLOADOBJETOSESPAÑOL= "Assets/Resources/Jsons/ObjetosEsp.json";
     public static List<Objeto> LeerObjetosJson(E_Idiomas idioma)
     {
         List<Objeto> objetosJson= new List<Objeto>();
@@ -18,8 +18,11 @@ public static class ControladorJsons
 
             // Deserialize the JSON data 
             //  into a pattern matching the GameData class.
-
-            objetosJson = JsonConvert.DeserializeObject<List<Objeto>>(fileContents);
+            JsonSerializerSettings settings= new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.Auto
+            };
+            objetosJson = JsonConvert.DeserializeObject<List<Objeto>>(fileContents,settings);
 
 
 

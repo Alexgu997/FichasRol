@@ -33,6 +33,7 @@ public static class ControladorObjetos
         if (objetosTotales == null)
         {
             CargarObjetos(E_Idiomas.Español);
+            
         }
         for (int i = 0; i < objetosTotales.Count; i++)
         {
@@ -42,6 +43,7 @@ public static class ControladorObjetos
             }
 
         }
+
         return objetoBuscado;
     }
 
